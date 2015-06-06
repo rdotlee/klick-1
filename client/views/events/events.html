@@ -1,0 +1,10 @@
+<template name="events">
+    <h1>Upcoming events</h1>
+    <div class="container-fluid">
+      <div class="row">
+        {{#each events}}
+          {{> eventCard}}
+        {{/each}}
+      </div>
+    </div>
+</template>
