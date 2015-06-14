@@ -12,7 +12,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            {{#if isAdmin}}
+            {{#if isInRole 'admin'}}
             <li  class="{{isActiveRoute 'dashboard'}}"><a href="/dashboard">Dashboard</a></li>
             {{/if}}
             <li  class="{{isActiveRoute 'events'}}"><a href="/events">Events</a></li>

@@ -1,20 +1,9 @@
-Events = new Mongo.Collection('Events');
+Areas = new Mongo.Collection('Areas');
 
-Events.attachSchema(
+Areas.attachSchema(
     new SimpleSchema({
-    title: {
+    name: {
       type: String
-    },
-    area: {
-      type: String,
-      label: 'Area',
-      autoform: {
-        options: function () {
-          return _.map(Areas.find().fetch(), function (area) {
-            return {label: area.name, value: area._id};
-          });
-        }
-      }
     },
     createdAt: {
       type: Date,
@@ -37,7 +26,7 @@ Events.attachSchema(
 // Collection2 already does schema checking
 // Add custom permission rules if needed
 if (Meteor.isServer) {
-  Events.allow({
+  Areas.allow({
     insert : function () {
       return true;
     },

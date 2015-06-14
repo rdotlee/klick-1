@@ -15,6 +15,15 @@ Router.route('/events', {
   }
 });
 
+Router.route('/events/:_id', {
+  name: 'event',
+  action: function () {
+    var eventObj = Events.findOne({_id: this.params._id});
+    this.render('event', {data: eventObj});
+    SEO.set({ title: 'Event - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/dashboard', {
   name: 'dashboard',
   action: function () {
@@ -40,4 +49,4 @@ var goToDashboard = function(pause) {
 };
 
 Router.onBeforeAction(mustBeSignedIn, {except: ['home', 'events']});
-Router.onBeforeAction(goToDashboard, {only: ['home']});
+//Router.onBeforeAction(goToDashboard, {only: ['home']});
