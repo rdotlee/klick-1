@@ -56,7 +56,8 @@ Events.attachSchema(
       },
       autoform: {
         omit: true
-      }
+      },
+      defaultValue: []
     },
     date: {
       type: Date,

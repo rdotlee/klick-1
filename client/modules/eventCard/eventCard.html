@@ -1,9 +1,15 @@
 <template name="eventCard">
     <div class="col-md-3">
-      <a href="/events/{{_id}}">{{title}}</a>
-      {{#if users}}
-        <p>Count: {{users.length}}</p>
+      <a href="/events/{{_id}}"><h3>{{title}}</h3></a>
+      <h6>Count: {{eventCount}}</h6>
+      {{#if currentUser}}
+        <p>
+          {{#if isRegistered}}
+            <button class="btn btn-default" id="unregister" type="submit">Unregister</button>
+          {{else}}
+            <button class="btn btn-default" id="register" type="submit">Register</button>
+          {{/if}}
+        </p>
       {{/if}}
-      <button class="btn btn-default" id="register" type="submit">Register</button>
     </div>
 </template>
