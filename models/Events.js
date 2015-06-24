@@ -1,5 +1,10 @@
 Events = new Mongo.Collection('Events');
 
+SimpleSchema.messages({
+  wrongRole: "Wrong Role",
+  eventFull: "The event is full"
+});
+
 Events.attachSchema(
     new SimpleSchema({
     title: {
@@ -31,6 +36,38 @@ Events.attachSchema(
         omit: true
       }
     },
+    eventLimit:{
+      type: Number,
+      label: 'Attendee Limit',
+      min: 1
+    },
+    groupLimit:{
+      type: Number,
+      label: 'Group Size',
+      min: 2
+    },
+    users: {
+      type: [String],
+      label: 'People registered',
+      custom: function(){
+        if(this.field('eventLimit').isSet && this.value.length > this.field('eventLimit').value){
+          return 'eventFull';
+        } 
+      },
+      autoform: {
+        omit: true
+      }
+    },
+    date: {
+      type: Date,
+      label: 'Date',
+      min: new Date(),
+      autoform: {
+        afFieldInput: {
+          type: "bootstrap-datetimepicker"
+        }
+      }
+    }
   })
 );
 
