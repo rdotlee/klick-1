@@ -11,7 +11,6 @@ accounts-password
 aldeed:collection2
 iron:router
 raix:handlebar-helpers
-matteodem:easy-security
 audit-argument-checks
 fastclick
 zimme:iron-router-active
@@ -29,3 +28,4 @@ aldeed:autoform
 tsega:bootstrap3-datetimepicker@=3.1.3_3
 mrt:moment-timezone
 aldeed:autoform-bs-datetimepicker
+accounts-facebook

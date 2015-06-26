@@ -32,6 +32,14 @@ Router.route('/dashboard', {
   }
 });
 
+Router.route('/users', {
+  name: 'users',
+  action: function () {
+    this.render('users');
+    SEO.set({ title: 'Users - ' + Meteor.App.NAME });
+  }
+});
+
 var mustBeSignedIn = function(pause) {
   if (!(Meteor.user() || Meteor.loggingIn())) {
     Router.go('home');
