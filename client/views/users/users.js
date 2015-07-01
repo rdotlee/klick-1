@@ -21,5 +21,8 @@ Template['users'].events({
     this.roles.splice(index, 1);
     Roles.setUserRoles(this, this.roles);
   },
+  "click #delete-user": function(event, template){
+    Meteor.users.remove({_id:this._id}) ;
+  },
 
 });

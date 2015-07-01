@@ -40,6 +40,15 @@ Router.route('/users', {
   }
 });
 
+Router.route('/users/:_id', {
+  name: 'user',
+  action: function () {
+    var userObj = Meteor.users.findOne({_id: this.params._id});
+    this.render('user', {data: userObj});
+    SEO.set({ title: 'User - ' + Meteor.App.NAME });
+  }
+});
+
 var mustBeSignedIn = function(pause) {
   if (!(Meteor.user() || Meteor.loggingIn())) {
     Router.go('home');
