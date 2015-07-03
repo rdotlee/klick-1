@@ -1,9 +1,17 @@
 <template name="events">
-    <h1>Upcoming events</h1>
     <div class="container-fluid">
       <div class="row">
-        {{#each events}}
-          {{> eventCard}}
+        {{#each areas}}
+          <div class="col-md-6">
+            <h3>{{name}}</h3>
+            <div class="row">
+              {{#each events}}
+                {{#if ifInArea ../_id area}}
+                  {{> eventCard}}
+                {{/if}}
+              {{/each}}
+            </div>
+          </div>
         {{/each}}
       </div>
     </div>

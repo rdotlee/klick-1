@@ -19,7 +19,7 @@ Areas.attachSchema(
       autoform: {
         omit: true
       }
-    },
+    }
   })
 );
 

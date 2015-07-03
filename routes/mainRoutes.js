@@ -32,7 +32,7 @@ Router.route('/dashboard', {
   }
 });
 
-Router.route('/users', {
+Router.route('/dashboard/users', {
   name: 'users',
   action: function () {
     this.render('users');
