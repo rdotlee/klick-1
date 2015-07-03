@@ -16,7 +16,7 @@ var UserProfile = new SimpleSchema({
     },
     gender: {
         type: String,
-        allowedValues: ['Male', 'Female'],
+        allowedValues: ['male', 'female'],
         optional: true
     },
     organization : {
@@ -54,7 +54,9 @@ var UserSchema = new SimpleSchema({
     },
     emails: {
         type: [Object],
-        optional: true
+        optional: true,
+        defaultValue: [],
+        minCount: 0
     },
     "emails.$.address": {
         type: String,
@@ -109,24 +111,41 @@ if (Meteor.isServer) {
   });
 
   Accounts.onCreateUser(function(options, user) {
-    console.log(user);
+    if(!user.emails){
+        user.emails = [];
+    }
     user.profile = {};
     if(user.services && user.services.facebook){
-      user.username = user.services.facebook.first_name 
-      FBGraph.setAccessToken(user.services.facebook.accessToken);
-      FBGraph.get("me/picture?type=large", function(err, res) {
-        user.profile.picture = res.location;
-      });
+      user = getFacebookProfile(user);
     } else if (user.services && user.services.linkedin) {
-      var linkedin = Linkedin().init(user.services.linkedin.accessToken);
-      linkedin.people.me(function(err, $in) {
-        user.profile.picture = me['picture-url'];
-      });
-
+      user = getLinkedinProfile(user);
     } else {
       user.profile.picture = Gravatar.imageUrl(user.emails[0].address);
     }
     return user;
   });
+
+  function getFacebookProfile(user){
+    user.username = user.services.facebook.first_name; 
+    user.profile.firstName = user.services.facebook.first_name;
+    user.profile.lastName = user.services.facebook.last_name;
+    user.profile.gender = user.services.facebook.gender;
+    user.profile.lastName = user.services.facebook.last_name;
+    user.emails.push({address: user.services.facebook.email, verified: false});
+
+    FBGraph.setAccessToken(user.services.facebook.accessToken);
+    FBGraph.get("me/picture?type=large", function(err, res) {
+        user.profile.picture = res.location;
+    });
+    return user;
+  }
+
+  function getLinkedinProfile(user){
+    var linkedin = Linkedin().init(user.services.linkedin.accessToken);
+    linkedin.people.me(function(err, $in) {
+        user.profile.picture = me['picture-url'];
+    });
+    return user;
+  }
 
 }
