@@ -1,3 +1,12 @@
 <template name="user">
-    {{> quickForm collection="Meteor.users" doc=this id="updateUserForm" type="update"}}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h1>{{profile.firstName}} {{profile.lastName}}</h1>
+        {{#if userIsLoggedInUser _id}}
+          <a class="btn btn-default" href="/users/{{_id}}/edit">Edit</a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
 </template>

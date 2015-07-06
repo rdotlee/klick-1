@@ -8,7 +8,11 @@ Template['eventCard'].helpers({
   },
   eventCount: function(){
     return this.users.length || 0;
-  }
+  },
+
+  isHot: function(num){
+    return num >= 5;
+  },
 });
 
 Template['eventCard'].events({

@@ -50,13 +50,19 @@ var UserProfile = new SimpleSchema({
 var UserSchema = new SimpleSchema({
     username: {
         type: String,
-        regEx: /^[a-z0-9A-Z_]{3,15}$/
+        regEx: /^[a-z0-9A-Z_]{3,15}$/,
+        autoform: {
+            omit: true
+        }
     },
     emails: {
         type: [Object],
         optional: true,
         defaultValue: [],
-        minCount: 0
+        minCount: 0,
+        autoform: {
+            omit: true
+        }
     },
     "emails.$.address": {
         type: String,
@@ -66,7 +72,10 @@ var UserSchema = new SimpleSchema({
         type: Boolean
     },
     createdAt: {
-        type: Date
+        type: Date,
+        autoform: {
+            omit: true
+        }
     },
     profile: {
         type: UserProfile,
@@ -75,11 +84,17 @@ var UserSchema = new SimpleSchema({
     services: {
         type: Object,
         optional: true,
-        blackbox: true
+        blackbox: true,
+        autoform: {
+            omit: true
+        }
     },
     roles: {
         type: [String],
-        optional: true
+        optional: true,
+        autoform: {
+            omit: true
+        }
     }
 });
 

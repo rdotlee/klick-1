@@ -49,6 +49,16 @@ Router.route('/users/:_id', {
   }
 });
 
+Router.route('/users/:_id/edit', {
+  name: 'userEdit',
+  onBeforeAction: mustBeThisUser,
+  action: function () {
+    var userObj = Meteor.users.findOne({_id: this.params._id});
+    this.render('userEdit', {data: userObj});
+    SEO.set({ title: 'Edit User - ' + Meteor.App.NAME });
+  }
+});
+
 var mustBeSignedIn = function(pause) {
   if (!(Meteor.user() || Meteor.loggingIn())) {
     Router.go('home');
@@ -65,5 +75,14 @@ var goToDashboard = function(pause) {
   }
 };
 
+var mustBeThisUser = function(pause){
+  if(Meteor.userId() !== this.params._id){
+    Router.go('home');
+  } else {
+    this.next();
+  }
+}
+
+Router.onBeforeAction(mustBeThisUser, {only: ['userEdit']});
 Router.onBeforeAction(mustBeSignedIn, {except: ['home', 'events']});
 //Router.onBeforeAction(goToDashboard, {only: ['home']});
