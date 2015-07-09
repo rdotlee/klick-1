@@ -49,6 +49,7 @@ Events.attachSchema(
     users: {
       type: [String],
       label: 'People registered',
+      optional: true,
       custom: function(){
         if(this.field('eventLimit').isSet && this.value.length > this.field('eventLimit').value){
           return 'eventFull';
@@ -58,6 +59,31 @@ Events.attachSchema(
         omit: true
       },
       defaultValue: []
+    },
+    groups: {
+      type: Array,
+      label: 'Groups',
+      optional: true,
+      autoform: {
+        omit: true
+      }
+    },
+    'groups.$': {
+      type: [String],
+      label: 'Group',
+      optional: true,
+      autoform: {
+        omit: true
+      }
+    },
+    isLocked: {
+      type: Boolean,
+      label: "Event Locked",
+      defaultValue: false,
+      optional: true,
+      autoform: {
+        omit: true
+      }
     },
     date: {
       type: Date,
@@ -86,4 +112,31 @@ if (Meteor.isServer) {
       return true;
     }
   });
+
+  Events.before.update(function (userId, doc, fieldNames, modifier, options) {
+    var groups = modifier.$set.groups;
+    var groups = Groups.shuffle(groups);
+  });
 }
+
+var Groups = {};
+
+Groups.shuffle = function(groups){
+  return groups;
+};
+
+Groups.getUserDistance = function(a,b){
+  return 0;
+}
+
+Groups.getGroupDistance = function(group){
+  return 0;
+}
+
+Groups.getGroupsDistance = function(groups){
+  return 0;
+}
+
+
+
+
