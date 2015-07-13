@@ -1,3 +1,18 @@
 <template name="event">
-    <h1>{{title}}</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>{{title}}</h1>  
+      </div>
+      {{#if viewable}}
+        <div class="col-md-4">
+          <h1>Real Groups</h1>
+        </div>
+      {{else}}
+        <div class="col-md-4">
+          <h1>Dummy view</h1>
+        </div>
+      {{/if}}
+    </div>
+  </div>
 </template>

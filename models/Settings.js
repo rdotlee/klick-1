@@ -1,24 +1,9 @@
-Areas = new Mongo.Collection('Areas');
+Settings = new Mongo.Collection('Settings');
 
-Areas.attachSchema(
+Settings.attachSchema(
     new SimpleSchema({
-    name: {
-      type: String
-    },
-    createdAt: {
-      type: Date,
-      autoValue: function() {
-        if (this.isInsert) {
-          return new Date;
-        } else if (this.isUpsert) {
-          return {$setOnInsert: new Date};
-        } else {
-          this.unset();
-        }
-      },
-      autoform: {
-        omit: true
-      }
+    release_frame: {
+      type: Number
     }
   })
 );
@@ -26,7 +11,7 @@ Areas.attachSchema(
 // Collection2 already does schema checking
 // Add custom permission rules if needed
 if (Meteor.isServer) {
-  Areas.allow({
+  Settings.allow({
     insert : function (userId, doc) {
       if(userId == doc._id || Roles.userIsInRole(userId, ['admin'])){
         return true;

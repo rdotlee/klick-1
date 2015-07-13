@@ -1,0 +1,9 @@
+<template name="arrangeGroups">
+  {{#each userGroups}}
+    <ul>
+      {{#sortable items=this options=options}}
+        <li class="my-handle">{{_id}}</li>
+      {{/sortable}}
+    </ul>
+  {{/each}}
+</template>

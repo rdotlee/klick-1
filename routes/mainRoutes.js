@@ -24,8 +24,19 @@ Router.route('/events/:_id', {
   }
 });
 
+Router.route('/events/:_id/edit', {
+  name: 'eventEdit',
+  onBeforeAction: mustBeAdmin,
+  action: function () {
+    var eventObj = Events.findOne({_id: this.params._id});
+    this.render('eventEdit', {data: eventObj});
+    SEO.set({ title: 'Edit Event - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/dashboard', {
   name: 'dashboard',
+  onBeforeAction: mustBeAdmin,
   action: function () {
     this.render('dashboard');
     SEO.set({ title: 'Dashboard - ' + Meteor.App.NAME });
@@ -34,9 +45,19 @@ Router.route('/dashboard', {
 
 Router.route('/dashboard/users', {
   name: 'users',
+  onBeforeAction: mustBeAdmin,
   action: function () {
     this.render('users');
     SEO.set({ title: 'Users - ' + Meteor.App.NAME });
+  }
+});
+
+Router.route('/dashboard/configuration', {
+  name: 'configuration',
+  onBeforeAction: mustBeAdmin,
+  action: function () {
+    this.render('configuration');
+    SEO.set({ title: 'Configuration - ' + Meteor.App.NAME });
   }
 });
 
@@ -77,6 +98,14 @@ var goToDashboard = function(pause) {
 
 var mustBeThisUser = function(pause){
   if(Meteor.userId() !== this.params._id){
+    Router.go('home');
+  } else {
+    this.next();
+  }
+}
+
+var mustBeAdmin = function(pause){
+  if(Roles.userIsInRole(Meteor.user(), ['admin'])){
     Router.go('home');
   } else {
     this.next();

@@ -1,0 +1,30 @@
+event1:
+ title: Event1
+ area: Evanston
+ eventLimit: 18
+ groupLimit: 6
+event2:
+ title: Event2
+ area: Kellogg
+ eventLimit: 10
+ groupLimit: 2
+event3:
+ title: Event3
+ area: Jacobs
+ eventLimit: 8
+ groupLimit: 4
+event4:
+ title: Event4
+ area: Evanston
+ eventLimit: 24
+ groupLimit: 4
+event5:
+ title: Event5
+ area: Kellogg
+ eventLimit: 8
+ groupLimit: 2
+event6:
+ title: Event6
+ area: Jacobs
+ eventLimit: 100
+ groupLimit: 15

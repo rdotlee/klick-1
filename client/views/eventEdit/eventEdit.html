@@ -1,0 +1,12 @@
+<template name="eventEdit">
+   <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        {{> quickForm collection="Events" doc=this id="updateEventForm" type="update"}}
+      </div>
+      <div class="col-md-6">
+        {{> arrangeGroups}}
+      </div>
+    </div>
+  </div>
+</template>

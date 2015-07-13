@@ -33,14 +33,15 @@ Template['eventCard'].events({
     })
   },
   "click #unregister": function (event, template) {
-    console.log(this.groups);
     _.each(this.groups, function(group, index, list){
       list[index] = _.filter(group, function(id){ return id !== Meteor.userId() });
     });
-    console.log(this.groups);
     Events.update(this._id,{
       $pull: {users: Meteor.userId()},
       $set: {groups: this.groups}
     })
+  },
+  "click #delete": function (event, template) {
+    Events.remove(this._id);
   },
 });

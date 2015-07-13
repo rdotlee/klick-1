@@ -102,31 +102,45 @@ Events.attachSchema(
 // Add custom permission rules if needed
 if (Meteor.isServer) {
   Events.allow({
-    insert : function () {
+    insert : function (userId, doc) {
+      return true
+    },
+    update : function (userId, doc) {
       return true;
     },
-    update : function () {
-      return true;
-    },
-    remove : function () {
-      return true;
+    remove : function (userId, doc) {
+      if(userId == doc._id || Roles.userIsInRole(userId, ['admin'])){
+        return true;
+      } else {
+        return false;
+      }
     }
   });
 
   Events.before.update(function (userId, doc, fieldNames, modifier, options) {
     var groups = modifier.$set.groups;
-    var groups = Groups.shuffle(groups);
   });
 }
 
+//var clusterfck = Meteor.npmRequire("clusterfck");
 var Groups = {};
 
-Groups.shuffle = function(groups){
-  return groups;
+Groups.cluster = function(users){
+  var clusters = clusterfck.kmeans(users, 2, Groups.getUserDistance)
+  console.log(clusters);
+  //return clusters;
 };
 
 Groups.getUserDistance = function(a,b){
-  return 0;
+  var genderD = 10;
+  if(a.profile.gender === b.profile.gender){
+    genderD = 0;
+  }
+  var lastnameD = 20;
+  if(a.profile.lastName === b.profile.lastName){
+    genderD = 0;
+  }
+  return Math.sqrt(genderD*genderD + lastnameD*lastnameD);
 }
 
 Groups.getGroupDistance = function(group){
@@ -136,6 +150,11 @@ Groups.getGroupDistance = function(group){
 Groups.getGroupsDistance = function(groups){
   return 0;
 }
+
+
+
+    
+  
 
 
 

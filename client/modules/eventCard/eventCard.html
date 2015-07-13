@@ -14,5 +14,8 @@
       {{#if isHot eventCount}}
         <p>Hot</p>
       {{/if}}
+      {{#if isInRole 'admin'}}
+        <button class="btn btn-danger" id="delete" type="submit">Delete</button>
+      {{/if}}
     </div>
 </template>
