@@ -11,7 +11,6 @@ accounts-password
 aldeed:collection2
 iron:router
 raix:handlebar-helpers
-audit-argument-checks
 fastclick
 zimme:iron-router-active
 manuelschoebel:ms-seo
@@ -34,9 +33,9 @@ stevezhu:fbgraph
 jparker:gravatar
 khamoud:linkedin-api
 matb33:collection-hooks
-rubaxa:sortable
 momentjs:moment
 
 
 npm-container
 meteorhacks:npm
+sahina:flatui

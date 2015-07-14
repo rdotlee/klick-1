@@ -85,6 +85,15 @@ Events.attachSchema(
         omit: true
       }
     },
+    manualSort: {
+      type: Boolean,
+      label: "Manual group sorting",
+      defaultValue: false,
+      optional: true,
+      autoform: {
+        omit: true
+      }
+    },
     date: {
       type: Date,
       label: 'Date',
@@ -122,34 +131,34 @@ if (Meteor.isServer) {
   });
 }
 
-//var clusterfck = Meteor.npmRequire("clusterfck");
-var Groups = {};
+// var clusterfck = Meteor.npmRequire("clusterfck");
+// var Groups = {};
 
-Groups.cluster = function(users){
-  var clusters = clusterfck.kmeans(users, 2, Groups.getUserDistance)
-  console.log(clusters);
-  //return clusters;
-};
+// Groups.cluster = function(users){
+//   var clusters = clusterfck.kmeans(users, 2, Groups.getUserDistance)
+//   console.log(clusters);
+//   //return clusters;
+// };
 
-Groups.getUserDistance = function(a,b){
-  var genderD = 10;
-  if(a.profile.gender === b.profile.gender){
-    genderD = 0;
-  }
-  var lastnameD = 20;
-  if(a.profile.lastName === b.profile.lastName){
-    genderD = 0;
-  }
-  return Math.sqrt(genderD*genderD + lastnameD*lastnameD);
-}
+// Groups.getUserDistance = function(a,b){
+//   var genderD = 10;
+//   if(a.profile.gender === b.profile.gender){
+//     genderD = 0;
+//   }
+//   var lastnameD = 20;
+//   if(a.profile.lastName === b.profile.lastName){
+//     genderD = 0;
+//   }
+//   return Math.sqrt(genderD*genderD + lastnameD*lastnameD);
+// }
 
-Groups.getGroupDistance = function(group){
-  return 0;
-}
+// Groups.getGroupDistance = function(group){
+//   return 0;
+// }
 
-Groups.getGroupsDistance = function(groups){
-  return 0;
-}
+// Groups.getGroupsDistance = function(groups){
+//   return 0;
+// }
 
 
 

@@ -14,5 +14,8 @@
         </div>
       {{/if}}
     </div>
+    {{#if isInRole 'admin'}}
+      <a class="btn btn-default" href="/events/{{_id}}/edit">Edit</a>
+    {{/if}}
   </div>
 </template>

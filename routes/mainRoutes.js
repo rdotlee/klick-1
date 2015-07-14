@@ -9,6 +9,9 @@ Router.route('/', {
 
 Router.route('/events', {
   name: 'events',
+  waitOn: function(){
+    return Meteor.subscribe("Events");
+  },
   action: function () {
     this.render('events');
     SEO.set({ title: 'Events - ' + Meteor.App.NAME });
@@ -17,9 +20,14 @@ Router.route('/events', {
 
 Router.route('/events/:_id', {
   name: 'event',
+  waitOn: function(){
+    return Meteor.subscribe("Event", this.params._id);
+  },
+  data: function(){
+    return Events.findOne({_id: this.params._id});
+  },
   action: function () {
-    var eventObj = Events.findOne({_id: this.params._id});
-    this.render('event', {data: eventObj});
+    this.render('event');
     SEO.set({ title: 'Event - ' + Meteor.App.NAME });
   }
 });
@@ -27,10 +35,15 @@ Router.route('/events/:_id', {
 Router.route('/events/:_id/edit', {
   name: 'eventEdit',
   onBeforeAction: mustBeAdmin,
-  action: function () {
-    var eventObj = Events.findOne({_id: this.params._id});
-    this.render('eventEdit', {data: eventObj});
-    SEO.set({ title: 'Edit Event - ' + Meteor.App.NAME });
+  waitOn: function(){
+    return Meteor.subscribe("Event", this.params._id);
+  },
+  data: function(){
+    return Events.findOne({_id: this.params._id});
+  },
+  action : function () {
+    this.render('eventEdit');
+    SEO.set({ title: 'Event - ' + Meteor.App.NAME });
   }
 });
 

@@ -1,9 +1,22 @@
 <template name="arrangeGroups">
+  <div class="col-md-12">
+    <div class="btn-group" role="group">
+      <button type="button" id="auto-group" class="btn btn-default {{#unless manualSort}}active{{/unless}}">Auto grouping</button>
+      <button type="button" id="manual-group" class="btn btn-default {{#if manualSort}}active{{/if}}">Manual</button>
+    </div>
+    <button type="button" id="save-group" class="btn btn-default">Save</button>
+  </div>
   {{#each userGroups}}
-    <ul>
-      {{#sortable items=this options=options}}
-        <li class="my-handle">{{_id}}</li>
-      {{/sortable}}
-    </ul>
+  <div class="col-md-6">
+    <div class="list-group sortable-table" data-table-id="{{id}}">
+      <div class="list-group-item disabled">
+        <b>Group {{id}}</b>
+      </div>
+      {{#each people}}
+        <div class="list-group-item people" data-user-id="{{_id}}">{{this.username}}</div>
+      {{/each}}
+    </div>
+  </div>
   {{/each}}
 </template>
+
