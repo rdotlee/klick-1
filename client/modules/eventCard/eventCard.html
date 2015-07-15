@@ -1,21 +1,32 @@
 <template name="eventCard">
-    <div class="col-md-6">
-      <a href="/events/{{_id}}"><h3>{{title}}</h3></a>
-      <h6>Count: {{eventCount}}</h6>
-      {{#if currentUser}}
-        <p>
-          {{#if isRegistered}}
-            <button class="btn btn-default" id="unregister" type="submit">Unregister</button>
-          {{else}}
-            <button class="btn btn-default" id="register" type="submit">Register</button>
-          {{/if}}
-        </p>
-      {{/if}}
-      {{#if isHot eventCount}}
-        <p>Hot</p>
-      {{/if}}
-      {{#if isInRole 'admin'}}
-        <button class="btn btn-danger" id="delete" type="submit">Delete</button>
-      {{/if}}
+    <div class="col-md-3">
+      <div class="share ">
+            <ul>
+              <li>
+                <a href="/events/{{_id}}">
+                  <h2 class="tile-title">
+                    {{title}} <span class="fui-info-circle pull-right"></span>
+                    {{#if isHot}}<span class="fui-star-2"></span>{{/if}}
+                  </h2>
+                </a>
+              </li>
+              <li>
+                <span class="fui-location"></span> {{location.street}}
+              </li>
+              <li>
+                <span class="fui-calendar"></span> {{formatDateTime date}}
+              </li>
+              <li>
+                <span class="fui-user"></span> {{users.length}}
+              </li>
+            </ul>
+            {{#if future}}
+              {{#if isRegistered}}
+                <button class="btn btn-danger btn-large btn-block" id="unregister" type="submit">Deregister</button>
+              {{else}}
+                <button class="btn btn-primary btn-large btn-block" id="register" type="submit">Register</button>
+              {{/if}}
+            {{/if}}
+          </div>
     </div>
 </template>

@@ -1,12 +1,38 @@
 <template name="user">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <h1>{{profile.firstName}} {{profile.lastName}}</h1>
-        {{#if userIsLoggedInUser _id}}
-          <a class="btn btn-default" href="/users/{{_id}}/edit">Edit</a>
-        {{/if}}
+      <div class="col-md-12 profile">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="{{profile.picture}}" class="profile-img img-rounded pull-right">
+          </div>
+          <div class="col-md-6">
+            <h3>
+              {{name}}
+              {{#if userIsLoggedInUser _id}}
+                <a class="btn btn-primary" href="/users/{{_id}}/edit">Edit</a>
+              {{/if}}
+            </h3>
+            <blockquote>
+            {{#if profile.bio}}
+              <p>{{profile.bio}}</p>
+            {{/if}}
+            </blockquote>
+            <p>
+              <b>Birthday:</b> {{formatDate profile.birthday}}<br>
+              <b>Gender:</b> {{profile.gender}}<br>
+            </p>
+          </div>  
+        </div> 
       </div>
     </div>
+    {{#if userIsLoggedInUser _id}}
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Past events</h2>
+      </div>
+    </div>
+    {{/if}}
   </div>
 </template>

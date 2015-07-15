@@ -10,9 +10,13 @@ Template['eventCard'].helpers({
     return this.users.length || 0;
   },
 
-  isHot: function(num){
-    return num >= 5;
+  isHot: function(){
+    return this.users.length >= 5;
   },
+
+  future: function(){
+    return this.date > new Date();
+  }
 });
 
 Template['eventCard'].events({

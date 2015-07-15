@@ -136,7 +136,10 @@ if (Meteor.isServer) {
     } else if (user.services && user.services.linkedin) {
       user = getLinkedinProfile(user);
     } else {
-      user.profile.picture = Gravatar.imageUrl(user.emails[0].address);
+      user.profile.picture = Gravatar.imageUrl(user.emails[0].address,{
+        size: 34,
+        default: 'mm'
+    });
     }
     return user;
   });

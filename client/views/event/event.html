@@ -1,21 +1,36 @@
 <template name="event">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <h1>{{title}}</h1>  
+      <div class="col-md-12 text-center">
+        {{#if isInRole 'admin'}}
+          <a href="/events/{{_id}}/edit">
+            <h2>{{title}} <span class="fui-new"></span></h2>
+          </a>
+        {{else}}
+          <h2>{{title}}</h2>
+        {{/if}}
+        <p>
+          <span class="fui-location"></span> {{location.street}} &nbsp;
+          <span class="fui-calendar"></span> {{formatDateTime date}} &nbsp;
+          <span class="fui-user"></span> {{users.length}}
+        </p>  
       </div>
       {{#if viewable}}
         <div class="col-md-4">
           <h1>Real Groups</h1>
         </div>
       {{else}}
-        <div class="col-md-4">
-          <h1>Dummy view</h1>
+        <div class="row row-centered">
+          {{#each repeat groupLimit}}
+          <div class="col-xs-6 col-md-3 col-centered">
+            <img src="https://placeimg.com/640/480/animals/grayscale" class="img-responsive img-rounded">
+          </div>
+          {{/each}}
         </div>
+        <div class="row row-centered">
+          <p class="lead"></p>
+        </div>  
       {{/if}}
     </div>
-    {{#if isInRole 'admin'}}
-      <a class="btn btn-default" href="/events/{{_id}}/edit">Edit</a>
-    {{/if}}
   </div>
 </template>

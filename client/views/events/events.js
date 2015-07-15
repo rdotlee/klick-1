@@ -29,8 +29,33 @@ Template['events'].helpers({
 
     ifInArea: function(area, eventArea){
       return area === eventArea;
+    },
+
+    filter: function(event){
+      if (Session.get('allEvents')) return true;
+
+      if(event.users && _.indexOf(event.users, Meteor.userId()) != -1){
+        return true;
+      } else {
+        return false;
+      }
+    },
+
+    allEvents: function(){
+      return Session.get('allEvents');
     }
 });
 
 Template['events'].events({
+  'click #all-events': function(event, template){
+    Session.set('allEvents', true);
+  },
+  'click #reg-events': function(event, template){
+    Session.set('allEvents', false);
+  },
 });
+
+Template['events'].onRendered(function(){
+  Session.set('allEvents', true);
+})
+

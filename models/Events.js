@@ -5,6 +5,27 @@ SimpleSchema.messages({
   eventFull: "The event is full"
 });
 
+AddressSchema = new SimpleSchema({
+  street: {
+    type: String,
+    max: 100
+  },
+  city: {
+    type: String,
+    max: 50
+  },
+  state: {
+    type: String,
+    autoform: {
+      options: {'AL': 'AL', 'AK': 'AK', 'AZ': 'AZ', 'AR': 'AR', 'CA': 'CA', 'CO': 'CO', 'CT': 'CT', 'DC': 'DC', 'DE': 'DE', 'FL': 'FL', 'GA': 'GA', 'HI': 'HI', 'ID': 'ID', 'IL': 'IL', 'IN': 'IN', 'IA': 'IA', 'KS': 'KS', 'KY': 'KY', 'LA': 'LA', 'ME': 'ME', 'MD': 'MD', 'MA': 'MA', 'MI': 'MI', 'MN': 'MN', 'MS': 'MS', 'MO': 'MO', 'MT': 'MT', 'NE': 'NE', 'NV': 'NV', 'NH': 'NH', 'NJ': 'NJ', 'NM': 'NM', 'NY': 'NY', 'NC': 'NC', 'ND': 'ND', 'OH': 'OH', 'OK': 'OK', 'OR': 'OR', 'PA': 'PA', 'RI': 'RI', 'SC': 'SC', 'SD': 'SD', 'TN': 'TN', 'TX': 'TX', 'UT': 'UT', 'VT': 'VT', 'VA': 'VA', 'WA': 'WA', 'WV': 'WV', 'WI': 'WI', 'WY': 'WY'}
+    }
+  },
+  zip: {
+    type: String,
+    regEx: /^[0-9]{5}$/
+  }
+});
+
 Events.attachSchema(
     new SimpleSchema({
     title: {
@@ -85,6 +106,9 @@ Events.attachSchema(
         omit: true
       }
     },
+    location: {
+      type: AddressSchema
+    },
     manualSort: {
       type: Boolean,
       label: "Manual group sorting",
@@ -130,6 +154,7 @@ if (Meteor.isServer) {
     var groups = modifier.$set.groups;
   });
 }
+
 
 // var clusterfck = Meteor.npmRequire("clusterfck");
 // var Groups = {};

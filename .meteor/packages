@@ -14,12 +14,10 @@ raix:handlebar-helpers
 fastclick
 zimme:iron-router-active
 manuelschoebel:ms-seo
-browser-policy
 natestrauser:animate-css
 dburles:collection-helpers
 meteorhacks:fast-render
 
-twbs:bootstrap
 ian:accounts-ui-bootstrap-3
 alanning:roles
 zimme:active-route
@@ -38,4 +36,4 @@ momentjs:moment
 
 npm-container
 meteorhacks:npm
-sahina:flatui
+twbs:bootstrap

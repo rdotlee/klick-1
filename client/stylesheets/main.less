@@ -2,6 +2,7 @@
 @import 'helpers';
 @import 'variables';
 @import 'lib/elements';
+@import 'lib/flat-ui.import.less';
 
 /* -------------------
     Main Content
@@ -9,4 +10,29 @@
 
 body { 
   padding-top: 70px; 
+}
+
+.dropdown-menu{
+  min-width: 320px;
+}
+
+.profile{
+  .profile-img{
+    height: 150px;
+    margin: 21px 0 17px;
+    vertical-align: bottom;
+  }
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }

@@ -25,3 +25,19 @@ Template.registerHelper('debug', function (optionalValue) {
 Template.registerHelper('constant', function (what) {
   return Meteor.App[what.toUpperCase()];
 });
+
+Template.registerHelper('formatDate', function(date) {
+  return moment(date).format('MM/DD/YYYY');
+});
+
+Template.registerHelper('formatDateTime', function(date) {
+  return moment(date).format('MM/DD/YYYY @ hh:mm a');
+});
+
+Template.registerHelper('repeat', function(times) {
+  var countArr = [];
+    for (var i=0; i<times; i++){
+      countArr.push(i);
+    }
+    return countArr;
+});
