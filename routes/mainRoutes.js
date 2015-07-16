@@ -21,10 +21,13 @@ Router.route('/events', {
 Router.route('/events/:_id', {
   name: 'event',
   waitOn: function(){
-    return Meteor.subscribe("Event", this.params._id);
+    return [Meteor.subscribe("Event", this.params._id),Meteor.subscribe('Settings'),Meteor.subscribe('Users')];
   },
   data: function(){
-    return Events.findOne({_id: this.params._id});
+    return { 
+      eventData: Events.findOne({_id: this.params._id}),
+      config: Settings.findOne({})
+    }
   },
   action: function () {
     this.render('event');
@@ -59,9 +62,30 @@ Router.route('/dashboard', {
 Router.route('/dashboard/users', {
   name: 'users',
   onBeforeAction: mustBeAdmin,
+  waitOn: function(){
+    return Meteor.subscribe('Users',this.params._id);
+  },
+  data: function(){
+    return Meteor.users.find();
+  },
   action: function () {
     this.render('users');
     SEO.set({ title: 'Users - ' + Meteor.App.NAME });
+  }
+});
+
+Router.route('/dashboard/events', {
+  name: 'eventList',
+  onBeforeAction: mustBeAdmin,
+  waitOn: function(){
+    return Meteor.subscribe("Events");
+  },
+  data: function(){
+    return Events.find({});
+  },
+  action: function () {
+    this.render('eventList');
+    SEO.set({ title: 'Events - ' + Meteor.App.NAME });
   }
 });
 
@@ -76,9 +100,14 @@ Router.route('/dashboard/configuration', {
 
 Router.route('/users/:_id', {
   name: 'user',
+  waitOn: function(){
+    return [Meteor.subscribe("Events"),Meteor.subscribe('User',this.params._id)];
+  },
+  data: function(){
+    return Meteor.users.findOne({_id: this.params._id})
+  },
   action: function () {
-    var userObj = Meteor.users.findOne({_id: this.params._id});
-    this.render('user', {data: userObj});
+    this.render('user');
     SEO.set({ title: 'User - ' + Meteor.App.NAME });
   }
 });

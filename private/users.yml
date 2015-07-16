@@ -1,36 +1,32 @@
 user_admin:
   email: admin@test.com
-  username: admin
   password: testtest
-  roles: 
-    - admin
   profile:
     firstName: Bob
     lastName: Smith
     gender: male
+  roles: 
+    - admin
 user_test1:
   email: test1@test.com
-  username: test1
   password: testtest
-  roles:
-    - user
   profile:
     firstName: Sally
     lastName: Apt
     gender: female
-user_test2:
-  email: test2@test.com
-  username: test2
-  password: testtest
   roles:
     - user
+user_test2:
+  email: test2@test.com
+  password: testtest
   profile:
     firstName: Bill
     lastName: Ross
     gender: male
+  roles:
+    - user
 user_test3:
   email: test3@test.com
-  username: test3
   password: testtest
   roles:
     - user
@@ -40,7 +36,6 @@ user_test3:
     gender: female
 user_test4:
   email: test4@test.com
-  username: test4
   password: testtest
   roles:
     - user
@@ -50,7 +45,6 @@ user_test4:
     gender: female
 user_test5:
   email: test5@test.com
-  username: test5
   password: testtest
   roles:
     - user
@@ -60,7 +54,6 @@ user_test5:
     gender: male
 user_test6:
   email: test6@test.com
-  username: test6
   password: testtest
   roles:
     - user

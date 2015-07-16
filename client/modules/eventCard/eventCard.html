@@ -20,12 +20,16 @@
                 <span class="fui-user"></span> {{users.length}}
               </li>
             </ul>
-            {{#if future}}
-              {{#if isRegistered}}
-                <button class="btn btn-danger btn-large btn-block" id="unregister" type="submit">Deregister</button>
-              {{else}}
-                <button class="btn btn-primary btn-large btn-block" id="register" type="submit">Register</button>
+            {{#if currentUser}}
+              {{#if future}}
+                {{#if isRegistered}}
+                  <button class="btn btn-danger btn-large btn-block" id="unregister" type="submit">Not going</button>
+                {{else}}
+                  <button class="btn btn-primary btn-large btn-block" id="register" type="submit">Join</button>
+                {{/if}}
               {{/if}}
+            {{else}}
+              <a class="btn btn-primary btn-large btn-block" href="/">Join</a>
             {{/if}}
           </div>
     </div>

@@ -37,3 +37,4 @@ momentjs:moment
 npm-container
 meteorhacks:npm
 twbs:bootstrap
+flyandi:reactive-countdown

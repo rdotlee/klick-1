@@ -1,0 +1,21 @@
+<template name="eventList">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Events</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Title</th>
+            </tr>
+          </thead>
+          {{#each this}}
+            <tr>
+              <td><a href="/events/{{_id}}">{{title}}</a></td>
+            </tr>
+          {{/each}}
+        </table>
+      </div>
+    </div>
+  </div>
+</template>

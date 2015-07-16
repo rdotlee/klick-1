@@ -1,8 +1,4 @@
 Template['users'].helpers({
-  users: function () {
-    return Meteor.users.find();
-  },
-
   isRole: function(user, role){
     if(Roles.userIsInRole(user,[role])){
       return true;

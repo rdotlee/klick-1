@@ -3,12 +3,10 @@ var UserProfile = new SimpleSchema({
     firstName: {
         type: String,
         regEx: /^[a-zA-Z-]{2,25}$/,
-        optional: true
     },
     lastName: {
         type: String,
         regEx: /^[a-zA-Z]{2,25}$/,
-        optional: true
     },
     birthday: {
         type: Date,
@@ -50,7 +48,6 @@ var UserProfile = new SimpleSchema({
 var UserSchema = new SimpleSchema({
     username: {
         type: String,
-        regEx: /^[a-z0-9A-Z_]{3,15}$/,
         optional: true,
         autoform: {
             omit: true
@@ -96,6 +93,13 @@ var UserSchema = new SimpleSchema({
         autoform: {
             omit: true
         }
+    },
+    klicks: {
+        type: [String],
+        optional: true,
+        autoform: {
+            omit: true
+        }
     }
 });
 
@@ -131,13 +135,16 @@ if (Meteor.isServer) {
         user.emails = [];
     }
     user.profile = {};
+    user.profile.firstName = options.profile.firstName;
+    user.profile.lastName = options.profile.lastName;
+    user.username = options.email;
     if(user.services && user.services.facebook){
       user = getFacebookProfile(user);
     } else if (user.services && user.services.linkedin) {
       user = getLinkedinProfile(user);
     } else {
       user.profile.picture = Gravatar.imageUrl(user.emails[0].address,{
-        size: 34,
+        size: 200,
         default: 'mm'
     });
     }

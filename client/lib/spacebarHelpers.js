@@ -26,6 +26,34 @@ Template.registerHelper('constant', function (what) {
   return Meteor.App[what.toUpperCase()];
 });
 
+Template.registerHelper('secondsToDays', function(seconds) {
+  seconds = seconds*1000;
+  var time = {
+    years : Math.round(moment.duration(seconds, 'milliseconds').years()),
+    months : Math.round(moment.duration(seconds, 'milliseconds').months()),
+    days : Math.round(moment.duration(seconds, 'milliseconds').days()),
+    hours : Math.round(moment.duration(seconds, 'milliseconds').hours()),
+    minutes : Math.round(moment.duration(seconds, 'milliseconds').minutes()),
+    seconds : Math.round(moment.duration(seconds, 'milliseconds').seconds())
+  };
+
+  function humanize(time){
+    var o = '';
+    for(key in time){
+        if(time[key] > 0){
+            if(o === ''){
+                o += time[key] + ' ' + key + ' ';
+            }else{
+                return o + 'and ' + time[key] + ' ' + key;
+            }
+        }
+    }
+    return o;
+  }
+
+  return humanize(time);
+});
+
 Template.registerHelper('formatDate', function(date) {
   return moment(date).format('MM/DD/YYYY');
 });
