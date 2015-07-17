@@ -67,6 +67,7 @@ momentjs:moment@2.8.4
 mongo@1.1.0
 mrt:moment@2.8.1
 mrt:moment-timezone@0.2.1
+mystor:device-detection@0.2.0
 natestrauser:animate-css@3.2.6
 npm-bcrypt@0.7.8_2
 npm-container@1.0.0

@@ -4,7 +4,7 @@
       <div class="col-md-12 profile">
         <div class="row">
           <div class="col-md-4">
-            <img src="{{profile.picture}}" class="profile-img img-rounded pull-right">
+            <img src="{{profile.picture}}" class="profile-img img-rounded {{#unless isPhone}}pull-right{{/unless}}">
           </div>
           <div class="col-md-6">
             <h3>

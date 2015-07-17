@@ -19,7 +19,7 @@ Template['event'].helpers({
     }
   },
   groupAttr: function (context) {
-    var classes = "col-centered col-xs-6 ";
+    var classes = "col-centered ";
     if(context.eventData.groupLimit > 8){
       return {class: classes + "col-md-2"};
     } else {
@@ -28,8 +28,9 @@ Template['event'].helpers({
   },
   group: function(){
     var group = [];
-    for (var i = this.eventData.groups.length - 1; i >= 0; i--) {
-      var usersIndex = this.eventData.groups[i].indexOf(Meteor.userId());
+    var groups = Events.findOne({_id: this.eventData._id}).groups;
+    for (var i = groups.length - 1; i >= 0; i--) {
+      var usersIndex = groups[i].indexOf(Meteor.userId());
       if(usersIndex !== -1){
         group = this.eventData.groups[i];
         group.splice(usersIndex,1);
@@ -42,29 +43,14 @@ Template['event'].helpers({
 });
 
 Template['event'].events({
-   "click #register": function (event, template) {
-    if(!this.groups){
-      this.eventData.groups = [];
-      this.eventData.groups.push([Meteor.userId()]);
-    } else if (this.eventData.groups && this.eventData.groups[this.groups.length - 1].length < this.eventData.groupLimit){
-      this.eventData.groups[this.eventData.groups.length - 1].push(Meteor.userId())
-    } else {
-      this.eventData.groups.push([Meteor.userId()]);
-    }
-    console.log(this.eventData.groups);
-
+  "click #register": function (event, template) {
     Events.update(this.eventData._id,{
       $addToSet: {users: Meteor.userId()},
-      $set: {groups: this.eventData.groups}
     })
   },
   "click #unregister": function (event, template) {
-    _.each(this.eventData.groups, function(group, index, list){
-      list[index] = _.filter(group, function(id){ return id !== Meteor.userId() });
-    });
     Events.update(this.eventData._id,{
       $pull: {users: Meteor.userId()},
-      $set: {groups: this.eventData.groups}
     })
   },
 });

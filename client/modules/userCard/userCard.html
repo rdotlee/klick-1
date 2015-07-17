@@ -1,0 +1,15 @@
+<template name="userCard">
+  <div class="user-card">
+    <figure>
+      <a href="/users/{{_id}}">
+        <img src="{{profile.picture}}" class="img-rounded img-responsive">
+      </a>
+      <figcaption>
+        <a href="/users/{{_id}}">
+          <h4>{{profile.firstName}} {{profile.lastName}}</h4>
+        </a>
+        <a href="mailto:{{email}}" class="btn btn-block btn-sm btn-primary">Contact</a>
+      </figcaption>
+    </figure>
+  </div>
+</template>

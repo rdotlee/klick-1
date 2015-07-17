@@ -39,7 +39,7 @@ Router.route('/events/:_id/edit', {
   name: 'eventEdit',
   onBeforeAction: mustBeAdmin,
   waitOn: function(){
-    return Meteor.subscribe("Event", this.params._id);
+    return [Meteor.subscribe("Event", this.params._id), Meteor.subscribe("Users")];
   },
   data: function(){
     return Events.findOne({_id: this.params._id});

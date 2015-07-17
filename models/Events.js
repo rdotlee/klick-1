@@ -151,13 +151,27 @@ if (Meteor.isServer) {
   });
 
   Events.before.update(function (userId, doc, fieldNames, modifier, options) {
-    var groups = modifier.$set.groups;
+    if(!doc.manualSort){
+      var new_groups;
+      if(modifier.$addToSet){
+        new_groups = Groups.addToGroup(doc.groups,modifier.$addToSet.users, doc.groupLimit);
+      } else if(modifier.$pull){
+        new_groups = Groups.removeFromGroup(doc.groups,modifier.$pull.users, doc.groupLimit);
+      }
+      modifier.$set = {groups: new_groups}
+    } else {
+
+    }
+  });
+
+  Events.after.update(function (userId, doc, fieldNames, modifier, options) {
+    console.log('Updating event to: ')
+    console.log(doc);
   });
 }
 
 
 // var clusterfck = Meteor.npmRequire("clusterfck");
-// var Groups = {};
 
 // Groups.cluster = function(users){
 //   var clusters = clusterfck.kmeans(users, 2, Groups.getUserDistance)
