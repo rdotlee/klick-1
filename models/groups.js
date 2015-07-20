@@ -26,16 +26,11 @@ Groups.removeFromGroup = function(groups, user, groupLimit) {
 }
 
 Groups.addToRandomGroup = function(users, groupLimit) {
-
   return Groups.shuffleIntoGroups(users, groupLimit);
 }
 
-Groups.removeFromRandomGroup = function(groups, user, groupLimit) {
-  console.log('Removing user: ' + user);
-  for (var i = groups.length - 1; i >= 0; i--) {
-    groups[i] = _.filter(groups[i], function(id){ return id !== user});
-  };
-  return groups;
+Groups.removeFromRandomGroup = function(users, groupLimit) {
+  return Groups.shuffleIntoGroups(users, groupLimit);
 }
 
 //User IDS

@@ -153,24 +153,27 @@ if (Meteor.isServer) {
   Events.before.update(function (userId, doc, fieldNames, modifier, options) {
     var new_groups;
     var users = doc.users || [];
+    var config = Settings.findOne({});
     if(modifier.$addToSet && modifier.$addToSet.users){
       var newUser = modifier.$addToSet.users;
       users.push(newUser);
-      if(doc.manualSort){
+      if(doc.manualSort || moment().add(config.release_frame, 'days').isAfter(doc.date)){
         console.log('Manual grouping add')
-        new_groups = Groups.addToGroup(users, doc.groupLimit);
+        new_groups = Groups.addToGroup(doc.groups,modifier.$addToSet.users, doc.groupLimit);
       } else {
         console.log('Random grouping add')
         new_groups = Groups.addToRandomGroup(users, doc.groupLimit);
       }
       Meteor.users.update(modifier.$addToSet.users, {$addToSet: {klicks: doc._id}});
     } else if (modifier.$pull && modifier.$pull.users) {
-      if(doc.manualSort){
+      var removeUser = modifier.$pull.users;
+      users = _.filter(users, function(id){ return id !== removeUser});
+      if(doc.manualSort || moment().add(config.release_frame, 'days').isAfter(doc.date)){
         console.log('Manual grouping remove')
         new_groups = Groups.removeFromGroup(doc.groups,modifier.$pull.users, doc.groupLimit);
       } else {
         console.log('Random grouping remove')
-        new_groups = Groups.removeFromRandomGroup(doc.groups,modifier.$pull.users, doc.groupLimit);
+        new_groups = Groups.removeFromRandomGroup(users, doc.groupLimit);
       }
        Meteor.users.update(modifier.$pull.users, {$pull: {klicks: doc._id}});
     }
