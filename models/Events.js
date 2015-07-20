@@ -42,6 +42,14 @@ Events.attachSchema(
         }
       }
     },
+    gcalId: {
+      type: String,
+      label: 'Gcal ID',
+      optional: true,
+      autoform: {
+        omit: true
+      }
+    },
     createdAt: {
       type: Date,
       autoValue: function() {
@@ -121,7 +129,7 @@ Events.attachSchema(
     date: {
       type: Date,
       label: 'Date',
-      //min: new Date(),
+      min: new Date(),
       autoform: {
         afFieldInput: {
           type: "bootstrap-datetimepicker"
@@ -195,9 +203,94 @@ if (Meteor.isServer) {
     }
   });
 
+  Events.after.insert(function (userId, doc){
+    var config = Settings.findOne({});
+    var calendarOwner = Meteor.users.findOne(config.calendarOwner);
+    if(calendarOwner){
+      var endDate = moment(doc.date).add(1, 'hours').toDate();
+      var options = {
+        user: calendarOwner,
+        data:{
+          summary: doc.title,
+          start: {
+            dateTime: doc.date
+          },
+          end: {
+            dateTime: endDate
+          },
+          anyoneCanAddSelf: false,
+          guestsCanSeeOtherGuests: false,
+          guestsCanInviteOthers: false,
+          location: doc.location.street + ", " + doc.location.city,
+          visibility: 'private'
+        }
+      };
+
+      GoogleApi.post('calendar/v3/calendars/primary/events', options, function(res, data){
+        var calId = data.id;
+        Events.update(doc._id, {$set: {gcalId: calId}});
+      });
+    }
+  })
+
   Events.after.update(function (userId, doc, fieldNames, modifier, options) {
     console.log('\n\nUpdating event to: ')
     console.log(doc);
+
+    var config = Settings.findOne({});
+    var calendarOwner = Meteor.users.findOne(config.calendarOwner);
+    var invited = Meteor.users.find({_id: {$in: doc.users}}).fetch();
+    var invited = invited.map(function(user){
+      return { 
+        email: user.emails[0].address,
+        displayName: user.profile.firstName + " "+ user.profile.lastName
+      }
+    });
+
+    if(calendarOwner){
+      var endDate = moment(doc.date).add(1, 'hours').toDate();
+      var options = {
+        user: calendarOwner,
+        query:{
+          sendNotifications: true,
+        },
+        data:{
+          summary: doc.title,
+          attendees: invited,
+          start: {
+            dateTime: doc.date
+          },
+          end: {
+            dateTime: endDate
+          },
+          anyoneCanAddSelf: false,
+          guestsCanSeeOtherGuests: false,
+          guestsCanInviteOthers: false,
+          location: doc.location.street + ", " + doc.location.city,
+          visibility: 'private'
+        }
+      };
+
+      GoogleApi.post('calendar/v3/calendars/primary/events' + doc.gcalId, options, function(res, data){
+        console.log(res, data);
+      });
+    }
+  });
+
+  Events.after.remove(function (userId, doc){
+    if(calendarOwner){
+      var endDate = moment(doc.date).add(1, 'hours').toDate();
+      var options = {
+        user: calendarOwner,
+        query:{
+          sendNotifications: true,
+        }
+      };
+
+      GoogleApi.delete('calendar/v3/calendars/primary/events' + doc.gcalId, options, function(res, data){
+        console.log(res, data);
+      });
+    }
   });
 }
 

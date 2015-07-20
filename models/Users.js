@@ -1,48 +1,48 @@
 
 var UserProfile = new SimpleSchema({
-    firstName: {
-        type: String,
-        regEx: /^[a-zA-Z-]{2,25}$/,
-    },
-    lastName: {
-        type: String,
-        regEx: /^[a-zA-Z]{2,25}$/,
-    },
-    birthday: {
-        type: Date,
-        optional: true
-    },
-    gender: {
-        type: String,
-        allowedValues: ['male', 'female'],
-        optional: true
-    },
-    organization : {
-        type: String,
-        regEx: /^[a-z0-9A-z .]{3,30}$/,
-        optional: true
-    },
-    website: {
-        type: String,
-        regEx: SimpleSchema.RegEx.Url,
-        optional: true
-    },
-    bio: {
-        type: String,
-        optional: true
-    },
-    country: {
-        type: String,
-        optional: true
-    },
-    languages: {
-        type: [String],
-        optional: true
-    },
-    picture: {
-        type: String,
-        optional: true
-    }
+  firstName: {
+      type: String,
+      regEx: /^[a-zA-Z-]{2,25}$/,
+  },
+  lastName: {
+      type: String,
+      regEx: /^[a-zA-Z]{2,25}$/,
+  },
+  birthday: {
+      type: Date,
+      optional: true
+  },
+  gender: {
+      type: String,
+      allowedValues: ['male', 'female'],
+      optional: true
+  },
+  organization : {
+      type: String,
+      regEx: /^[a-z0-9A-z .]{3,30}$/,
+      optional: true
+  },
+  website: {
+      type: String,
+      regEx: SimpleSchema.RegEx.Url,
+      optional: true
+  },
+  bio: {
+      type: String,
+      optional: true
+  },
+  country: {
+      type: String,
+      optional: true
+  },
+  languages: {
+      type: [String],
+      optional: true
+  },
+  picture: {
+      type: String,
+      optional: true
+  }
 });
 
 var UserSchema = new SimpleSchema({
@@ -131,23 +131,33 @@ if (Meteor.isServer) {
   });
 
   Accounts.onCreateUser(function(options, user) {
+    // console.log(options);
+    // console.log(user);
     if(!user.emails){
         user.emails = [];
     }
     user.profile = {};
     user.profile.firstName = options.profile.firstName;
     user.profile.lastName = options.profile.lastName;
-    user.username = options.email;
     if(user.services && user.services.facebook){
       user = getFacebookProfile(user);
+      user.username = options.email;
     } else if (user.services && user.services.linkedin) {
       user = getLinkedinProfile(user);
+      user.username = options.email;
+    } else if (user.services && user.services.google) {
+      user.username = user.services.google.email;
+      user.emails.push({address: user.services.google.email, verified: false});
+      user.profile.picture = user.services.google.picture;
+      user.profile.firstName = user.services.google.given_name;
+      user.profile.lastName = user.services.google.family_name;
     } else {
-      user.profile.picture = Gravatar.imageUrl(user.emails[0].address,{
+      user.profile.picture = Gravatar.imageUrl(options.email,{
         size: 200,
         default: 'mm'
-    });
+      });
     }
+    console.log(user);
     return user;
   });
 

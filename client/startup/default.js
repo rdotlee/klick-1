@@ -4,5 +4,7 @@ Meteor.startup(function () {
   //   appId: process.env.FACEBOOK_APP_ID,
   //   secret: process.env.FACEBOOK_APP_SECRET
   // });
+
+  //Accounts.config({ restrictCreationByEmailDomain: 'kellogg.edu' })
 });
 

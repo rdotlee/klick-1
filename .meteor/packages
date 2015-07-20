@@ -39,3 +39,5 @@ meteorhacks:npm
 twbs:bootstrap
 flyandi:reactive-countdown
 mystor:device-detection
+percolate:google-api
+accounts-google

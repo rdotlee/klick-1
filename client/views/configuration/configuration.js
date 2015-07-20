@@ -2,10 +2,6 @@ Template['configuration'].helpers({
   areas: function() {
     return Areas.find();
   },
-  settings: function(){
-    console.log(Settings.find({}).count());
-    return Settings.findOne({});
-  }
 });
 
 Template['configuration'].events({

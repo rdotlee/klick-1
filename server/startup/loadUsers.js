@@ -7,8 +7,6 @@ function loadUser(user) {
     id = Accounts.createUser(user);
 
     if (user.roles.length > 0) {
-      // Need _id of existing user record so this call must come 
-      // after `Accounts.createUser` or `Accounts.onCreate`
       Roles.addUsersToRoles(id, user.roles);
     }
 

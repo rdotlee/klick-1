@@ -4,7 +4,19 @@ Settings.attachSchema(
     new SimpleSchema({
     release_frame: {
       type: Number
-    }
+    },
+    calendarOwner: {
+      type: String,
+      label: 'Calendar Owner',
+      optional: true,
+      autoform: {
+        options: function () {
+          return _.map(Meteor.users.find().fetch(), function (user) {
+            return {label: user.username, value: user._id};
+          });
+        }
+      }
+    },
   })
 );
 

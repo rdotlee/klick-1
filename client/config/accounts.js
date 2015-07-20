@@ -20,3 +20,11 @@ Accounts.ui.config({
         visible: true,
     }]
 });
+
+Accounts.ui.config({
+    requestPermissions:{
+        google:['https://www.googleapis.com/auth/calendar','https://www.googleapis.com/auth/userinfo.profile']
+    }, 
+    forceApprovalPrompt: {google: true},
+    requestOfflineToken: {google: true},
+})

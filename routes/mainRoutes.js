@@ -92,6 +92,15 @@ Router.route('/dashboard/events', {
 Router.route('/dashboard/configuration', {
   name: 'configuration',
   onBeforeAction: mustBeAdmin,
+  waitOn: function(){
+    return [Meteor.subscribe('Users'), Meteor.subscribe('Settings')];
+  },
+  data: function(){
+    return {
+      users: Meteor.users.find(),
+      settings: Settings.findOne({})
+    }
+  },
   action: function () {
     this.render('configuration');
     SEO.set({ title: 'Configuration - ' + Meteor.App.NAME });
