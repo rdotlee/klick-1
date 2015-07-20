@@ -7,14 +7,17 @@ Template['arrangeGroups'].helpers({
       var userSets = [];
       _.each(this.groups,function(group, iG, groups){
         var table = {id: iG+1, people:[]};
-        _.each(group,function(user, iU, group){
-          var userId = _.where(users, {_id: user})[0];
-          var user = Meteor.users.findOne(userId);
+        _.each(group,function(userId, iU, group){
+          var user = _.where(users, {_id: userId})[0];
           table.people.push(user);
         });
         userSets.push(table)
       });
       return userSets;
+  },
+
+  randomnessScore: function(tableID){
+    return Session.get(tableID.toString());
   },
 });
 
@@ -22,6 +25,7 @@ Template['arrangeGroups'].events({
   'click #auto-group': function(event, template){
     Events.update(this._id, {$set: {manualSort: false}});
     toggleGroupMode();
+    Router.go('eventEdit', this);
   },
   'click #manual-group': function(event, template){
     Events.update(this._id, {$set: {manualSort: true}});
@@ -38,6 +42,11 @@ Template['arrangeGroups'].events({
 });
 
 Template['arrangeGroups'].onRendered(function(){
+  _.each(this.data.groups,function(group, index){
+    var rScore = Groups.getGroupDistance(group);
+    Session.set((index+1).toString(), rScore);
+  })
+
   var manualSort = !!this.data.manualSort;
   new_groups = this.data.groups;
   var tables = document.getElementsByClassName('sortable-table');
@@ -54,6 +63,9 @@ Template['arrangeGroups'].onRendered(function(){
         var i = new_groups[fromTable-1].indexOf(userId)
         new_groups[fromTable-1].splice(i,1);
         new_groups[toTable-1].push(userId);
+
+        Session.set((fromTable).toString(), Groups.getGroupDistance(new_groups[fromTable-1]));
+        Session.set((toTable).toString(), Groups.getGroupDistance(new_groups[toTable-1]));
       },
     });
     sortTables.push(sortTable);

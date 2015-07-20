@@ -121,7 +121,7 @@ Events.attachSchema(
     date: {
       type: Date,
       label: 'Date',
-      min: new Date(),
+      //min: new Date(),
       autoform: {
         afFieldInput: {
           type: "bootstrap-datetimepicker"
@@ -151,53 +151,52 @@ if (Meteor.isServer) {
   });
 
   Events.before.update(function (userId, doc, fieldNames, modifier, options) {
-    if(!doc.manualSort){
-      var new_groups;
-      if(modifier.$addToSet){
-        new_groups = Groups.addToGroup(doc.groups,modifier.$addToSet.users, doc.groupLimit);
-      } else if(modifier.$pull){
-        new_groups = Groups.removeFromGroup(doc.groups,modifier.$pull.users, doc.groupLimit);
+    var new_groups;
+    var users = doc.users || [];
+    if(modifier.$addToSet && modifier.$addToSet.users){
+      var newUser = modifier.$addToSet.users;
+      users.push(newUser);
+      if(doc.manualSort){
+        console.log('Manual grouping add')
+        new_groups = Groups.addToGroup(users, doc.groupLimit);
+      } else {
+        console.log('Random grouping add')
+        new_groups = Groups.addToRandomGroup(users, doc.groupLimit);
       }
-      modifier.$set = {groups: new_groups}
-    } else {
+      Meteor.users.update(modifier.$addToSet.users, {$addToSet: {klicks: doc._id}});
+    } else if (modifier.$pull && modifier.$pull.users) {
+      if(doc.manualSort){
+        console.log('Manual grouping remove')
+        new_groups = Groups.removeFromGroup(doc.groups,modifier.$pull.users, doc.groupLimit);
+      } else {
+        console.log('Random grouping remove')
+        new_groups = Groups.removeFromRandomGroup(doc.groups,modifier.$pull.users, doc.groupLimit);
+      }
+       Meteor.users.update(modifier.$pull.users, {$pull: {klicks: doc._id}});
+    }
 
+    if(modifier.$set && modifier.$set.groupLimit && !doc.manualSort){
+      new_groups = Groups.shuffleIntoGroups(users, modifier.$set.groupLimit)
+    }
+
+    if(modifier.$set && !modifier.$set.manualSort && doc.manualSort){
+      new_groups = Groups.shuffleIntoGroups(users, doc.groupLimit)
+    }
+
+    if (new_groups) {
+      if(!modifier.$set){
+        modifier.$set = {groups: new_groups};
+      }else{
+        modifier.$set.groups = new_groups;
+      }
     }
   });
 
   Events.after.update(function (userId, doc, fieldNames, modifier, options) {
-    console.log('Updating event to: ')
+    console.log('\n\nUpdating event to: ')
     console.log(doc);
   });
 }
-
-
-// var clusterfck = Meteor.npmRequire("clusterfck");
-
-// Groups.cluster = function(users){
-//   var clusters = clusterfck.kmeans(users, 2, Groups.getUserDistance)
-//   console.log(clusters);
-//   //return clusters;
-// };
-
-// Groups.getUserDistance = function(a,b){
-//   var genderD = 10;
-//   if(a.profile.gender === b.profile.gender){
-//     genderD = 0;
-//   }
-//   var lastnameD = 20;
-//   if(a.profile.lastName === b.profile.lastName){
-//     genderD = 0;
-//   }
-//   return Math.sqrt(genderD*genderD + lastnameD*lastnameD);
-// }
-
-// Groups.getGroupDistance = function(group){
-//   return 0;
-// }
-
-// Groups.getGroupsDistance = function(groups){
-//   return 0;
-// }
 
 
 

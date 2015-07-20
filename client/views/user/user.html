@@ -28,8 +28,8 @@
     </div>
     {{#if userIsLoggedInUser _id}}
     <hr>
-    <div class="row row-centered text-center">
-      <h2>Past events</h2>
+    <div class="row">
+      <h2 class="text-center">Past events</h2>
       {{#each pastEvents}}
         {{> eventCard}}
       {{/each}}

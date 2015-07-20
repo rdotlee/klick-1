@@ -101,7 +101,7 @@ Router.route('/dashboard/configuration', {
 Router.route('/users/:_id', {
   name: 'user',
   waitOn: function(){
-    return [Meteor.subscribe("Events"),Meteor.subscribe('User',this.params._id)];
+    return [Meteor.subscribe("pastEvents"),Meteor.subscribe('User',this.params._id)];
   },
   data: function(){
     return Meteor.users.findOne({_id: this.params._id})

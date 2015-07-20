@@ -22,7 +22,7 @@ Template['user'].helpers({
         },
         {
           date: {
-            $lte: new Date()
+            $lte: moment().toDate()
           }
         }
       ]

@@ -1,22 +1,28 @@
 <template name="arrangeGroups">
-  <div class="col-md-12">
+  <div class="col-md-12 btn-toolbar">
     <div class="btn-group" role="group">
-      <button type="button" id="auto-group" class="btn btn-default {{#unless manualSort}}active{{/unless}}">Auto grouping</button>
-      <button type="button" id="manual-group" class="btn btn-default {{#if manualSort}}active{{/if}}">Manual</button>
+      <button type="button" id="auto-group" class="btn btn-primary {{#unless manualSort}}active{{/unless}}">Auto grouping</button>
+      <button type="button" id="manual-group" class="btn btn-primary {{#if manualSort}}active{{/if}}">Manual</button>
     </div>
-    <button type="button" id="save-group" class="btn btn-default">Save</button>
+    <button type="button" id="save-group" class="btn btn-primary {{#unless manualSort}}disabled{{/unless}}">Save</button>
   </div>
   {{#each userGroups}}
   <div class="col-md-6">
-    <div class="list-group sortable-table" data-table-id="{{id}}">
+    <div class="list-group">
       <div class="list-group-item disabled">
         <b>Group {{id}}</b>
+        Randomness: {{randomnessScore id}}
       </div>
+      <div class="sortable-table" data-table-id="{{id}}">
       {{#each people}}
-        <div class="list-group-item people" data-user-id="{{_id}}">{{this.username}}</div>
+        <div class="list-group-item people" data-user-id="{{_id}}">
+          <a href="{{pathFor route='user' data=this}}">
+            {{this.profile.firstName}} {{this.profile.lastName}}
+          </a>
+        </div>
       {{/each}}
+      </div>
     </div>
   </div>
   {{/each}}
 </template>
-

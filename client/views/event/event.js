@@ -29,14 +29,16 @@ Template['event'].helpers({
   group: function(){
     var group = [];
     var groups = Events.findOne({_id: this.eventData._id}).groups;
-    for (var i = groups.length - 1; i >= 0; i--) {
-      var usersIndex = groups[i].indexOf(Meteor.userId());
-      if(usersIndex !== -1){
-        group = this.eventData.groups[i];
-        group.splice(usersIndex,1);
-        break;
-      }
-    };
+    if (groups) {
+      for (var i = groups.length - 1;i >= 0; i--) {
+        var usersIndex = groups[i].indexOf(Meteor.userId());
+        if(usersIndex !== -1){
+          group = this.eventData.groups[i];
+          group.splice(usersIndex,1);
+          break;
+        }
+      };
+    }
     return Meteor.users.find({_id: {$in: group}});
   }
   
