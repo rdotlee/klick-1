@@ -33,11 +33,63 @@ var UserProfile = new SimpleSchema({
   },
   country: {
       type: String,
-      optional: true
+      label: 'Home country',
+      optional: true,
+      autoform: {
+        type: "typeahead",
+        afFieldInput: {
+          typeaheadOptions: {
+            minLength: 3
+          },
+          typeaheadDatasets: {
+            source: function findMatches(q, cb) {
+              var matches, substringRegex;
+              var config = Settings.findOne({});
+              var strs = config.countries;
+              matches = [];
+              substrRegex = new RegExp(q, 'i');
+              $.each(strs, function(i, str) {
+                if (substrRegex.test(str.value)) {
+                  matches.push(str);
+                }
+              });
+
+              cb(matches);
+            }
+          }
+        }
+      }
   },
   languages: {
       type: [String],
-      optional: true
+      optional: true,
+  },
+  'languages.$': {
+      type: String,
+      autoform: {
+        type: "typeahead",
+        afFieldInput: {
+          typeaheadOptions: {
+            minLength: 3
+          },
+          typeaheadDatasets: {
+            source: function findMatches(q, cb) {
+              var matches, substringRegex;
+              var config = Settings.findOne({});
+              var strs = config.languages;
+              matches = [];
+              substrRegex = new RegExp(q, 'i');
+              $.each(strs, function(i, str) {
+                if (substrRegex.test(str.value)) {
+                  matches.push(str);
+                }
+              });
+
+              cb(matches);
+            }
+          }
+        }
+      }
   },
   picture: {
       type: String,

@@ -124,9 +124,17 @@ Router.route('/users/:_id', {
 Router.route('/users/:_id/edit', {
   name: 'userEdit',
   onBeforeAction: mustBeThisUser,
+  waitOn: function(){
+    return [Meteor.subscribe("Settings"), Meteor.subscribe('User',this.params._id)];
+  },
+  data: function(){
+    return {
+      user: Meteor.users.findOne({_id: this.params._id}),
+      config: Settings.findOne({})
+    }
+  },
   action: function () {
-    var userObj = Meteor.users.findOne({_id: this.params._id});
-    this.render('userEdit', {data: userObj});
+    this.render('userEdit');
     SEO.set({ title: 'Edit User - ' + Meteor.App.NAME });
   }
 });

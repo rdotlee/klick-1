@@ -17,6 +17,21 @@ Settings.attachSchema(
         }
       }
     },
+    languages: {
+      type: [Object],
+      label: 'Languages',
+      optional: true,
+    },
+    countries: {
+      type: [Object],
+      label: 'Countries',
+      optional: true,
+    },
+    companies: {
+      type: [String],
+      label: 'Companies',
+      optional: true,
+    }
   })
 );
 
