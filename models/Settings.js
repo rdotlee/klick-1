@@ -12,7 +12,7 @@ Settings.attachSchema(
       autoform: {
         options: function () {
           return _.map(Meteor.users.find().fetch(), function (user) {
-            return {label: user.username, value: user._id};
+            return {label: user.profile.firstName + " " + user.profile.lastName, value: user._id};
           });
         }
       }
@@ -22,16 +22,31 @@ Settings.attachSchema(
       label: 'Languages',
       optional: true,
     },
+    'languages.$.value': {
+      type: String,
+      label: 'Name',
+      optional: true,
+    },
     countries: {
       type: [Object],
       label: 'Countries',
       optional: true,
     },
+    'countries.$.value': {
+      type: String,
+      label: 'Name',
+      optional: true,
+    },
     companies: {
-      type: [String],
+      type: [Object],
       label: 'Companies',
       optional: true,
-    }
+    },
+    'companies.$.value': {
+      type: String,
+      label: 'Name',
+      optional: true,
+    },
   })
 );
 

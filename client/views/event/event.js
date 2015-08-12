@@ -33,7 +33,7 @@ Template['event'].helpers({
       for (var i = groups.length - 1;i >= 0; i--) {
         var usersIndex = groups[i].indexOf(Meteor.userId());
         if(usersIndex !== -1){
-          group = this.eventData.groups[i];
+          group = groups[i];
           group.splice(usersIndex,1);
           break;
         }

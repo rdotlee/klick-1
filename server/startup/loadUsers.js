@@ -25,7 +25,7 @@ function loadSettings(settings){
 }
 
 function loadAreas(area) {
-  var alreadyExists = typeof Areas.findOne({ label : area.label }) === 'object';
+  var alreadyExists = typeof Areas.findOne({ name : area.name }) === 'object';
   if (!alreadyExists) {
     Areas.insert(area)
   }
@@ -35,7 +35,7 @@ function loadEvent(event,i) {
   var alreadyExists = typeof Events.findOne({ title : event.title }) === 'object';
 
   if (!alreadyExists) {
-    var area = Areas.findOne({label: event.area});
+    var area = Areas.findOne({name: event.area});
     if(area){
       event.area = area._id;
     }

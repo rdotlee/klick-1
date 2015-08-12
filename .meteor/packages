@@ -26,7 +26,6 @@ tsega:bootstrap3-datetimepicker@=3.1.3_3
 mrt:moment-timezone
 aldeed:autoform-bs-datetimepicker
 accounts-facebook
-pauli:accounts-linkedin
 stevezhu:fbgraph
 jparker:gravatar
 khamoud:linkedin-api
@@ -44,3 +43,5 @@ accounts-google
 vazco:universe-autoform-select
 comerc:bs-typeahead
 comerc:autoform-typeahead
+yogiben:autoform-modals
+aslagle:reactive-table
