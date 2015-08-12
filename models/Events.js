@@ -166,10 +166,10 @@ if (Meteor.isServer) {
       var newUser = modifier.$addToSet.users;
       users.push(newUser);
       if(doc.manualSort || moment().add(config.release_frame, 'days').isAfter(doc.date)){
-        console.log('Manual grouping add')
+        console.log('Adding, Manual grouping add or within release')
         new_groups = Groups.addToGroup(doc.groups,modifier.$addToSet.users, doc.groupLimit);
       } else {
-        console.log('Random grouping add')
+        console.log('Adding, Random grouping add')
         new_groups = Groups.addToRandomGroup(users, doc.groupLimit);
       }
       Meteor.users.update(modifier.$addToSet.users, {$addToSet: {klicks: doc._id}});
@@ -190,7 +190,8 @@ if (Meteor.isServer) {
       new_groups = Groups.shuffleIntoGroups(users, modifier.$set.groupLimit)
     }
 
-    if(modifier.$set && !modifier.$set.manualSort && doc.manualSort){
+    if(modifier.$set && modifier.$set.manualSort === false && doc.manualSort){
+      console.log('Reshuffling groups for pref change')
       new_groups = Groups.shuffleIntoGroups(users, doc.groupLimit)
     }
 

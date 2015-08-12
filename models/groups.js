@@ -6,10 +6,14 @@ Groups.addToGroup = function(groups, user, groupLimit) {
     groups.push([user]);
   } else {
     var target;
+    console.log("Limit: " +groupLimit)
+    console.log(groups)
     _.each(groups, function(group, index){
+      console.log("G l: " +group.length)
       if(group.length < groupLimit) target = index;
     });
-    if(target){
+    console.log("Index: " +target)
+    if(target < groups.length){
       groups[target].push(user)
     } else {
       groups.push([user]);
@@ -22,6 +26,7 @@ Groups.removeFromGroup = function(groups, user, groupLimit) {
   for (var i = groups.length - 1; i >= 0; i--) {
     groups[i] = _.filter(groups[i], function(id){ return id !== user});
   };
+  groups = groups.filter(function(group){return group.length > 0});
   return groups;
 }
 
@@ -36,6 +41,7 @@ Groups.removeFromRandomGroup = function(users, groupLimit) {
 //User IDS
 Groups.shuffleIntoGroups = function(users, groupLimit){
   var numGroups = Math.ceil(users.length/groupLimit);
+  console.log("Number of groups "+ numGroups)
   var users = Meteor.users.find({_id: {$in: users}}).fetch();
   var dM = generateDMatrix(users);
   var groups = new Array(numGroups);
@@ -53,7 +59,7 @@ Groups.shuffleIntoGroups = function(users, groupLimit){
         insertEnd = true;
       } else {
         var gD = Groups.getGroupDistance(groups[gi].concat([user]), dM);
-        if(gD > bestFitDistance){
+        if(gD > bestFitDistance && groups[gi].length < groupLimit){
           bestFitDistance = gD;
           bestFit = gi;
         }
@@ -65,9 +71,11 @@ Groups.shuffleIntoGroups = function(users, groupLimit){
     }
   }
 
-   var group_by_id = groups.map(function(group){
+  var group_by_id = groups.map(function(group){
     return group.map(function(user){return user._id})
-   });
+  });
+
+  group_by_id = group_by_id.filter(function(group){return group.length > 0});
   return group_by_id;
 }
 
