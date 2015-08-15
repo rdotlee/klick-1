@@ -27,22 +27,32 @@ Settings.attachSchema(
       label: 'Name',
       optional: true,
     },
-    countries: {
+    education: {
       type: [Object],
       label: 'Countries',
       optional: true,
     },
-    'countries.$.value': {
+    'education.$.value': {
       type: String,
       label: 'Name',
       optional: true,
     },
-    companies: {
+    organizations: {
       type: [Object],
       label: 'Companies',
       optional: true,
     },
-    'companies.$.value': {
+    'organizations.$.value': {
+      type: String,
+      label: 'Name',
+      optional: true,
+    },
+    nationalities: {
+      type: [Object],
+      label: 'Companies',
+      optional: true,
+    },
+    'nationalities.$.value': {
       type: String,
       label: 'Name',
       optional: true,
@@ -55,18 +65,10 @@ Settings.attachSchema(
 if (Meteor.isServer) {
   Settings.allow({
     insert : function (userId, doc) {
-      if(userId == doc._id || Roles.userIsInRole(userId, ['admin'])){
-        return true;
-      } else {
-        return false;
-      }
+      return true;
     },
     update : function (userId, doc) {
-      if(userId == doc._id || Roles.userIsInRole(userId, ['admin'])){
-        return true;
-      } else {
-        return false;
-      }
+      return true;
     },
     remove : function (userId, doc) {
       if(userId == doc._id || Roles.userIsInRole(userId, ['admin'])){

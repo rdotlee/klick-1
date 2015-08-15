@@ -66,4 +66,20 @@ Meteor.startup(function () {
     i++;
   }
 
+  if (ServiceConfiguration.configurations.find({service: 'facebook'}).count()===0) {
+    ServiceConfiguration.configurations.insert({
+      service: "facebook",
+      appId: "1443500655956235",
+      secret: "d343eb1dec70cea878b6055d97a18dfe"
+    });
+  }
+
+  if (ServiceConfiguration.configurations.find({service: 'google'}).count()===0) {
+    ServiceConfiguration.configurations.insert({
+      service: "google",
+      clientId: "163904196918-2j85kll0sg7c2em0nmbh01qkbct5duu1.apps.googleusercontent.com",
+      secret: "mvsD9msqm2hTUXWo152s5hji"
+    });
+  }
+
 });

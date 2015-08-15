@@ -17,11 +17,6 @@ var UserProfile = new SimpleSchema({
       allowedValues: ['male', 'female'],
       optional: true
   },
-  organization : {
-      type: String,
-      regEx: /^[a-z0-9A-z .]{3,30}$/,
-      optional: true
-  },
   website: {
       type: String,
       regEx: SimpleSchema.RegEx.Url,
@@ -31,15 +26,93 @@ var UserProfile = new SimpleSchema({
       type: String,
       optional: true
   },
-  country: {
-      type: String,
-      label: 'Home country',
+  gradYear: {
+      type: Number,
       optional: true,
+      label: 'Class of',
+      min: 2000
+  },
+  program: {
+      type: String,
+      optional: true,
+      label: 'Kellogg Program',
+      allowedValues: ['MMM', 'ONE-YEAR MBA', 'TWO-YEAR MBA'],
+  },
+  organizations: {
+      type: [String],
+      optional: true,
+      label: 'Companies and Organizations',
+  },
+  'organizations.$': {
+      type: String,
+      autoform: {
+        type: "typeahead",
+        afFieldInput: {
+          typeaheadOptions: {
+            minLength: 1
+          },
+          typeaheadDatasets: {
+            source: function findMatches(q, cb) {
+              var matches, substringRegex;
+              var config = Settings.findOne({});
+              var strs = config.organizations;
+              if (!strs) return;
+              matches = [];
+              substrRegex = new RegExp(q, 'i');
+              $.each(strs, function(i, str) {
+                if (substrRegex.test(str.value)) {
+                  matches.push(str);
+                }
+              });
+
+              cb(matches);
+            }
+          }
+        }
+      }
+  },
+  education: {
+      type: [String],
+      optional: true,
+  },
+  'education.$': {
+      type: String,
       autoform: {
         type: "typeahead",
         afFieldInput: {
           typeaheadOptions: {
             minLength: 3
+          },
+          typeaheadDatasets: {
+            source: function findMatches(q, cb) {
+              var matches, substringRegex;
+              var config = Settings.findOne({});
+              var strs = config.education;
+              matches = [];
+              substrRegex = new RegExp(q, 'i');
+              $.each(strs, function(i, str) {
+                if (substrRegex.test(str.value)) {
+                  matches.push(str);
+                }
+              });
+
+              cb(matches);
+            }
+          }
+        }
+      }
+  },
+  nationalities: {
+      type: [String],
+      optional: true,
+  },
+  'nationalities.$': {
+      type: String,
+      autoform: {
+        type: "typeahead",
+        afFieldInput: {
+          typeaheadOptions: {
+            minLength: 2
           },
           typeaheadDatasets: {
             source: function findMatches(q, cb) {
@@ -182,9 +255,21 @@ if (Meteor.isServer) {
     }
   });
 
+  Accounts.validateNewUser(function (user) {
+    var email_regex = new RegExp("^[A-Z0-9._%+-]+@[A-Z0-9._%+-]*northwestern\.edu$","i"); 
+    if (user.emails.length >= 1){
+      for (var i = user.emails.length - 1; i >= 0; i--) {
+        if(email_regex.test(user.emails[i].address)) {
+          return true;
+        }
+      }
+    }
+    throw new Meteor.Error(403, "You must use a Northwestern University Email");
+  });
+
   Accounts.onCreateUser(function(options, user) {
-    // console.log(options);
-    // console.log(user);
+    console.log(options)
+    console.log(user)
     if(!user.emails){
         user.emails = [];
     }
@@ -193,10 +278,6 @@ if (Meteor.isServer) {
     user.profile.lastName = options.profile.lastName;
     if(user.services && user.services.facebook){
       user = getFacebookProfile(user);
-      user.username = options.email;
-    } else if (user.services && user.services.linkedin) {
-      user = getLinkedinProfile(user);
-      user.username = options.email;
     } else if (user.services && user.services.google) {
       user.username = user.services.google.email;
       user.emails.push({address: user.services.google.email, verified: false});
@@ -204,17 +285,17 @@ if (Meteor.isServer) {
       user.profile.firstName = user.services.google.given_name;
       user.profile.lastName = user.services.google.family_name;
     } else {
+      user.username = options.email;
       user.profile.picture = Gravatar.imageUrl(options.email,{
         size: 200,
         default: 'mm'
       });
     }
-    console.log(user);
     return user;
   });
 
   function getFacebookProfile(user){
-    user.username = user.services.facebook.first_name; 
+    user.username = user.services.facebook.email; 
     user.profile.firstName = user.services.facebook.first_name;
     user.profile.lastName = user.services.facebook.last_name;
     user.profile.gender = user.services.facebook.gender;
@@ -228,12 +309,5 @@ if (Meteor.isServer) {
     return user;
   }
 
-  function getLinkedinProfile(user){
-    var linkedin = Linkedin().init(user.services.linkedin.accessToken);
-    linkedin.people.me(function(err, $in) {
-        user.profile.picture = me['picture-url'];
-    });
-    return user;
-  }
 
 }

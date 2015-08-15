@@ -1,5 +1,5 @@
 user_admin:
-  email: admin@test.com
+  email: admin@northwestern.edu
   password: testtest
   profile:
     firstName: Bob
@@ -8,7 +8,7 @@ user_admin:
   roles: 
     - admin
 user_test1:
-  email: test1@test.com
+  email: test1@northwestern.edu
   password: testtest
   profile:
     firstName: Sally
@@ -17,7 +17,7 @@ user_test1:
   roles:
     - user
 user_test2:
-  email: test2@test.com
+  email: test2@northwestern.edu
   password: testtest
   profile:
     firstName: Bill
@@ -26,7 +26,7 @@ user_test2:
   roles:
     - user
 user_test3:
-  email: test3@test.com
+  email: test3@northwestern.edu
   password: testtest
   roles:
     - user
@@ -35,7 +35,7 @@ user_test3:
     lastName: Apple
     gender: female
 user_test4:
-  email: test4@test.com
+  email: test4@northwestern.edu
   password: testtest
   roles:
     - user
@@ -44,7 +44,7 @@ user_test4:
     lastName: Apt
     gender: female
 user_test5:
-  email: test5@test.com
+  email: test5@northwestern.edu
   password: testtest
   roles:
     - user
@@ -53,7 +53,7 @@ user_test5:
     lastName: Ross
     gender: male
 user_test6:
-  email: test6@test.com
+  email: test6@northwestern.edu
   password: testtest
   roles:
     - user
