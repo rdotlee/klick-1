@@ -19,8 +19,53 @@
             {{/if}}
             </blockquote>
             <p>
-              <b>Birthday:</b> {{formatDate profile.birthday}}<br>
-              <b>Gender:</b> {{profile.gender}}<br>
+              {{#if profile.birthday}}
+                <b>Birthday:</b> {{formatDate profile.birthday}}<br>
+              {{/if}}
+              {{#if profile.gender}}
+                <b>Gender:</b> {{profile.gender}}<br>
+              {{/if}}
+              {{#if profile.website}}
+                <b>Website:</b> {{profile.website}}<br>
+              {{/if}}
+              {{#if profile.program}}
+                <b>Program:</b> {{profile.program}}<br>
+              {{/if}}
+              {{#if profile.gradYear}}
+                <b>Class of:</b> {{profile.gradYear}}<br>
+              {{/if}}
+              {{#if profile.organizations}}
+                <b>Companies and Organizations:</b>
+                <ul>
+                  {{#each profile.organizations}}
+                    <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+              {{#if profile.education}}
+                <b>Education:</b>
+                <ul>
+                  {{#each profile.education}}
+                    <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+              {{#if profile.nationalities}}
+                <b>Nationalities:</b>
+                <ul>
+                  {{#each profile.nationalities}}
+                    <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              {{/if}}
+              {{#if profile.languages}}
+                <b>Languages:</b>
+                <ul>
+                  {{#each profile.languages}}
+                    <li>{{this}}</li>
+                  {{/each}}
+                </ul>
+              {{/if}}
             </p>
           </div>  
         </div> 
