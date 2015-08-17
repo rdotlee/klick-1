@@ -26,7 +26,7 @@ Template['arrangeGroups'].events({
     Events.update(this._id, {$set: {manualSort: false}});
     toggleGroupMode();
     Session.set('new_groups',this.groups);
-    Router.go('eventEdit', this);
+    Router.go('event', this);
   },
   'click #manual-group': function(event, template){
     Events.update(this._id, {$set: {manualSort: true}});
@@ -47,7 +47,7 @@ Template['arrangeGroups'].events({
 
 Template['arrangeGroups'].onRendered(function(){
   _.each(this.data.groups,function(group, index){
-    var rScore = Groups.getGroupDistance(group);
+    var rScore = Groups.getGroupDistanceFromIDs(group);
     Session.set((index+1).toString(), rScore);
   })
 
@@ -72,8 +72,8 @@ Template['arrangeGroups'].onRendered(function(){
         Session.set('new_groups', new_groups);
         console.log(new_groups)
 
-        Session.set((fromTable).toString(), Groups.getGroupDistance(new_groups[fromTable-1]));
-        Session.set((toTable).toString(), Groups.getGroupDistance(new_groups[toTable-1]));
+        Session.set((fromTable).toString(), Groups.getGroupDistanceFromIDs(new_groups[fromTable-1]));
+        Session.set((toTable).toString(), Groups.getGroupDistanceFromIDs(new_groups[toTable-1]));
       },
     });
     sortTables.push(sortTable);

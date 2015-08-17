@@ -9,10 +9,8 @@ Groups.addToGroup = function(groups, user, groupLimit) {
     console.log("Limit: " +groupLimit)
     console.log(groups)
     _.each(groups, function(group, index){
-      console.log("G l: " +group.length)
       if(group.length < groupLimit) target = index;
     });
-    console.log("Index: " +target)
     if(target < groups.length){
       groups[target].push(user)
     } else {
@@ -79,6 +77,14 @@ Groups.shuffleIntoGroups = function(users, groupLimit){
   return group_by_id;
 }
 
+Groups.getGroupDistanceFromIDs = function(group){
+  console.log(group);
+  var users = Meteor.users.find({_id: {$in: group}}).fetch();
+  var gD = Groups.getGroupDistance(users);
+  console.log('group distance is: ' + gD);
+  return gD;
+}
+
 //User objects
 Groups.getGroupDistance = function(group, matrix){
   var total = 0;
@@ -136,11 +142,22 @@ function shuffleArray(array) {
 
 //User objects
 Groups.userDistance = function(userA, userB) {
-  var genderD = 0;
+  if (userA._id === userB._id) return 0;
   if(!userA.profile || !userB.profile) return 100;
-  if (userA.profile.gender !== userB.profile.gender) genderD = 1;
 
-  var distance = genderD;
+  console.log('\n====================================\n\nComparing:')
+  console.log(userA.profile)
+  console.log(userB.profile)
+  var distance = 0;
+
+  distance += (userA.profile.gender === userB.profile.gender) ? 0 : 1;
+
+  if (userA.profile.gradYear && userB.profile.gradYear) {
+    distance += Math.abs(userA.profile.gradYear - userB.profile.gradYear);
+  }
+
+  console.log('\nDistance: ' + distance);
+  console.log('\n====================================\n')
   return distance;
 }
 

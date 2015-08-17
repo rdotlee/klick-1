@@ -1,7 +1,8 @@
 function loadUser(user) {
   var userAlreadyExists = typeof Meteor.users.findOne({ emails: { $elemMatch: { address: user.email } } }) === 'object';
-
   if (!userAlreadyExists) {
+    console.log('=======================================\n\n');
+    console.log(user.email);
     var id;
 
     id = Accounts.createUser(user);
@@ -9,7 +10,13 @@ function loadUser(user) {
     if (user.roles.length > 0) {
       Roles.addUsersToRoles(id, user.roles);
     }
-
+    console.log(Meteor.users.findOne({_id: id}));
+    Events.find().forEach(function(eventOb){
+      console.log('Adding user to event: ' + eventOb.title);
+      Events.update(eventOb._id,{
+        $addToSet: {users: id},
+      })
+    })
   }
 }
 
@@ -45,14 +52,11 @@ function loadEvent(event,i) {
 }
 
 Meteor.startup(function () {
-  var users = YAML.eval(Assets.getText('users.yml'));
+  
   var settings = YAML.eval(Assets.getText('settings.yml'));
   var areas = YAML.eval(Assets.getText('areas.yml'));
   var events = YAML.eval(Assets.getText('events.yml'));
-
-  for (key in users) if (users.hasOwnProperty(key)) {
-    loadUser(users[key]);
-  }
+  var users = YAML.eval(Assets.getText('users.yml'));
 
   loadSettings(settings);
 
@@ -64,6 +68,10 @@ Meteor.startup(function () {
   for (key in events) if (events.hasOwnProperty(key)) {
     loadEvent(events[key], i);
     i++;
+  }
+
+  for (key in users) if (users.hasOwnProperty(key)) {
+    loadUser(users[key]);
   }
 
   if (ServiceConfiguration.configurations.find({service: 'facebook'}).count()===0) {

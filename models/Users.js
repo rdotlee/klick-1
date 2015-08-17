@@ -268,14 +268,10 @@ if (Meteor.isServer) {
   });
 
   Accounts.onCreateUser(function(options, user) {
-    console.log(options)
-    console.log(user)
     if(!user.emails){
         user.emails = [];
     }
-    user.profile = {};
-    user.profile.firstName = options.profile.firstName;
-    user.profile.lastName = options.profile.lastName;
+    user.profile = options.profile || {};
     if(user.services && user.services.facebook){
       user = getFacebookProfile(user);
     } else if (user.services && user.services.google) {

@@ -1,30 +1,33 @@
 user_admin:
   email: admin@northwestern.edu
   password: testtest
+  roles: 
+    - admin
   profile:
     firstName: Bob
     lastName: Smith
-    gender: male
-  roles: 
-    - admin
+    gender: "male"
+    gradYear: 2016
 user_test1:
   email: test1@northwestern.edu
   password: testtest
+  roles:
+    - user
   profile:
     firstName: Sally
     lastName: Apt
-    gender: female
-  roles:
-    - user
+    gender: "female"
+    gradYear: 2015
 user_test2:
   email: test2@northwestern.edu
   password: testtest
+  roles:
+    - user
   profile:
     firstName: Bill
     lastName: Ross
-    gender: male
-  roles:
-    - user
+    gender: "male"
+    gradYear: 2014
 user_test3:
   email: test3@northwestern.edu
   password: testtest
@@ -33,7 +36,8 @@ user_test3:
   profile:
     firstName: Kelly
     lastName: Apple
-    gender: female
+    gender: "female"
+    gradYear: 2016
 user_test4:
   email: test4@northwestern.edu
   password: testtest
@@ -42,7 +46,7 @@ user_test4:
   profile:
     firstName: Vickie
     lastName: Apt
-    gender: female
+    gender: "female"
 user_test5:
   email: test5@northwestern.edu
   password: testtest
@@ -51,7 +55,7 @@ user_test5:
   profile:
     firstName: Connor
     lastName: Ross
-    gender: male
+    gender: "male"
 user_test6:
   email: test6@northwestern.edu
   password: testtest
@@ -60,4 +64,4 @@ user_test6:
   profile:
     firstName: Jenny
     lastName: Apple
-    gender: female
+    gender: "female"
