@@ -49,7 +49,7 @@ Settings.attachSchema(
     },
     nationalities: {
       type: [Object],
-      label: 'Companies',
+      label: 'Companies or Orgs',
       optional: true,
     },
     'nationalities.$.value': {

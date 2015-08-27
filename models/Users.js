@@ -299,9 +299,10 @@ if (Meteor.isServer) {
     user.emails.push({address: user.services.facebook.email, verified: false});
 
     FBGraph.setAccessToken(user.services.facebook.accessToken);
-    FBGraph.get("me/picture?type=large", function(err, res) {
-        user.profile.picture = res.location;
-    });
+    var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
+    var results = fb_get("me/picture?type=large");
+    console.log(results)
+    user.profile.picture = results.location;
     return user;
   }
 
