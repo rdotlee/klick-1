@@ -33,4 +33,8 @@ Template['eventCard'].events({
   "click #delete": function (event, template) {
     Events.remove(this._id);
   },
+  'click #login_click': function (event, template) {
+    console.log('click')
+    $('#login-dropdown-list').addClass('open');
+  }
 });
