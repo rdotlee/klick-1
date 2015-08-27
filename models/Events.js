@@ -208,6 +208,7 @@ if (Meteor.isServer) {
     var config = Settings.findOne({});
     var calendarOwner = Meteor.users.findOne(config.calendarOwner);
     if(calendarOwner){
+      console.log(calendarOwner)
       var endDate = moment(doc.date).add(1, 'hours').toDate();
       var options = {
         user: calendarOwner,
@@ -228,6 +229,8 @@ if (Meteor.isServer) {
       };
 
       GoogleApi.post('calendar/v3/calendars/primary/events', options, function(res, data){
+        console.log(res)
+        console.log(data)
         var calId = data.id;
         Events.update(doc._id, {$set: {gcalId: calId}});
       });
@@ -235,6 +238,7 @@ if (Meteor.isServer) {
   })
 
   Events.after.update(function (userId, doc, fieldNames, modifier, options) {
+    console.log('\n\n===========================================\n===========================================');
     console.log('\n\nUpdating event to: ')
     console.log(doc);
 
@@ -259,10 +263,10 @@ if (Meteor.isServer) {
           summary: doc.title,
           attendees: invited,
           start: {
-            dateTime: doc.date
+            dateTime: moment(doc.date).format("YYYY-MM-DDTHH:mm:ssZ")
           },
           end: {
-            dateTime: endDate
+            dateTime: moment(endDate).format("YYYY-MM-DDTHH:mm:ssZ")
           },
           anyoneCanAddSelf: false,
           guestsCanSeeOtherGuests: false,
@@ -272,7 +276,7 @@ if (Meteor.isServer) {
         }
       };
 
-      GoogleApi.post('calendar/v3/calendars/primary/events' + doc.gcalId, options, function(res, data){
+      GoogleApi.patch('calendar/v3/calendars/primary/events/' + doc.gcalId+'?sendNotifications=true', options, function(res, data){
         console.log(res, data);
       });
     }
@@ -288,7 +292,7 @@ if (Meteor.isServer) {
         }
       };
 
-      GoogleApi.delete('calendar/v3/calendars/primary/events' + doc.gcalId, options, function(res, data){
+      GoogleApi.delete('calendar/v3/calendars/primary/events' + doc.gcalId +'?sendNotifications=true', options, function(res, data){
         console.log(res, data);
       });
     }

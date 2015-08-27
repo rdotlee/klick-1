@@ -78,10 +78,8 @@ Groups.shuffleIntoGroups = function(users, groupLimit){
 }
 
 Groups.getGroupDistanceFromIDs = function(group){
-  console.log(group);
   var users = Meteor.users.find({_id: {$in: group}}).fetch();
   var gD = Groups.getGroupDistance(users);
-  console.log('group distance is: ' + gD);
   return gD;
 }
 
@@ -150,11 +148,13 @@ Groups.userDistance = function(userA, userB) {
   console.log(userB.profile)
   var distance = 0;
 
-  distance += (userA.profile.gender === userB.profile.gender) ? 0 : 1;
+  distance += (userA.profile.gender === userB.profile.gender) ? 0 : 10;
 
   if (userA.profile.gradYear && userB.profile.gradYear) {
     distance += Math.abs(userA.profile.gradYear - userB.profile.gradYear);
   }
+
+  distance += (userA.profile.program === userB.profile.program) ? 0 : 10;
 
   console.log('\nDistance: ' + distance);
   console.log('\n====================================\n')

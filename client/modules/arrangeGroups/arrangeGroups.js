@@ -17,7 +17,8 @@ Template['arrangeGroups'].helpers({
   },
 
   randomnessScore: function(tableID){
-    return Session.get(tableID.toString());
+    var num = Session.get(tableID.toString());
+    return Math.ceil(num)
   },
 });
 

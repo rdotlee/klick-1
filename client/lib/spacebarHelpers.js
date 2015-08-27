@@ -69,3 +69,7 @@ Template.registerHelper('repeat', function(times) {
     }
     return countArr;
 });
+
+Template.registerHelper('twoDecimals', function(num) {
+  return Math.round(num * 100) / 100;
+});

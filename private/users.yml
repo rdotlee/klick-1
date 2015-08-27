@@ -8,6 +8,7 @@ user_admin:
     lastName: Smith
     gender: "male"
     gradYear: 2016
+    program: 'MMM'
 user_test1:
   email: test1@northwestern.edu
   password: testtest
@@ -18,6 +19,7 @@ user_test1:
     lastName: Apt
     gender: "female"
     gradYear: 2015
+    program: 'TWO-YEAR MBA'
 user_test2:
   email: test2@northwestern.edu
   password: testtest
@@ -28,6 +30,7 @@ user_test2:
     lastName: Ross
     gender: "male"
     gradYear: 2014
+    program: 'MMM'
 user_test3:
   email: test3@northwestern.edu
   password: testtest
@@ -38,6 +41,7 @@ user_test3:
     lastName: Apple
     gender: "female"
     gradYear: 2016
+    program: 'ONE-YEAR MBA'
 user_test4:
   email: test4@northwestern.edu
   password: testtest
@@ -47,6 +51,7 @@ user_test4:
     firstName: Vickie
     lastName: Apt
     gender: "female"
+    program: 'MMM'
 user_test5:
   email: test5@northwestern.edu
   password: testtest
@@ -65,3 +70,4 @@ user_test6:
     firstName: Jenny
     lastName: Apple
     gender: "female"
+    program: 'ONE-YEAR MBA'

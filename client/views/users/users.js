@@ -5,6 +5,20 @@ Template['users'].helpers({
     } else {
       return false;
     }
+  },
+
+  settings: function () {
+      return {
+          collection: Meteor.users,
+          rowsPerPage: 10,
+          showFilter: false,
+          fields: [
+            {key:'name', label:'Name', tmpl: Template.users_name},
+            {key:'username', label:'Email'},
+            {key:'klicks', label:'# of klicks', fn: function(value, object){return object.klicks ? object.klicks.length : 0;}},
+            {key:'settings', label:'Settings', tmpl: Template.user_settings},
+          ]
+      };
   }
 });
 
@@ -21,4 +35,14 @@ Template['users'].events({
     Meteor.users.remove({_id:this._id}) ;
   },
 
+});
+
+Template['user_settings'].helpers({
+  isRole: function(user, role){
+    if(Roles.userIsInRole(user,[role])){
+      return true;
+    } else {
+      return false;
+    }
+  }
 });
