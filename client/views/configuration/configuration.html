@@ -18,7 +18,67 @@
       </div>
       <div class="col-md-8">
         <h3>Settings</h3>
-        {{> quickForm collection="Settings" doc=settings id="updateEventForm" type="update"}}
+        <p>
+          {{#autoForm collection="Settings" id="updateEventForm"  doc=settings type="update"}}
+            {{> afQuickField name='release_frame'}}
+            {{> afQuickField name='calendarOwner'}}
+            <button type="submit" class="btn btn-primary">Update</button>
+          {{/autoForm}}
+        </p>
+        <p>
+          {{#afModal 
+            class="btn btn-primary" 
+            collection="Settings"
+            doc=settings._id
+            omitFields="release_frame,calendarOwner,education,organizations,nationalities" 
+            operation="update" 
+            buttonContent="Update Languages" 
+            prompt="These languages autocomplete the user profile field" title="Update Languages" buttonClasses="btn btn-success"
+          }}
+            Update Languages Database
+          {{/afModal}}
+        </p>
+        <p>
+          {{#afModal 
+            class="btn btn-primary" 
+            collection="Settings"
+            doc=settings._id
+            omitFields="release_frame,calendarOwner,languages,organizations,nationalities" 
+            operation="update" 
+            buttonContent="Update Schools" 
+            prompt="These schools autocomplete the user profile field" title="Update Schools" buttonClasses="btn btn-success"
+          }}
+            Update Education Database
+          {{/afModal}}
+        </p>
+        <p>
+          {{#afModal 
+            class="btn btn-primary" 
+            collection="Settings"
+            doc=settings._id
+            omitFields="release_frame,calendarOwner,languages,organizations,education" 
+            operation="update" 
+            buttonContent="Update Countries" 
+            prompt="These countries autocomplete the user profile field" title="Update Countries" buttonClasses="btn btn-success"
+          }}
+            Update Nationalities Database
+          {{/afModal}}
+        </p>
+        <p>
+          {{#afModal 
+            class="btn btn-primary" 
+            collection="Settings"
+            doc=settings._id
+            omitFields="release_frame,calendarOwner,languages,nationalities,education" 
+            operation="update" 
+            buttonContent="Update Organizations and Companies" 
+            prompt="These Organizations and Companies autocomplete the user profile field" 
+            title="Update Organizations and Companies" 
+            buttonClasses="btn btn-success"
+          }}
+            Update Organizations and Companies Database
+          {{/afModal}}
+        </p>
       </div>
     </div>
   </div>

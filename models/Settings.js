@@ -29,7 +29,7 @@ Settings.attachSchema(
     },
     education: {
       type: [Object],
-      label: 'Countries',
+      label: 'Schools',
       optional: true,
     },
     'education.$.value': {
