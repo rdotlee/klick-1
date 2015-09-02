@@ -10,7 +10,8 @@ var UserProfile = new SimpleSchema({
   },
   birthday: {
       type: Date,
-      optional: true
+      optional: true,
+      defaultValue: new Date(),
   },
   gender: {
       type: String,
@@ -19,7 +20,6 @@ var UserProfile = new SimpleSchema({
   },
   website: {
       type: String,
-      regEx: SimpleSchema.RegEx.Url,
       optional: true
   },
   bio: {
@@ -30,13 +30,23 @@ var UserProfile = new SimpleSchema({
       type: Number,
       optional: true,
       label: 'Class of',
-      min: 2000
+      min: 2000,
+      autoform: {
+        options: function () {
+          var options = [];
+          for (var i = 4 - 1; i >= 0; i--) {
+            var year = moment().year() + i;
+            options.push({label: year, value: year});
+          };
+          return options;
+        }
+      }
   },
   program: {
       type: String,
       optional: true,
       label: 'Kellogg Program',
-      allowedValues: ['MMM', 'ONE-YEAR MBA', 'TWO-YEAR MBA'],
+      allowedValues: ['MMM', 'One-year MBA', 'Two-year MBA', 'JDMBA', 'MDMBA', 'Part-time', 'Executive', 'JV'],
   },
   organizations: {
       type: [String],

@@ -7,6 +7,7 @@ Template['userEdit'].events({
 Template['userEdit'].onRendered(function(){
   AutoForm.addHooks('updateUserForm', {
     onSuccess: function (formType, result) {
+      console.log(this.updateDoc.$set)
       var profileSet = this.updateDoc.$set;
       var config = Settings.findOne({});
       addToConfig(profileSet,'organizations',config);

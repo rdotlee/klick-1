@@ -5,6 +5,7 @@ accounts-oauth@1.1.5
 accounts-password@1.1.1
 alanning:roles@1.2.13
 aldeed:autoform@5.4.0
+aldeed:autoform-bs-datepicker@1.1.1
 aldeed:autoform-bs-datetimepicker@1.0.6
 aldeed:collection2@2.3.3
 aldeed:delete-button@1.0.0
@@ -86,6 +87,7 @@ observe-sequence@1.0.6
 ordered-dict@1.0.3
 percolate:google-api@1.0.2
 raix:handlebar-helpers@0.2.4
+rajit:bootstrap3-datepicker@1.4.1
 random@1.0.3
 reactive-dict@1.1.0
 reactive-var@1.0.5

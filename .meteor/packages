@@ -47,3 +47,5 @@ aslagle:reactive-table
 service-configuration
 aldeed:delete-button
 ian:accounts-ui-bootstrap-3
+aldeed:autoform-bs-datepicker
+rajit:bootstrap3-datepicker

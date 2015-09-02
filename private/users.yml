@@ -29,7 +29,7 @@ user_test2:
     firstName: Bill
     lastName: Ross
     gender: "male"
-    gradYear: 2014
+    gradYear: 2017
     program: 'MMM'
 user_test3:
   email: test3@northwestern.edu

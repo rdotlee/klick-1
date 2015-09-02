@@ -55,7 +55,7 @@ Template.registerHelper('secondsToDays', function(seconds) {
 });
 
 Template.registerHelper('formatDate', function(date) {
-  return moment(date).format('MM/DD/YYYY');
+  return moment(date).utc().format('MM/DD/YYYY');
 });
 
 Template.registerHelper('formatDateTime', function(date) {
