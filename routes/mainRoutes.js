@@ -7,6 +7,14 @@ Router.route('/', {
   }
 });
 
+Router.route('/signup', {
+  name: 'signup',
+  action: function () {
+    this.render('signup');
+    SEO.set({ title: 'Sign up - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/events', {
   name: 'events',
   waitOn: function(){
@@ -172,5 +180,5 @@ var mustBeAdmin = function(pause){
 }
 
 Router.onBeforeAction(mustBeThisUser, {only: ['userEdit']});
-Router.onBeforeAction(mustBeSignedIn, {except: ['home', 'events']});
+Router.onBeforeAction(mustBeSignedIn, {except: ['home', 'events','signup']});
 //Router.onBeforeAction(goToDashboard, {only: ['home']});

@@ -18,7 +18,6 @@ natestrauser:animate-css
 dburles:collection-helpers
 meteorhacks:fast-render
 
-ian:accounts-ui-bootstrap-3
 alanning:roles
 zimme:active-route
 aldeed:autoform
@@ -47,3 +46,4 @@ yogiben:autoform-modals
 aslagle:reactive-table
 service-configuration
 aldeed:delete-button
+ian:accounts-ui-bootstrap-3
