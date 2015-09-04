@@ -22,9 +22,10 @@ var UserProfile = new SimpleSchema({
       type: String,
       optional: true
   },
-  bio: {
+  Tagline: {
       type: String,
-      optional: true
+      optional: true,
+      label: 'Tagline'
   },
   gradYear: {
       type: Number,
@@ -47,6 +48,18 @@ var UserProfile = new SimpleSchema({
       optional: true,
       label: 'Kellogg Program',
       allowedValues: ['MMM', 'One-year MBA', 'Two-year MBA', 'JDMBA', 'MDMBA', 'Part-time', 'Executive', 'JV'],
+  },
+  section: {
+      type: String,
+      optional: true,
+      label: 'Section',
+      allowedValues: ['2015-1Y-Hedgehogs','2015-1Y-Roadrunners','2015-Big Dawgs','2015-Bucket Heads','2015-Bull Frogs','2015-Cash Cows','2015-Highlanders','2015-Jive Turkeys','2015-Moose','2015-Poets','2016-Big Dawgs','2016-Bucket Heads','2016-Bull Frogs','2016-Cash Cows','2016-Highlanders','2016-Jive Turkeys','2016-Moose','2016-Poets','N/A'],
+  },
+  kwesttrip: {
+      type: String,
+      optional: true,
+      label: 'KWEST Trip',
+      allowedValues: ['Amazing Race-2013','Amazing race-2014','Argentina-2014','Arubacao-2014','Belize-2014','Berlin/Krakow-2014','Bike Holland-2014','Brazil-2013','Chile-2013','Chile-2014','Costa Rica-2014','Croatia-2013','Croatia-2014','Czechoslovakia-2014','Denmark/Austria-2014','Dominican Republic-2013','Ecuador-2014','France-2013','Georgia/Armenia-2014','Greece-2014','Guatemala-2014','Hungary-2014','Iceland-2014','Ireland-2014','Italy-2014','Mystery-2014','Nicaragua-2013','Nicaragua-2014','Oman-2014','Panama-2014','Peru-2013','Peru-2014','Portugal-2014','Puerto Rico-2014','Romania-2013','Romania-2014','South Africa-2013','Spain - Mediterranean-2013','Spain - Northern-2013','Spain Mediterranean-2014','St. Lucia-2014','Sweden-2014','Thailand-2013','Thailand-2014','Turkey-2014','USA Virgin Islands-2013','Vietnam-2014','Zanzibar-2014','N/A'],
   },
   organizations: {
       type: [String],
