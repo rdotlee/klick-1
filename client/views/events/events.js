@@ -24,38 +24,62 @@ Template['events'].helpers({
     },
 
     events: function(){
-      return Events.find();
+      var params = Session.get('eventsParams');
+      return Events.find(params);
     },
 
     ifInArea: function(area, eventArea){
       return area === eventArea;
     },
 
-    filter: function(event){
-      if (Session.get('allEvents')) return true;
-
-      if(event.users && _.indexOf(event.users, Meteor.userId()) != -1){
-        return true;
-      } else {
-        return false;
-      }
-    },
-
-    allEvents: function(){
-      return Session.get('allEvents');
+    isFilter: function(filter){
+      return Session.get('filter') === filter;
     }
 });
 
 Template['events'].events({
   'click #all-events': function(event, template){
-    Session.set('allEvents', true);
+    Session.set('eventsParams', {});
+    Session.set('filter', 'all');
   },
   'click #reg-events': function(event, template){
-    Session.set('allEvents', false);
+    Session.set('filter', 'reg');
+    Session.set('eventsParams', {
+      $and: [
+        {
+          users: {
+            $all: [Meteor.userId()]
+          }
+        },
+        {
+          date: {
+            $gte: moment().toDate()
+          }
+        }
+      ]
+    });
+  },
+  'click #past-events': function(event, template){
+    Session.set('filter', 'past');
+    Session.set('eventsParams', {
+      $and: [
+        {
+          users: {
+            $all: [Meteor.userId()]
+          }
+        },
+        {
+          date: {
+            $lt: moment().toDate()
+          }
+        }
+      ]
+    });
   },
 });
 
 Template['events'].onRendered(function(){
-  Session.set('allEvents', true);
+  Session.set('filter', 'all');
+  Session.set('eventsParams', {});
 })
 

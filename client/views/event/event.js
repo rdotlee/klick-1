@@ -40,6 +40,23 @@ Template['event'].helpers({
       };
     }
     return Meteor.users.find({_id: {$in: group}});
+  },
+  groupEmails: function(){
+    var group = [];
+    var groups = Events.findOne({_id: this.eventData._id}).groups;
+    if (groups) {
+      for (var i = groups.length - 1;i >= 0; i--) {
+        var usersIndex = groups[i].indexOf(Meteor.userId());
+        if(usersIndex !== -1){
+          group = groups[i];
+          group.splice(usersIndex,1);
+          break;
+        }
+      };
+    }
+    return Meteor.users.find({_id: {$in: group}}).fetch().map(function(user){
+      return user.emails[0].address;
+    })
   }
   
 });
@@ -61,6 +78,7 @@ Template['event'].onRendered(function(){
   var now = moment();
   var releaseDate = moment(this.data.eventData.date).subtract(this.data.config.release_frame, 'days');
   var diff = releaseDate.diff(now, 'seconds');
-
+  countdown = new ReactiveCountdown(0);
+  countdown.start();
   countdown.add(diff);
 })

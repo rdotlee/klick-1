@@ -3,9 +3,9 @@
       <div class="share ">
             <ul>
               <li>
-                <a href="/events/{{_id}}">
+                <a href="{{#if currentUser}}/events/{{_id}}{{/if}}" class="{{#unless currentUser}}disabled{{/unless}}">
                   <h2 class="tile-title">
-                    {{title}} <span class="fui-info-circle pull-right"></span>
+                    {{title}} {{#if currentUser}}<span class="fui-info-circle pull-right"></span>{{/if}}
                     {{#if isHot}}<span class="fui-star-2"></span>{{/if}}
                   </h2>
                 </a>
@@ -23,7 +23,7 @@
             {{#if currentUser}}
               {{#if future}}
                 {{#if isRegistered}}
-                  <button class="btn btn-danger btn-large btn-block" id="unregister" type="submit">Not going</button>
+                  <button class="btn btn-primary btn-large btn-block disabled"  type="submit">Attending</button>
                 {{else}}
                   <button class="btn btn-primary btn-large btn-block" id="register" type="submit">Join</button>
                 {{/if}}

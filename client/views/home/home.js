@@ -1,6 +1,14 @@
 Template.home.helpers({
-  events: function () {
-    return Events.find();
+  futureEvents: function(){
+    return Events.find({
+      $and: [
+        {
+          users: {
+            $all: [Meteor.userId()]
+          }
+        }
+      ]
+    });
   }
 });
 

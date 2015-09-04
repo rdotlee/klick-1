@@ -25,16 +25,13 @@ Template['eventCard'].events({
       $addToSet: {users: Meteor.userId()},
     })
   },
-  "click #unregister": function (event, template) {
-    Events.update(this._id,{
-      $pull: {users: Meteor.userId()},
-    })
-  },
   "click #delete": function (event, template) {
     Events.remove(this._id);
   },
   'click #login_click': function (event, template) {
     console.log('click')
     $('#login-dropdown-list').addClass('open');
-  }
+  },
 });
+
+

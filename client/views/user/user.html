@@ -71,14 +71,5 @@
         </div> 
       </div>
     </div>
-    {{#if userIsLoggedInUser _id}}
-    <hr>
-    <div class="row">
-      <h2 class="text-center">Past events</h2>
-      {{#each pastEvents}}
-        {{> eventCard}}
-      {{/each}}
-    </div>
-    {{/if}}
   </div>
 </template>

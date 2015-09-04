@@ -2,8 +2,9 @@
     <div class="container">
       {{#if currentUser}}
       <div class="btn-group pull-right" role="group">
-        <button type="button" id="all-events" class="btn btn-default {{#if allEvents}}active{{/if}}">All</button>
-        <button type="button" id="reg-events" class="btn btn-default {{#unless allEvents}}active{{/unless}}">Going</button>
+        <button type="button" id="all-events" class="btn btn-default {{#if isFilter 'all'}}active{{/if}}">All</button>
+        <button type="button" id="reg-events" class="btn btn-default {{#if isFilter 'reg'}}active{{/if}}">Going</button>
+        <button type="button" id="past-events" class="btn btn-default {{#if isFilter 'past'}}active{{/if}}">Past</button>
       </div>
       {{/if}}
       <div class="row">
@@ -13,9 +14,7 @@
             <div class="row">
               {{#each events}}
                 {{#if ifInArea ../_id area}}
-                  {{#if filter this}}
-                    {{> eventCard}}
-                  {{/if}}
+                  {{> eventCard}}
                 {{/if}}
               {{/each}}
             </div>

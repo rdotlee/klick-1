@@ -11,24 +11,6 @@ Template['user'].helpers({
       return username
     }
   },
-
-  pastEvents: function(){
-    return Events.find({
-      $and: [
-        {
-          users: {
-            $all: [Meteor.userId()]
-          }
-        },
-        {
-          date: {
-            $lte: moment().toDate()
-          }
-        }
-      ]
-    });
-  }
-
 });
 
 Template['user'].events({
