@@ -24,13 +24,10 @@ Template['eventCard'].events({
     Events.update(this._id,{
       $addToSet: {users: Meteor.userId()},
     })
+    Router.go('event',{_id: this._id})
   },
   "click #delete": function (event, template) {
     Events.remove(this._id);
-  },
-  'click #login_click': function (event, template) {
-    console.log('click')
-    $('#login-dropdown-list').addClass('open');
   },
 });
 

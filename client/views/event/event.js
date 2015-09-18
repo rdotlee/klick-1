@@ -1,12 +1,9 @@
-var countdown = new ReactiveCountdown(0);
-countdown.start();
-
 Template['event'].helpers({
   viewable: function () {
     return moment().add(this.config.release_frame, 'days').isAfter(this.eventData.date);
   },
   getCountdown: function() {
-    return countdown.get();
+    return Session.get("time");
   },
   future: function(){
     return this.eventData.date > new Date();
@@ -78,7 +75,16 @@ Template['event'].onRendered(function(){
   var now = moment();
   var releaseDate = moment(this.data.eventData.date).subtract(this.data.config.release_frame, 'days');
   var diff = releaseDate.diff(now, 'seconds');
-  countdown = new ReactiveCountdown(0);
-  countdown.start();
-  countdown.add(diff);
+  var clock = diff;
+
+  var timeLeft = function() {
+    if (clock > 0) {
+      clock--;
+      Session.set("time", clock);
+    } else {
+      return Meteor.clearInterval(interval);
+    }
+  };
+
+  var interval = Meteor.setInterval(timeLeft, 1000);
 })

@@ -1,40 +1,42 @@
 <template name="home">
   <div class="container">
-    <div class="jumbotron hero">
-      <div class="container">
-        <h1>Make new connections at the Jake with Klick</h1>
-        <p>Expand your Kellogg experience and network through informal Klick meet-ups to make brave new connections </p>
-        <p>
-          {{#unless currentUser}}
-            <a href="/signup" class="btn btn-primary btn-lg mrs">Sign Up!</a>
-          {{/unless}}
-          <a class="btn btn-primary btn-lg" href="/events" role="button">See events&raquo;</a>
-        </p>
-      </div>
-    </div>
-
-      <!-- Example row of columns -->
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <h2><span class="fui-calendar"></span> Schedule</h2>
-      </div>
-      <div class="col-md-4 text-center">
-        <h2><span class="fui-bubble"></span> Meet</h2>
-     </div>
-      <div class="col-md-4 text-center">
-        <h2><span class="fui-checkbox-checked"></span> Klick</h2>
-      </div>
-      <div class="col-md-12 text-center">
-        <p>In the limited time we have in Evanston, it's tough to meet all the amazing students in the Kellogg community.  Through casual Klick meet-ups, we hope to offer Kellogg students opportunities to meet new classmates and forge inspiring connections.</p>
-      </div>
-    </div>
     {{#if currentUser}}
-    <div class="row">
-      <h2 class="text-center">Upcoming events</h2>
-      {{#each futureEvents}}
-        {{> eventCard}}
-      {{/each}}
-    </div>
+      <div class="row">
+        <h2 class="">My upcoming events</h2>
+        {{#each futureEvents}}
+          {{> eventCard}}
+        {{/each}}
+      </div>
+
+    {{else}}
+      <div class="jumbotron hero">
+        <div class="container">
+          <h1>Make new connections at the Jake with Klick</h1>
+          <p>Expand your Kellogg experience and network through informal Klick meet-ups to make brave new connections </p>
+          <p>
+            {{#unless currentUser}}
+              <a href="/signup" class="btn btn-primary btn-lg mrs">Sign Up!</a>
+            {{/unless}}
+            <a class="btn btn-primary btn-lg" href="/events" role="button">See events&raquo;</a>
+          </p>
+        </div>
+      </div>
+
+        <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <h2><span class="fui-calendar"></span> Schedule</h2>
+        </div>
+        <div class="col-md-4 text-center">
+          <h2><span class="fui-bubble"></span> Meet</h2>
+       </div>
+        <div class="col-md-4 text-center">
+          <h2><span class="fui-checkbox-checked"></span> Klick</h2>
+        </div>
+        <div class="col-md-12 text-center">
+          <p>In the limited time we have in Evanston, it's tough to meet all the amazing students in the Kellogg community.  Through casual Klick meet-ups, we hope to offer Kellogg students opportunities to meet new classmates and forge inspiring connections.</p>
+        </div>
+      </div>
     {{/if}}
   </div>
 

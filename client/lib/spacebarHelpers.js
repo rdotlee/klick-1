@@ -41,10 +41,14 @@ Template.registerHelper('secondsToDays', function(seconds) {
     var o = '';
     for(key in time){
         if(time[key] > 0){
+            var word = key;
+            if  (time[key] === 1) {
+              word = word.substring(0, word.length - 1);
+            }
             if(o === ''){
-                o += time[key] + ' ' + key + ' ';
+                o += time[key] + ' ' + word + ' ';
             }else{
-                return o + 'and ' + time[key] + ' ' + key;
+                return o + 'and ' + time[key] + ' ' + word;
             }
         }
     }

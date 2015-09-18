@@ -1,13 +1,7 @@
 Template.home.helpers({
   futureEvents: function(){
     return Events.find({
-      $and: [
-        {
-          users: {
-            $all: [Meteor.userId()]
-          }
-        }
-      ]
+      users: {$all: [Meteor.userId()]}
     });
   }
 });

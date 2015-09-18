@@ -11,5 +11,5 @@ Meteor.publish('Event', function (id) {
 });
 
 Meteor.publish('futureEvents', function () {
-  return Events.find({date: {$gte: new Date()}},{sort: {date: -1}});
+  return Events.find({date: {$gte: new Date()}},{sort: {date: 1}});
 });

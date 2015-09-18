@@ -43,7 +43,7 @@
         {{#if future}}
           {{#if isRegistered}}
             {{#unless viewable}}
-              <button class="btn btn-danger btn-large " id="unregister" type="submit">Not going</button>
+              <button class="btn btn-danger btn-large " id="unregister" type="submit">Sadly, I must cancel</button>
             {{else}}
               <a class="btn btn-danger btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}},{{/each}}?subject=Sorry! I can’t make it today.">Cancel – Contact All Attendees</a>
                <a class="btn btn-warning btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}},{{/each}}?subject=Sorry! Running late.">Running Late – Contact All Attendees</a>
