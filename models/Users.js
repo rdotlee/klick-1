@@ -53,7 +53,7 @@ var UserProfile = new SimpleSchema({
       type: String,
       optional: true,
       label: 'Section',
-      allowedValues: ['2015-1Y-Hedgehogs','2015-1Y-Roadrunners','2015-Big Dawgs','2015-Bucket Heads','2015-Bull Frogs','2015-Cash Cows','2015-Highlanders','2015-Jive Turkeys','2015-Moose','2015-Poets','2016-Big Dawgs','2016-Bucket Heads','2016-Bull Frogs','2016-Cash Cows','2016-Highlanders','2016-Jive Turkeys','2016-Moose','2016-Poets','N/A'],
+      allowedValues: ['1Y-Hedgehogs','1Y-Roadrunners','Big Dawgs','Bucket Heads','Bull Frogs','Cash Cows','Highlanders','Jive Turkeys','Moose','Poets','N/A',],
   },
   kwesttrip: {
       type: String,
@@ -279,15 +279,16 @@ if (Meteor.isServer) {
   });
 
   Accounts.validateNewUser(function (user) {
-    var email_regex = new RegExp("^[A-Z0-9._%+-]+@[A-Z0-9._%+-]*northwestern\.edu$","i"); 
-    if (user.emails.length >= 1){
-      for (var i = user.emails.length - 1; i >= 0; i--) {
-        if(email_regex.test(user.emails[i].address)) {
-          return true;
-        }
-      }
-    }
-    throw new Meteor.Error(403, "You must use a Northwestern University Email");
+    // var email_regex = new RegExp("^[A-Z0-9._%+-]+@[A-Z0-9._%+-]*northwestern\.edu$","i"); 
+    // if (user.emails.length >= 1){
+    //   for (var i = user.emails.length - 1; i >= 0; i--) {
+    //     if(email_regex.test(user.emails[i].address)) {
+    //       return true;
+    //     }
+    //   }
+    // }
+    // throw new Meteor.Error(403, "You must use a Northwestern University Email");
+    return true;
   });
 
   Accounts.onCreateUser(function(options, user) {
