@@ -14,6 +14,11 @@
           <span class="fui-calendar"></span> {{formatDateTime eventData.date}} &nbsp;
           <span class="fui-user"></span> {{eventData.users.length}}
         </p>  
+        {{#if eventData.description}}
+        <p>
+          {{eventData.description}}
+        </p>
+        {{/if}}
       </div>
       {{#if isRegistered}}
         {{#if viewable}}

@@ -6,15 +6,15 @@
                 {{#if currentUser}}
                   <a href="{{#if currentUser}}/events/{{_id}}{{/if}}" class="{{#unless currentUser}}disabled{{/unless}}">
                     <h2 class="tile-title">
-                      {{title}} <span class="fui-info-circle pull-right"></span>
+                      {{title}}
                       {{#if isHot}}<span class="fui-star-2"></span>{{/if}}
                     </h2>
                   </a>
                 {{else}}
                   <h2 class="tile-title">
-                      {{title}}
-                      {{#if isHot}}<span class="fui-star-2"></span>{{/if}}
-                    </h2>
+                    {{title}}
+                    {{#if isHot}}<span class="fui-star-2"></span>{{/if}}
+                  </h2>
                 {{/if}}
               </li>
               <li>
@@ -25,6 +25,9 @@
               </li>
               <li>
                 <span class="fui-user"></span> {{users.length}}
+              </li>
+              <li>
+                Group size: {{groupLimit}}
               </li>
             </ul>
             {{#if currentUser}}

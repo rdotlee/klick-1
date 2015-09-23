@@ -12,6 +12,9 @@
               {{#if userIsLoggedInUser _id}}
                 <a class="btn btn-primary" href="/users/{{_id}}/edit">Edit</a>
               {{/if}}
+              {{#if isInRole 'admin'}}
+                <a class="btn btn-primary" href="/users/{{_id}}/edit">Edit</a>
+              {{/if}}
             </h3>
             <blockquote>
             {{#if profile.bio}}

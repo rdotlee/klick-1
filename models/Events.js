@@ -31,6 +31,10 @@ Events.attachSchema(
     title: {
       type: String
     },
+    description: {
+      type: String,
+      optional: true,
+    },
     area: {
       type: String,
       label: 'Area',

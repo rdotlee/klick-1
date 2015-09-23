@@ -167,10 +167,10 @@ var goToDashboard = function(pause) {
 };
 
 var mustBeThisUser = function(pause){
-  if(Meteor.userId() !== this.params._id){
-    Router.go('home');
-  } else {
+  if(Meteor.userId() === this.params._id || Roles.userIsInRole(Meteor.userId(), ['admin'])){
     this.next();
+  } else {
+    Router.go('home');
   }
 }
 
