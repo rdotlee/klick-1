@@ -3,7 +3,7 @@ Template['event'].helpers({
     return moment().add(this.config.release_frame, 'days').isAfter(this.eventData.date);
   },
   getCountdown: function() {
-    return Session.get("time");
+    return Session.get("time"+this.eventData._id);
   },
   future: function(){
     return this.eventData.date > new Date();
@@ -72,15 +72,16 @@ Template['event'].events({
 });
 
 Template['event'].onRendered(function(){
-  var now = moment();
   var releaseDate = moment(this.data.eventData.date).subtract(this.data.config.release_frame, 'days');
-  var diff = releaseDate.diff(now, 'seconds');
-  var clock = diff;
+  releaseDate = releaseDate.toDate();
+  var seconds =  (releaseDate - new Date())/1000;
+  var clock = seconds;
+  var event_id = this.data.eventData._id;
 
   var timeLeft = function() {
     if (clock > 0) {
       clock--;
-      Session.set("time", clock);
+      Session.set("time"+event_id, clock);
     } else {
       return Meteor.clearInterval(interval);
     }
