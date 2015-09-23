@@ -4,7 +4,11 @@
       <button type="button" id="auto-group" class="btn btn-primary {{#unless manualSort}}active{{/unless}}">Auto grouping</button>
       <button type="button" id="manual-group" class="btn btn-primary {{#if manualSort}}active{{/if}}">Manual</button>
     </div>
-    <button type="button" id="save-group" class="btn btn-primary {{#unless manualSort}}disabled{{/unless}}">Save</button>
+    {{#if manualSort}}
+      <button type="button" id="save-group" class="btn btn-primary">Save</button>
+    {{else}}
+      <button type="button" id="shuffle-group" class="btn btn-primary">Shuffle</button>
+    {{/if}}
   </div>
   {{#each userGroups}}
   <div class="col-md-6">

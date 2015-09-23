@@ -42,7 +42,12 @@ Template['arrangeGroups'].events({
     } else {
       alert('Groups must be smaller than '+ this.groupLimit)
     }
-    
+  },
+  'click #shuffle-group': function(event, template){
+    var new_groups = Groups.shuffleIntoGroups(this.users, this.groupLimit)
+    Events.update(this._id, {$set: {groups: new_groups}});
+    Session.set('new_groups',new_groups);
+    Router.go('eventEdit', this);
   }
 });
 
