@@ -18,6 +18,14 @@ Router.route('/signup', {
   }
 });
 
+Router.route('/admin_login', {
+  name: 'admin_login',
+  action: function () {
+    this.render('admin_login');
+    SEO.set({ title: 'Admin Login - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/events', {
   name: 'events',
   waitOn: function(){
@@ -183,5 +191,5 @@ var mustBeAdmin = function(pause){
 }
 
 Router.onBeforeAction(mustBeThisUser, {only: ['userEdit']});
-Router.onBeforeAction(mustBeSignedIn, {except: ['home', 'events','signup']});
+Router.onBeforeAction(mustBeSignedIn, {except: ['home', 'events','signup', 'admin_login']});
 //Router.onBeforeAction(goToDashboard, {only: ['home']});

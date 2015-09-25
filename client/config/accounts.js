@@ -21,10 +21,7 @@ Accounts.ui.config({
         }
     ],
     requestPermissions:{
-        google:['https://www.googleapis.com/auth/calendar','https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'],
         facebook: ['user_birthday', 'user_education_history','user_friends','user_hometown',]
-    }, 
-    forceApprovalPrompt: {google: true},
-    requestOfflineToken: {google: true},
+    },
 })
 

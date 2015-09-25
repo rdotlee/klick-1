@@ -16,18 +16,6 @@ Template['signup'].events({
       });
   },
 
-  'click #google-login': function(event) {
-      Meteor.loginWithGoogle({}, function(err){
-          if (err) {
-            console.log(err)
-            Session.set('error',err.reason)
-            throw new Meteor.Error("Google login failed");
-          } else {
-            Router.go('userEdit', {_id: Meteor.userId})
-          }
-      });
-  },
-
   'submit #register-form' : function(e, t) {
     e.preventDefault();
     var email = t.find('#account-email').value, 
