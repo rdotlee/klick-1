@@ -1,12 +1,10 @@
 
 var UserProfile = new SimpleSchema({
   firstName: {
-      type: String,
-      regEx: /^[a-zA-Z-]{2,25}$/,
+      type: String
   },
   lastName: {
-      type: String,
-      regEx: /^[a-zA-Z]{2,25}$/,
+      type: String
   },
   birthday: {
       type: Date,
