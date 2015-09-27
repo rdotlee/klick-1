@@ -2,7 +2,7 @@ function loadUser(user) {
   var userAlreadyExists = typeof Meteor.users.findOne({ emails: { $elemMatch: { address: user.email } } }) === 'object';
   if (!userAlreadyExists) {
     console.log('=======================================\n\n');
-    console.log(user.email);
+    console.log(user);
     var id;
 
     id = Accounts.createUser(user);

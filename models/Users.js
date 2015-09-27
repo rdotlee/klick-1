@@ -47,7 +47,7 @@ var UserProfile = new SimpleSchema({
       type: String,
       optional: true,
       label: 'Kellogg Program',
-      allowedValues: ['MMM', 'One-year MBA', 'Two-year MBA', 'JDMBA', 'MDMBA', 'Part-time', 'Executive', 'JV'],
+      allowedValues: ['MMM', '1Y', '2Y', 'JDMBA', 'MDMBA', 'Part-time', 'Executive', 'JV'],
   },
   section: {
       type: String,
