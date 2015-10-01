@@ -37,1964 +37,1964 @@ ajurinka2016:
     section: Moose
     kwesttrip: "Peru-2014"
 
-rlee2016:
-  email: rlee2016@kellogg.northwestern.edu
-  password: password3
-  roles:
-    - user
-  profile:
-    firstName: Ryan
-    lastName: Lee
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Jive Turkeys
-    kwesttrip: "Turkey-2014"
-
-userno4:
-  email: userno4@kellogg.northwestern.edu
-  password: password4
-  roles:
-    - user
-  profile:
-    firstName: Ariel
-    lastName: Terrell
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Italy-2014"
-
-userno5:
-  email: userno5@kellogg.northwestern.edu
-  password: password5
-  roles:
-    - user
-  profile:
-    firstName: Katherine
-    lastName: Boone
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Spain Mediterranean-2014"
-
-userno6:
-  email: userno6@kellogg.northwestern.edu
-  password: password6
-  roles:
-    - user
-  profile:
-    firstName: Vicool
-    lastName: Patel
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Czechoslovakia-2014"
-
-userno7:
-  email: userno7@kellogg.northwestern.edu
-  password: password7
-  roles:
-    - user
-  profile:
-    firstName: Samuel
-    lastName: Drake
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Italy-2014"
-
-userno8:
-  email: userno8@kellogg.northwestern.edu
-  password: password8
-  roles:
-    - user
-  profile:
-    firstName: Aloke
-    lastName: Singh
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Mystery-2014"
-
-userno9:
-  email: userno9@kellogg.northwestern.edu
-  password: password9
-  roles:
-    - user
-  profile:
-    firstName: Jesse
-    lastName: Chang
-    gender: male
-    gradYear: 2016
-    program: JDMBA
-    section: Bucket Heads
-    kwesttrip: "Zanzibar-2014"
-
-userno10:
-  email: userno10@kellogg.northwestern.edu
-  password: password10
-  roles:
-    - user
-  profile:
-    firstName: Robert
-    lastName: Parsley
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Mystery-2014"
-
-userno11:
-  email: userno11@kellogg.northwestern.edu
-  password: password11
-  roles:
-    - user
-  profile:
-    firstName: Ryan
-    lastName: Dougherty
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Hungary-2014"
-
-userno12:
-  email: userno12@kellogg.northwestern.edu
-  password: password12
-  roles:
-    - user
-  profile:
-    firstName: Xinyu
-    lastName: Shi
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Chile-2014"
-
-userno13:
-  email: userno13@kellogg.northwestern.edu
-  password: password13
-  roles:
-    - user
-  profile:
-    firstName: Daniel
-    lastName: Reaves
-    gender: male
-    gradYear: 2015
-    program: 2Y
-    section: Moose
-    kwesttrip: "Spain - Northern-2013"
-
-userno14:
-  email: userno14@kellogg.northwestern.edu
-  password: password14
-  roles:
-    - user
-  profile:
-    firstName: Manasi
-    lastName: Rajagopal
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Costa Rica-2014"
-
-userno16:
-  email: userno16@kellogg.northwestern.edu
-  password: password16
-  roles:
-    - user
-  profile:
-    firstName: Deepa
-    lastName: Sheth
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Romania-2013"
-
-userno17:
-  email: userno17@kellogg.northwestern.edu
-  password: password17
-  roles:
-    - user
-  profile:
-    firstName: Halley
-    lastName: Li
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Ireland-2014"
-
-userno18:
-  email: userno18@kellogg.northwestern.edu
-  password: password18
-  roles:
-    - user
-  profile:
-    firstName: John
-    lastName: Closs
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Argentina-2014"
-
-userno20:
-  email: userno20@kellogg.northwestern.edu
-  password: password20
-  roles:
-    - user
-  profile:
-    firstName: David
-    lastName: Slezak
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Oman-2014"
-
-userno21:
-  email: userno21@kellogg.northwestern.edu
-  password: password21
-  roles:
-    - user
-  profile:
-    firstName: Katherine
-    lastName: Finnegan
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Panama-2014"
-
-userno22:
-  email: userno22@kellogg.northwestern.edu
-  password: password22
-  roles:
-    - user
-  profile:
-    firstName: Ronald
-    lastName: Chan
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Belize-2014"
-
-userno23:
-  email: userno23@kellogg.northwestern.edu
-  password: password23
-  roles:
-    - user
-  profile:
-    firstName: Alan
-    lastName: Hearth
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Denmark/Austria-2014"
-
-userno24:
-  email: userno24@kellogg.northwestern.edu
-  password: password24
-  roles:
-    - user
-  profile:
-    firstName: Juan
-    lastName: Lombardi
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Portugal-2014"
-
-userno25:
-  email: userno25@kellogg.northwestern.edu
-  password: password25
-  roles:
-    - user
-  profile:
-    firstName: Jessica
-    lastName: Taylor
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Bucket Heads
-    kwesttrip: "Portugal-2014"
-
-userno26:
-  email: userno26@kellogg.northwestern.edu
-  password: password26
-  roles:
-    - user
-  profile:
-    firstName: Yvena
-    lastName: Lesperance
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Thailand-2014"
-
-userno28:
-  email: userno28@kellogg.northwestern.edu
-  password: password28
-  roles:
-    - user
-  profile:
-    firstName: Zubin
-    lastName: Beesla
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Spain Mediterranean-2014"
-
-userno29:
-  email: userno29@kellogg.northwestern.edu
-  password: password29
-  roles:
-    - user
-  profile:
-    firstName: Kevin
-    lastName: Pukala
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Bucket Heads
-    kwesttrip: "Panama-2014"
-
-userno30:
-  email: userno30@kellogg.northwestern.edu
-  password: password30
-  roles:
-    - user
-  profile:
-    firstName: Seung Han
-    lastName: Lee
-    gender: male
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Hedgehogs
-    kwesttrip: "Peru-2014"
-
-userno32:
-  email: userno32@kellogg.northwestern.edu
-  password: password32
-  roles:
-    - user
-  profile:
-    firstName: Nathaniel
-    lastName: Jackson
-    gender: male
-    gradYear: 2015
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Dominican Republic-2013"
-
-userno33:
-  email: userno33@kellogg.northwestern.edu
-  password: password33
-  roles:
-    - user
-  profile:
-    firstName: Asuquo
-    lastName: Mfon
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Bucket Heads
-    kwesttrip: "Turkey-2014"
-
-userno34:
-  email: userno34@kellogg.northwestern.edu
-  password: password34
-  roles:
-    - user
-  profile:
-    firstName: Arjun
-    lastName: Sareen
-    gender: male
-    gradYear: 2015
-    program: 2Y
-    section: Bucket Heads
-    kwesttrip: "Brazil-2013"
-
-userno35:
-  email: userno35@kellogg.northwestern.edu
-  password: password35
-  roles:
-    - user
-  profile:
-    firstName: Julian
-    lastName: Mateo
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Portugal-2014"
-
-userno36:
-  email: userno36@kellogg.northwestern.edu
-  password: password36
-  roles:
-    - user
-  profile:
-    firstName: Keyu
-    lastName: Min
-    gender: female
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Roadrunners
-    kwesttrip: "Ireland-2014"
-
-userno37:
-  email: userno37@kellogg.northwestern.edu
-  password: password37
-  roles:
-    - user
-  profile:
-    firstName: Thomas
-    lastName: Smithburg
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Oman-2014"
-
-userno39:
-  email: userno39@kellogg.northwestern.edu
-  password: password39
-  roles:
-    - user
-  profile:
-    firstName: Emily
-    lastName: Kaehler
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Peru-2014"
-
-userno40:
-  email: userno40@kellogg.northwestern.edu
-  password: password40
-  roles:
-    - user
-  profile:
-    firstName: Ankur
-    lastName: Saxena
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Croatia-2014"
-
-userno41:
-  email: userno41@kellogg.northwestern.edu
-  password: password41
-  roles:
-    - user
-  profile:
-    firstName: Maria
-    lastName: Torres Miro Quesada
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Sweden-2014"
-
-userno42:
-  email: userno42@kellogg.northwestern.edu
-  password: password42
-  roles:
-    - user
-  profile:
-    firstName: Sharon
-    lastName: Brown
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Iceland-2014"
-
-userno43:
-  email: userno43@kellogg.northwestern.edu
-  password: password43
-  roles:
-    - user
-  profile:
-    firstName: Prachi
-    lastName: Jalan
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Argentina-2014"
-
-userno44:
-  email: userno44@kellogg.northwestern.edu
-  password: password44
-  roles:
-    - user
-  profile:
-    firstName: Gabriel
-    lastName: Ferrari de Araujo
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Croatia-2014"
-
-userno45:
-  email: userno45@kellogg.northwestern.edu
-  password: password45
-  roles:
-    - user
-  profile:
-    firstName: Tina
-    lastName: Hossain
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "St. Lucia-2014"
-
-userno47:
-  email: userno47@kellogg.northwestern.edu
-  password: password47
-  roles:
-    - user
-  profile:
-    firstName: Danielle
-    lastName: Wipperfurth
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Vietnam-2014"
-
-userno48:
-  email: userno48@kellogg.northwestern.edu
-  password: password48
-  roles:
-    - user
-  profile:
-    firstName: Evan
-    lastName: Cooney
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Hungary-2014"
-
-userno49:
-  email: userno49@kellogg.northwestern.edu
-  password: password49
-  roles:
-    - user
-  profile:
-    firstName: Laila
-    lastName: Goldberg
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "France-2013"
-
-userno50:
-  email: userno50@kellogg.northwestern.edu
-  password: password50
-  roles:
-    - user
-  profile:
-    firstName: Shaun
-    lastName: Currie
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Poets
-    kwesttrip: "Nicaragua-2014"
-
-userno53:
-  email: userno53@kellogg.northwestern.edu
-  password: password53
-  roles:
-    - user
-  profile:
-    firstName: Matthew
-    lastName: Steger
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Sweden-2014"
-
-userno54:
-  email: userno54@kellogg.northwestern.edu
-  password: password54
-  roles:
-    - user
-  profile:
-    firstName: Eric
-    lastName: Chamberlain
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Costa Rica-2014"
-
-userno55:
-  email: userno55@kellogg.northwestern.edu
-  password: password55
-  roles:
-    - user
-  profile:
-    firstName: Anand
-    lastName: Natarajan
-    gender: male
-    gradYear: 2015
-    program: 2Y
-    section: Poets
-    kwesttrip: "Spain - Northern-2013"
-
-userno56:
-  email: userno56@kellogg.northwestern.edu
-  password: password56
-  roles:
-    - user
-  profile:
-    firstName: Colleen
-    lastName: Tubridy
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Amazing race-2014"
-
-userno57:
-  email: userno57@kellogg.northwestern.edu
-  password: password57
-  roles:
-    - user
-  profile:
-    firstName: Brittney
-    lastName: Moraski
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Bike Holland-2014"
-
-userno58:
-  email: userno58@kellogg.northwestern.edu
-  password: password58
-  roles:
-    - user
-  profile:
-    firstName: Laurent
-    lastName: Convent
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Nicaragua-2014"
-
-userno60:
-  email: userno60@kellogg.northwestern.edu
-  password: password60
-  roles:
-    - user
-  profile:
-    firstName: Amit
-    lastName: Berry
-    gender: male
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Roadrunners
-    kwesttrip: "Puerto Rico-2014"
-
-userno63:
-  email: userno63@kellogg.northwestern.edu
-  password: password63
-  roles:
-    - user
-  profile:
-    firstName: Asavari
-    lastName: Gupte
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Mystery-2014"
-
-userno64:
-  email: userno64@kellogg.northwestern.edu
-  password: password64
-  roles:
-    - user
-  profile:
-    firstName: Juan
-    lastName: Ojeda Smith
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Berlin/Krakow-2014"
-
-userno65:
-  email: userno65@kellogg.northwestern.edu
-  password: password65
-  roles:
-    - user
-  profile:
-    firstName: Elisa
-    lastName: Chi
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Amazing Race-2013"
-
-userno66:
-  email: userno66@kellogg.northwestern.edu
-  password: password66
-  roles:
-    - user
-  profile:
-    firstName: Raymond
-    lastName: Fan
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Bucket Heads
-    kwesttrip: "Nicaragua-2014"
-
-userno68:
-  email: userno68@kellogg.northwestern.edu
-  password: password68
-  roles:
-    - user
-  profile:
-    firstName: Rogerio
-    lastName: Campos
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Oman-2014"
-
-userno69:
-  email: userno69@kellogg.northwestern.edu
-  password: password69
-  roles:
-    - user
-  profile:
-    firstName: Hongxian Evelyn
-    lastName: Tay
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Nicaragua-2013"
-
-userno70:
-  email: userno70@kellogg.northwestern.edu
-  password: password70
-  roles:
-    - user
-  profile:
-    firstName: Gordon
-    lastName: Shu
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Arubacao-2014"
-
-userno72:
-  email: userno72@kellogg.northwestern.edu
-  password: password72
-  roles:
-    - user
-  profile:
-    firstName: Jihyung
-    lastName: Kim
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Bike Holland-2014"
-
-userno73:
-  email: userno73@kellogg.northwestern.edu
-  password: password73
-  roles:
-    - user
-  profile:
-    firstName: Youngjae
-    lastName: Jeon
-    gender: male
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Roadrunners
-    kwesttrip: "Iceland-2014"
-
-userno75:
-  email: userno75@kellogg.northwestern.edu
-  password: password75
-  roles:
-    - user
-  profile:
-    firstName: Taylor
-    lastName: Edgerton
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Croatia-2014"
-
-userno76:
-  email: userno76@kellogg.northwestern.edu
-  password: password76
-  roles:
-    - user
-  profile:
-    firstName: Casey
-    lastName: Field
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Vietnam-2014"
-
-userno77:
-  email: userno77@kellogg.northwestern.edu
-  password: password77
-  roles:
-    - user
-  profile:
-    firstName: James
-    lastName: Rowan
-    gender: male
-    gradYear: 2015
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Thailand-2013"
-
-userno78:
-  email: userno78@kellogg.northwestern.edu
-  password: password78
-  roles:
-    - user
-  profile:
-    firstName: Emily
-    lastName: Gipple
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Moose
-    kwesttrip: "Oman-2014"
-
-userno79:
-  email: userno79@kellogg.northwestern.edu
-  password: password79
-  roles:
-    - user
-  profile:
-    firstName: Alan
-    lastName: Hearth
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Denmark/Austria-2014"
-
-userno80:
-  email: userno80@kellogg.northwestern.edu
-  password: password80
-  roles:
-    - user
-  profile:
-    firstName: Abhimanyu
-    lastName: Dhar
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Highlanders
-    kwesttrip: "Italy-2014"
-
-userno81:
-  email: userno81@kellogg.northwestern.edu
-  password: password81
-  roles:
-    - user
-  profile:
-    firstName: Agam
-    lastName: Arora
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Argentina-2014"
-
-userno82:
-  email: userno82@kellogg.northwestern.edu
-  password: password82
-  roles:
-    - user
-  profile:
-    firstName: Jarrett
-    lastName: Crockett
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Arubacao-2014"
-
-userno83:
-  email: userno83@kellogg.northwestern.edu
-  password: password83
-  roles:
-    - user
-  profile:
-    firstName: Jennifer
-    lastName: Whitley
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Argentina-2014"
-
-userno84:
-  email: userno84@kellogg.northwestern.edu
-  password: password84
-  roles:
-    - user
-  profile:
-    firstName: Chhavi
-    lastName: Adtani
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Poets
-    kwesttrip: "Costa Rica-2014"
-
-userno85:
-  email: userno85@kellogg.northwestern.edu
-  password: password85
-  roles:
-    - user
-  profile:
-    firstName: Conor
-    lastName: Gettings
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Poets
-    kwesttrip: "Georgia/Armenia-2014"
-
-userno86:
-  email: userno86@kellogg.northwestern.edu
-  password: password86
-  roles:
-    - user
-  profile:
-    firstName: Francis
-    lastName: McManus
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Georgia/Armenia-2014"
-
-userno87:
-  email: userno87@kellogg.northwestern.edu
-  password: password87
-  roles:
-    - user
-  profile:
-    firstName: Jia
-    lastName: Yi
-    gender: female
-    gradYear: 2016
-    program: MMM
-    section: Bull Frogs
-    kwesttrip: "Georgia/Armenia-2014"
-
-userno88:
-  email: userno88@kellogg.northwestern.edu
-  password: password88
-  roles:
-    - user
-  profile:
-    firstName: Audrey
-    lastName: Arbeeny
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Croatia-2014"
-
-userno89:
-  email: userno89@kellogg.northwestern.edu
-  password: password89
-  roles:
-    - user
-  profile:
-    firstName: Juan
-    lastName: Lopez Barcelo
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Czechoslovakia-2014"
-
-userno92:
-  email: userno92@kellogg.northwestern.edu
-  password: password92
-  roles:
-    - user
-  profile:
-    firstName: Pablo
-    lastName: Jaramillo
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Romania-2014"
-
-userno93:
-  email: userno93@kellogg.northwestern.edu
-  password: password93
-  roles:
-    - user
-  profile:
-    firstName: Francesca
-    lastName: Velasco Alfaro
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Bucket Heads
-    kwesttrip: "USA Virgin Islands-2013"
-
-userno94:
-  email: userno94@kellogg.northwestern.edu
-  password: password94
-  roles:
-    - user
-  profile:
-    firstName: Jee Sun
-    lastName: Ha
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Peru-2013"
-
-userno95:
-  email: userno95@kellogg.northwestern.edu
-  password: password95
-  roles:
-    - user
-  profile:
-    firstName: Jeffrey
-    lastName: Rose
-    gender: male
-    gradYear: 2015
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Chile-2013"
-
-userno96:
-  email: userno96@kellogg.northwestern.edu
-  password: password96
-  roles:
-    - user
-  profile:
-    firstName: Gonzalo
-    lastName: Romero Rodriquez
-    gender: male
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Hedgehogs
-    kwesttrip: "Berlin/Krakow-2014"
-
-userno97:
-  email: userno97@kellogg.northwestern.edu
-  password: password97
-  roles:
-    - user
-  profile:
-    firstName: Tao
-    lastName: Jin
-    gender: male
-    gradYear: 2015
-    program: MMM
-    section: Jive Turkeys
-    kwesttrip: "Peru-2013"
-
-userno99:
-  email: userno99@kellogg.northwestern.edu
-  password: password99
-  roles:
-    - user
-  profile:
-    firstName: Yuichi
-    lastName: Morii
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Belize-2014"
-
-userno100:
-  email: userno100@kellogg.northwestern.edu
-  password: password100
-  roles:
-    - user
-  profile:
-    firstName: Ashish
-    lastName: Srivastava
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Spain Mediterranean-2014"
-
-userno101:
-  email: userno101@kellogg.northwestern.edu
-  password: password101
-  roles:
-    - user
-  profile:
-    firstName: Shuo
-    lastName: Jiang
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Belize-2014"
-
-userno103:
-  email: userno103@kellogg.northwestern.edu
-  password: password103
-  roles:
-    - user
-  profile:
-    firstName: David
-    lastName: Ufford
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Jive Turkeys
-    kwesttrip: "Ecuador-2014"
-
-userno104:
-  email: userno104@kellogg.northwestern.edu
-  password: password104
-  roles:
-    - user
-  profile:
-    firstName: Samantha
-    lastName: Greenberg
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Poets
-    kwesttrip: "Brazil-2013"
-
-userno105:
-  email: userno105@kellogg.northwestern.edu
-  password: password105
-  roles:
-    - user
-  profile:
-    firstName: Patrick
-    lastName: Quintana
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Panama-2014"
-
-userno106:
-  email: userno106@kellogg.northwestern.edu
-  password: password106
-  roles:
-    - user
-  profile:
-    firstName: Ryan
-    lastName: Lee
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Jive Turkeys
-    kwesttrip: "Turkey-2014"
-
-userno107:
-  email: userno107@kellogg.northwestern.edu
-  password: password107
-  roles:
-    - user
-  profile:
-    firstName: Kristina
-    lastName: Punwani
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Mystery-2014"
-
-userno108:
-  email: userno108@kellogg.northwestern.edu
-  password: password108
-  roles:
-    - user
-  profile:
-    firstName: Bethany
-    lastName: Curd
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Ireland-2014"
-
-userno109:
-  email: userno109@kellogg.northwestern.edu
-  password: password109
-  roles:
-    - user
-  profile:
-    firstName: Johanna
-    lastName: Snyder
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Georgia/Armenia-2014"
-
-userno110:
-  email: userno110@kellogg.northwestern.edu
-  password: password110
-  roles:
-    - user
-  profile:
-    firstName: Mary
-    lastName: Gray
-    gender: female
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Hedgehogs
-    kwesttrip: "Iceland-2014"
-
-userno111:
-  email: userno111@kellogg.northwestern.edu
-  password: password111
-  roles:
-    - user
-  profile:
-    firstName: Sharon
-    lastName: Somuah
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Arubacao-2014"
-
-userno112:
-  email: userno112@kellogg.northwestern.edu
-  password: password112
-  roles:
-    - user
-  profile:
-    firstName: Priya Anna
-    lastName: Wad
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Bucket Heads
-    kwesttrip: "Greece-2014"
-
-userno114:
-  email: userno114@kellogg.northwestern.edu
-  password: password114
-  roles:
-    - user
-  profile:
-    firstName: Dae Yong
-    lastName: Jung
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Ecuador-2014"
-
-userno115:
-  email: userno115@kellogg.northwestern.edu
-  password: password115
-  roles:
-    - user
-  profile:
-    firstName: Eric
-    lastName: Komenda
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Romania-2014"
-
-userno116:
-  email: userno116@kellogg.northwestern.edu
-  password: password116
-  roles:
-    - user
-  profile:
-    firstName: Stephen
-    lastName: Lane
-    gender: male
-    gradYear: 2016
-    program: JDMBA
-    section: Poets
-    kwesttrip: "Amazing race-2014"
-
-userno117:
-  email: userno117@kellogg.northwestern.edu
-  password: password117
-  roles:
-    - user
-  profile:
-    firstName: Emily
-    lastName: Chern
-    gender: female
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Roadrunners
-    kwesttrip: "Oman-2014"
-
-userno118:
-  email: userno118@kellogg.northwestern.edu
-  password: password118
-  roles:
-    - user
-  profile:
-    firstName: Lumay
-    lastName: Wang
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Bike Holland-2014"
-
-userno119:
-  email: userno119@kellogg.northwestern.edu
-  password: password119
-  roles:
-    - user
-  profile:
-    firstName: Hathai
-    lastName: Eamrungroj
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Spain - Mediterranean-2013"
-
-userno120:
-  email: userno120@kellogg.northwestern.edu
-  password: password120
-  roles:
-    - user
-  profile:
-    firstName: Vishwath
-    lastName: Kumar
-    gender: male
-    gradYear: 2015
-    program: 2Y
-    section: Poets
-    kwesttrip: "South Africa-2013"
-
-userno121:
-  email: userno121@kellogg.northwestern.edu
-  password: password121
-  roles:
-    - user
-  profile:
-    firstName: Maria
-    lastName: Duzon
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Poets
-    kwesttrip: "Sweden-2014"
-
-userno122:
-  email: userno122@kellogg.northwestern.edu
-  password: password122
-  roles:
-    - user
-  profile:
-    firstName: Chantal
-    lastName: McKay
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Bucket Heads
-    kwesttrip: "Nicaragua-2014"
-
-userno123:
-  email: userno123@kellogg.northwestern.edu
-  password: password123
-  roles:
-    - user
-  profile:
-    firstName: Gillian
-    lastName: Casten
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Ecuador-2014"
-
-userno124:
-  email: userno124@kellogg.northwestern.edu
-  password: password124
-  roles:
-    - user
-  profile:
-    firstName: Mehak
-    lastName: Agarwal
-    gender: female
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Hedgehogs
-    kwesttrip: "Spain Mediterranean-2014"
-
-userno125:
-  email: userno125@kellogg.northwestern.edu
-  password: password125
-  roles:
-    - user
-  profile:
-    firstName: Thanabhum
-    lastName: Aramwatananont
-    gender: male
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Hedgehogs
-    kwesttrip: "Spain Mediterranean-2014"
-
-userno129:
-  email: userno129@kellogg.northwestern.edu
-  password: password129
-  roles:
-    - user
-  profile:
-    firstName: Junhua
-    lastName: Xu
-    gender: male
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Hedgehogs
-    kwesttrip: "Greece-2014"
-
-userno130:
-  email: userno130@kellogg.northwestern.edu
-  password: password130
-  roles:
-    - user
-  profile:
-    firstName: Jason
-    lastName: Yeh
-    gender: female
-    gradYear: 2015
-    program: MMM
-    section: Highlanders
-    kwesttrip: "Iceland-2014"
-
-userno131:
-  email: userno131@kellogg.northwestern.edu
-  password: password131
-  roles:
-    - user
-  profile:
-    firstName: Richard
-    lastName: Tsai
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Amazing race-2014"
-
-userno132:
-  email: userno132@kellogg.northwestern.edu
-  password: password132
-  roles:
-    - user
-  profile:
-    firstName: Nihar
-    lastName: Shah
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Poets
-    kwesttrip: "Thailand-2014"
-
-userno133:
-  email: userno133@kellogg.northwestern.edu
-  password: password133
-  roles:
-    - user
-  profile:
-    firstName: Tiffany
-    lastName: Legge
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Arubacao-2014"
-
-userno134:
-  email: userno134@kellogg.northwestern.edu
-  password: password134
-  roles:
-    - user
-  profile:
-    firstName: London
-    lastName: Thomson-Thurm
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "France-2013"
-
-userno135:
-  email: userno135@kellogg.northwestern.edu
-  password: password135
-  roles:
-    - user
-  profile:
-    firstName: Hursha
-    lastName: Patel
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Guatemala-2014"
-
-userno137:
-  email: userno137@kellogg.northwestern.edu
-  password: password137
-  roles:
-    - user
-  profile:
-    firstName: Umberto Giovanni
-    lastName: Maccari
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Costa Rica-2014"
-
-userno138:
-  email: userno138@kellogg.northwestern.edu
-  password: password138
-  roles:
-    - user
-  profile:
-    firstName: Troy
-    lastName: Vernon
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Argentina-2014"
-
-userno139:
-  email: userno139@kellogg.northwestern.edu
-  password: password139
-  roles:
-    - user
-  profile:
-    firstName: Benjamin
-    lastName: Rosner
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Chile-2014"
-
-userno140:
-  email: userno140@kellogg.northwestern.edu
-  password: password140
-  roles:
-    - user
-  profile:
-    firstName: James
-    lastName: Tong
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Cash Cows
-    kwesttrip: "Mystery-2014"
-
-userno143:
-  email: userno143@kellogg.northwestern.edu
-  password: password143
-  roles:
-    - user
-  profile:
-    firstName: Ian
-    lastName: White
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Poets
-    kwesttrip: "Puerto Rico-2014"
-
-userno144:
-  email: userno144@kellogg.northwestern.edu
-  password: password144
-  roles:
-    - user
-  profile:
-    firstName: Brian
-    lastName: Mulligan
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Denmark/Austria-2014"
-
-userno145:
-  email: userno145@kellogg.northwestern.edu
-  password: password145
-  roles:
-    - user
-  profile:
-    firstName: María
-    lastName: Marchionni
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Turkey-2014"
-
-userno146:
-  email: userno146@kellogg.northwestern.edu
-  password: password146
-  roles:
-    - user
-  profile:
-    firstName: John
-    lastName: Snow
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Highlanders
-    kwesttrip: "Turkey-2014"
-
-userno147:
-  email: userno147@kellogg.northwestern.edu
-  password: password147
-  roles:
-    - user
-  profile:
-    firstName: Brittany
-    lastName: Bode
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Bucket Heads
-    kwesttrip: "Amazing race-2014"
-
-userno148:
-  email: userno148@kellogg.northwestern.edu
-  password: password148
-  roles:
-    - user
-  profile:
-    firstName: Ricardo
-    lastName: Becker Toro
-    gender: male
-    gradYear: 2015
-    program: 2Y
-    section: Poets
-    kwesttrip: "Croatia-2013"
-
-userno149:
-  email: userno149@kellogg.northwestern.edu
-  password: password149
-  roles:
-    - user
-  profile:
-    firstName: Bhalayogasthini
-    lastName: Sivayoganathan
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Poets
-    kwesttrip: "Ecuador-2014"
-
-userno150:
-  email: userno150@kellogg.northwestern.edu
-  password: password150
-  roles:
-    - user
-  profile:
-    firstName: Kendra
-    lastName: Zehentbauer
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Portugal-2014"
-
-userno151:
-  email: userno151@kellogg.northwestern.edu
-  password: password151
-  roles:
-    - user
-  profile:
-    firstName: Arti
-    lastName: Sanganeria
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Bucket Heads
-    kwesttrip: "Italy-2014"
-
-userno152:
-  email: userno152@kellogg.northwestern.edu
-  password: password152
-  roles:
-    - user
-  profile:
-    firstName: John
-    lastName: Jingle
-    gender: male
-    gradYear: 2015
-    program: 2Y
-    section: Jive Turkeys
-    kwesttrip: "Italy-2014"
-
-userno153:
-  email: userno153@kellogg.northwestern.edu
-  password: password153
-  roles:
-    - user
-  profile:
-    firstName: Adithya
-    lastName: Mohanakrishnan
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Costa Rica-2014"
-
-userno154:
-  email: userno154@kellogg.northwestern.edu
-  password: password154
-  roles:
-    - user
-  profile:
-    firstName: Avani
-    lastName: Patel
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Chile-2014"
-
-userno155:
-  email: userno155@kellogg.northwestern.edu
-  password: password155
-  roles:
-    - user
-  profile:
-    firstName: Mark
-    lastName: Giangreco
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "Panama-2014"
-
-userno156:
-  email: userno156@kellogg.northwestern.edu
-  password: password156
-  roles:
-    - user
-  profile:
-    firstName: Heeyoung
-    lastName: Kang
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Argentina-2014"
-
-userno157:
-  email: userno157@kellogg.northwestern.edu
-  password: password157
-  roles:
-    - user
-  profile:
-    firstName: Brian
-    lastName: Deppong
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Bull Frogs
-    kwesttrip: "St. Lucia-2014"
-
-userno158:
-  email: userno158@kellogg.northwestern.edu
-  password: password158
-  roles:
-    - user
-  profile:
-    firstName: Tommy
-    lastName: Jackson
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Cash Cows
-    kwesttrip: "Vietnam-2014"
-
-userno159:
-  email: userno159@kellogg.northwestern.edu
-  password: password159
-  roles:
-    - user
-  profile:
-    firstName: Valerie
-    lastName: Meyeres
-    gender: female
-    gradYear: 2015
-    program: 2Y
-    section: Big Dawgs
-    kwesttrip: "Vietnam-2014"
-
-userno160:
-  email: userno160@kellogg.northwestern.edu
-  password: password160
-  roles:
-    - user
-  profile:
-    firstName: Joe
-    lastName: Schmoe
-    gender: male
-    gradYear: 2016
-    program: JDMBA
-    section: Poets
-    kwesttrip: "Vietnam-2014"
-
-userno161:
-  email: userno161@kellogg.northwestern.edu
-  password: password161
-  roles:
-    - user
-  profile:
-    firstName: J
-    lastName: Parker
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Poets
-    kwesttrip: "Vietnam-2014"
-
-userno162:
-  email: userno162@kellogg.northwestern.edu
-  password: password162
-  roles:
-    - user
-  profile:
-    firstName: T
-    lastName: Bone
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Poets
-    kwesttrip: "Vietnam-2014"
-
-userno163:
-  email: userno163@kellogg.northwestern.edu
-  password: password163
-  roles:
-    - user
-  profile:
-    firstName: Daniel
-    lastName: Metzel
-    gender: male
-    gradYear: 2016
-    program: MMM
-    section: Cash Cows
-    kwesttrip: "Bike Holland-2014"
-
-userno164:
-  email: userno164@kellogg.northwestern.edu
-  password: password164
-  roles:
-    - user
-  profile:
-    firstName: Sompol
-    lastName: Hiranrag
-    gender: male
-    gradYear: 2015
-    program: 1Y
-    section: 1Y-Roadrunners
-    kwesttrip: "Peru-2014"
-
-userno165:
-  email: userno165@kellogg.northwestern.edu
-  password: password165
-  roles:
-    - user
-  profile:
-    firstName: Christa
-    lastName: Seid
-    gender: female
-    gradYear: 2016
-    program: JDMBA
-    section: Bull Frogs
-    kwesttrip: "Nicaragua-2014"
-
-userno166:
-  email: userno166@kellogg.northwestern.edu
-  password: password166
-  roles:
-    - user
-  profile:
-    firstName: Shilpam
-    lastName: Singh
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Argentina-2014"
-
-userno167:
-  email: userno167@kellogg.northwestern.edu
-  password: password167
-  roles:
-    - user
-  profile:
-    firstName: Franklin
-    lastName: Cohen
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Highlanders
-    kwesttrip: "Vietnam-2014"
+# rlee2016:
+#   email: rlee2016@kellogg.northwestern.edu
+#   password: password3
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ryan
+#     lastName: Lee
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Jive Turkeys
+#     kwesttrip: "Turkey-2014"
+
+# userno4:
+#   email: userno4@kellogg.northwestern.edu
+#   password: password4
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ariel
+#     lastName: Terrell
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Italy-2014"
+
+# userno5:
+#   email: userno5@kellogg.northwestern.edu
+#   password: password5
+#   roles:
+#     - user
+#   profile:
+#     firstName: Katherine
+#     lastName: Boone
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Spain Mediterranean-2014"
+
+# userno6:
+#   email: userno6@kellogg.northwestern.edu
+#   password: password6
+#   roles:
+#     - user
+#   profile:
+#     firstName: Vicool
+#     lastName: Patel
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Czechoslovakia-2014"
+
+# userno7:
+#   email: userno7@kellogg.northwestern.edu
+#   password: password7
+#   roles:
+#     - user
+#   profile:
+#     firstName: Samuel
+#     lastName: Drake
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Italy-2014"
+
+# userno8:
+#   email: userno8@kellogg.northwestern.edu
+#   password: password8
+#   roles:
+#     - user
+#   profile:
+#     firstName: Aloke
+#     lastName: Singh
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Mystery-2014"
+
+# userno9:
+#   email: userno9@kellogg.northwestern.edu
+#   password: password9
+#   roles:
+#     - user
+#   profile:
+#     firstName: Jesse
+#     lastName: Chang
+#     gender: male
+#     gradYear: 2016
+#     program: JDMBA
+#     section: Bucket Heads
+#     kwesttrip: "Zanzibar-2014"
+
+# userno10:
+#   email: userno10@kellogg.northwestern.edu
+#   password: password10
+#   roles:
+#     - user
+#   profile:
+#     firstName: Robert
+#     lastName: Parsley
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Mystery-2014"
+
+# userno11:
+#   email: userno11@kellogg.northwestern.edu
+#   password: password11
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ryan
+#     lastName: Dougherty
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Hungary-2014"
+
+# userno12:
+#   email: userno12@kellogg.northwestern.edu
+#   password: password12
+#   roles:
+#     - user
+#   profile:
+#     firstName: Xinyu
+#     lastName: Shi
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Chile-2014"
+
+# userno13:
+#   email: userno13@kellogg.northwestern.edu
+#   password: password13
+#   roles:
+#     - user
+#   profile:
+#     firstName: Daniel
+#     lastName: Reaves
+#     gender: male
+#     gradYear: 2015
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Spain - Northern-2013"
+
+# userno14:
+#   email: userno14@kellogg.northwestern.edu
+#   password: password14
+#   roles:
+#     - user
+#   profile:
+#     firstName: Manasi
+#     lastName: Rajagopal
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Costa Rica-2014"
+
+# userno16:
+#   email: userno16@kellogg.northwestern.edu
+#   password: password16
+#   roles:
+#     - user
+#   profile:
+#     firstName: Deepa
+#     lastName: Sheth
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Romania-2013"
+
+# userno17:
+#   email: userno17@kellogg.northwestern.edu
+#   password: password17
+#   roles:
+#     - user
+#   profile:
+#     firstName: Halley
+#     lastName: Li
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Ireland-2014"
+
+# userno18:
+#   email: userno18@kellogg.northwestern.edu
+#   password: password18
+#   roles:
+#     - user
+#   profile:
+#     firstName: John
+#     lastName: Closs
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Argentina-2014"
+
+# userno20:
+#   email: userno20@kellogg.northwestern.edu
+#   password: password20
+#   roles:
+#     - user
+#   profile:
+#     firstName: David
+#     lastName: Slezak
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Oman-2014"
+
+# userno21:
+#   email: userno21@kellogg.northwestern.edu
+#   password: password21
+#   roles:
+#     - user
+#   profile:
+#     firstName: Katherine
+#     lastName: Finnegan
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Panama-2014"
+
+# userno22:
+#   email: userno22@kellogg.northwestern.edu
+#   password: password22
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ronald
+#     lastName: Chan
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Belize-2014"
+
+# userno23:
+#   email: userno23@kellogg.northwestern.edu
+#   password: password23
+#   roles:
+#     - user
+#   profile:
+#     firstName: Alan
+#     lastName: Hearth
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Denmark/Austria-2014"
+
+# userno24:
+#   email: userno24@kellogg.northwestern.edu
+#   password: password24
+#   roles:
+#     - user
+#   profile:
+#     firstName: Juan
+#     lastName: Lombardi
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Portugal-2014"
+
+# userno25:
+#   email: userno25@kellogg.northwestern.edu
+#   password: password25
+#   roles:
+#     - user
+#   profile:
+#     firstName: Jessica
+#     lastName: Taylor
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bucket Heads
+#     kwesttrip: "Portugal-2014"
+
+# userno26:
+#   email: userno26@kellogg.northwestern.edu
+#   password: password26
+#   roles:
+#     - user
+#   profile:
+#     firstName: Yvena
+#     lastName: Lesperance
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Thailand-2014"
+
+# userno28:
+#   email: userno28@kellogg.northwestern.edu
+#   password: password28
+#   roles:
+#     - user
+#   profile:
+#     firstName: Zubin
+#     lastName: Beesla
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Spain Mediterranean-2014"
+
+# userno29:
+#   email: userno29@kellogg.northwestern.edu
+#   password: password29
+#   roles:
+#     - user
+#   profile:
+#     firstName: Kevin
+#     lastName: Pukala
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bucket Heads
+#     kwesttrip: "Panama-2014"
+
+# userno30:
+#   email: userno30@kellogg.northwestern.edu
+#   password: password30
+#   roles:
+#     - user
+#   profile:
+#     firstName: Seung Han
+#     lastName: Lee
+#     gender: male
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Hedgehogs
+#     kwesttrip: "Peru-2014"
+
+# userno32:
+#   email: userno32@kellogg.northwestern.edu
+#   password: password32
+#   roles:
+#     - user
+#   profile:
+#     firstName: Nathaniel
+#     lastName: Jackson
+#     gender: male
+#     gradYear: 2015
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Dominican Republic-2013"
+
+# userno33:
+#   email: userno33@kellogg.northwestern.edu
+#   password: password33
+#   roles:
+#     - user
+#   profile:
+#     firstName: Asuquo
+#     lastName: Mfon
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Bucket Heads
+#     kwesttrip: "Turkey-2014"
+
+# userno34:
+#   email: userno34@kellogg.northwestern.edu
+#   password: password34
+#   roles:
+#     - user
+#   profile:
+#     firstName: Arjun
+#     lastName: Sareen
+#     gender: male
+#     gradYear: 2015
+#     program: 2Y
+#     section: Bucket Heads
+#     kwesttrip: "Brazil-2013"
+
+# userno35:
+#   email: userno35@kellogg.northwestern.edu
+#   password: password35
+#   roles:
+#     - user
+#   profile:
+#     firstName: Julian
+#     lastName: Mateo
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Portugal-2014"
+
+# userno36:
+#   email: userno36@kellogg.northwestern.edu
+#   password: password36
+#   roles:
+#     - user
+#   profile:
+#     firstName: Keyu
+#     lastName: Min
+#     gender: female
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Roadrunners
+#     kwesttrip: "Ireland-2014"
+
+# userno37:
+#   email: userno37@kellogg.northwestern.edu
+#   password: password37
+#   roles:
+#     - user
+#   profile:
+#     firstName: Thomas
+#     lastName: Smithburg
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Oman-2014"
+
+# userno39:
+#   email: userno39@kellogg.northwestern.edu
+#   password: password39
+#   roles:
+#     - user
+#   profile:
+#     firstName: Emily
+#     lastName: Kaehler
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Peru-2014"
+
+# userno40:
+#   email: userno40@kellogg.northwestern.edu
+#   password: password40
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ankur
+#     lastName: Saxena
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Croatia-2014"
+
+# userno41:
+#   email: userno41@kellogg.northwestern.edu
+#   password: password41
+#   roles:
+#     - user
+#   profile:
+#     firstName: Maria
+#     lastName: Torres Miro Quesada
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Sweden-2014"
+
+# userno42:
+#   email: userno42@kellogg.northwestern.edu
+#   password: password42
+#   roles:
+#     - user
+#   profile:
+#     firstName: Sharon
+#     lastName: Brown
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Iceland-2014"
+
+# userno43:
+#   email: userno43@kellogg.northwestern.edu
+#   password: password43
+#   roles:
+#     - user
+#   profile:
+#     firstName: Prachi
+#     lastName: Jalan
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Argentina-2014"
+
+# userno44:
+#   email: userno44@kellogg.northwestern.edu
+#   password: password44
+#   roles:
+#     - user
+#   profile:
+#     firstName: Gabriel
+#     lastName: Ferrari de Araujo
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Croatia-2014"
+
+# userno45:
+#   email: userno45@kellogg.northwestern.edu
+#   password: password45
+#   roles:
+#     - user
+#   profile:
+#     firstName: Tina
+#     lastName: Hossain
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "St. Lucia-2014"
+
+# userno47:
+#   email: userno47@kellogg.northwestern.edu
+#   password: password47
+#   roles:
+#     - user
+#   profile:
+#     firstName: Danielle
+#     lastName: Wipperfurth
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Vietnam-2014"
+
+# userno48:
+#   email: userno48@kellogg.northwestern.edu
+#   password: password48
+#   roles:
+#     - user
+#   profile:
+#     firstName: Evan
+#     lastName: Cooney
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Hungary-2014"
+
+# userno49:
+#   email: userno49@kellogg.northwestern.edu
+#   password: password49
+#   roles:
+#     - user
+#   profile:
+#     firstName: Laila
+#     lastName: Goldberg
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "France-2013"
+
+# userno50:
+#   email: userno50@kellogg.northwestern.edu
+#   password: password50
+#   roles:
+#     - user
+#   profile:
+#     firstName: Shaun
+#     lastName: Currie
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "Nicaragua-2014"
+
+# userno53:
+#   email: userno53@kellogg.northwestern.edu
+#   password: password53
+#   roles:
+#     - user
+#   profile:
+#     firstName: Matthew
+#     lastName: Steger
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Sweden-2014"
+
+# userno54:
+#   email: userno54@kellogg.northwestern.edu
+#   password: password54
+#   roles:
+#     - user
+#   profile:
+#     firstName: Eric
+#     lastName: Chamberlain
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Costa Rica-2014"
+
+# userno55:
+#   email: userno55@kellogg.northwestern.edu
+#   password: password55
+#   roles:
+#     - user
+#   profile:
+#     firstName: Anand
+#     lastName: Natarajan
+#     gender: male
+#     gradYear: 2015
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "Spain - Northern-2013"
+
+# userno56:
+#   email: userno56@kellogg.northwestern.edu
+#   password: password56
+#   roles:
+#     - user
+#   profile:
+#     firstName: Colleen
+#     lastName: Tubridy
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Amazing race-2014"
+
+# userno57:
+#   email: userno57@kellogg.northwestern.edu
+#   password: password57
+#   roles:
+#     - user
+#   profile:
+#     firstName: Brittney
+#     lastName: Moraski
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Bike Holland-2014"
+
+# userno58:
+#   email: userno58@kellogg.northwestern.edu
+#   password: password58
+#   roles:
+#     - user
+#   profile:
+#     firstName: Laurent
+#     lastName: Convent
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Nicaragua-2014"
+
+# userno60:
+#   email: userno60@kellogg.northwestern.edu
+#   password: password60
+#   roles:
+#     - user
+#   profile:
+#     firstName: Amit
+#     lastName: Berry
+#     gender: male
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Roadrunners
+#     kwesttrip: "Puerto Rico-2014"
+
+# userno63:
+#   email: userno63@kellogg.northwestern.edu
+#   password: password63
+#   roles:
+#     - user
+#   profile:
+#     firstName: Asavari
+#     lastName: Gupte
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Mystery-2014"
+
+# userno64:
+#   email: userno64@kellogg.northwestern.edu
+#   password: password64
+#   roles:
+#     - user
+#   profile:
+#     firstName: Juan
+#     lastName: Ojeda Smith
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Berlin/Krakow-2014"
+
+# userno65:
+#   email: userno65@kellogg.northwestern.edu
+#   password: password65
+#   roles:
+#     - user
+#   profile:
+#     firstName: Elisa
+#     lastName: Chi
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Amazing Race-2013"
+
+# userno66:
+#   email: userno66@kellogg.northwestern.edu
+#   password: password66
+#   roles:
+#     - user
+#   profile:
+#     firstName: Raymond
+#     lastName: Fan
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bucket Heads
+#     kwesttrip: "Nicaragua-2014"
+
+# userno68:
+#   email: userno68@kellogg.northwestern.edu
+#   password: password68
+#   roles:
+#     - user
+#   profile:
+#     firstName: Rogerio
+#     lastName: Campos
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Oman-2014"
+
+# userno69:
+#   email: userno69@kellogg.northwestern.edu
+#   password: password69
+#   roles:
+#     - user
+#   profile:
+#     firstName: Hongxian Evelyn
+#     lastName: Tay
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Nicaragua-2013"
+
+# userno70:
+#   email: userno70@kellogg.northwestern.edu
+#   password: password70
+#   roles:
+#     - user
+#   profile:
+#     firstName: Gordon
+#     lastName: Shu
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Arubacao-2014"
+
+# userno72:
+#   email: userno72@kellogg.northwestern.edu
+#   password: password72
+#   roles:
+#     - user
+#   profile:
+#     firstName: Jihyung
+#     lastName: Kim
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Bike Holland-2014"
+
+# userno73:
+#   email: userno73@kellogg.northwestern.edu
+#   password: password73
+#   roles:
+#     - user
+#   profile:
+#     firstName: Youngjae
+#     lastName: Jeon
+#     gender: male
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Roadrunners
+#     kwesttrip: "Iceland-2014"
+
+# userno75:
+#   email: userno75@kellogg.northwestern.edu
+#   password: password75
+#   roles:
+#     - user
+#   profile:
+#     firstName: Taylor
+#     lastName: Edgerton
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Croatia-2014"
+
+# userno76:
+#   email: userno76@kellogg.northwestern.edu
+#   password: password76
+#   roles:
+#     - user
+#   profile:
+#     firstName: Casey
+#     lastName: Field
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Vietnam-2014"
+
+# userno77:
+#   email: userno77@kellogg.northwestern.edu
+#   password: password77
+#   roles:
+#     - user
+#   profile:
+#     firstName: James
+#     lastName: Rowan
+#     gender: male
+#     gradYear: 2015
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Thailand-2013"
+
+# userno78:
+#   email: userno78@kellogg.northwestern.edu
+#   password: password78
+#   roles:
+#     - user
+#   profile:
+#     firstName: Emily
+#     lastName: Gipple
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Oman-2014"
+
+# userno79:
+#   email: userno79@kellogg.northwestern.edu
+#   password: password79
+#   roles:
+#     - user
+#   profile:
+#     firstName: Alan
+#     lastName: Hearth
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Denmark/Austria-2014"
+
+# userno80:
+#   email: userno80@kellogg.northwestern.edu
+#   password: password80
+#   roles:
+#     - user
+#   profile:
+#     firstName: Abhimanyu
+#     lastName: Dhar
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Highlanders
+#     kwesttrip: "Italy-2014"
+
+# userno81:
+#   email: userno81@kellogg.northwestern.edu
+#   password: password81
+#   roles:
+#     - user
+#   profile:
+#     firstName: Agam
+#     lastName: Arora
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Argentina-2014"
+
+# userno82:
+#   email: userno82@kellogg.northwestern.edu
+#   password: password82
+#   roles:
+#     - user
+#   profile:
+#     firstName: Jarrett
+#     lastName: Crockett
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Arubacao-2014"
+
+# userno83:
+#   email: userno83@kellogg.northwestern.edu
+#   password: password83
+#   roles:
+#     - user
+#   profile:
+#     firstName: Jennifer
+#     lastName: Whitley
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Argentina-2014"
+
+# userno84:
+#   email: userno84@kellogg.northwestern.edu
+#   password: password84
+#   roles:
+#     - user
+#   profile:
+#     firstName: Chhavi
+#     lastName: Adtani
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Poets
+#     kwesttrip: "Costa Rica-2014"
+
+# userno85:
+#   email: userno85@kellogg.northwestern.edu
+#   password: password85
+#   roles:
+#     - user
+#   profile:
+#     firstName: Conor
+#     lastName: Gettings
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "Georgia/Armenia-2014"
+
+# userno86:
+#   email: userno86@kellogg.northwestern.edu
+#   password: password86
+#   roles:
+#     - user
+#   profile:
+#     firstName: Francis
+#     lastName: McManus
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Georgia/Armenia-2014"
+
+# userno87:
+#   email: userno87@kellogg.northwestern.edu
+#   password: password87
+#   roles:
+#     - user
+#   profile:
+#     firstName: Jia
+#     lastName: Yi
+#     gender: female
+#     gradYear: 2016
+#     program: MMM
+#     section: Bull Frogs
+#     kwesttrip: "Georgia/Armenia-2014"
+
+# userno88:
+#   email: userno88@kellogg.northwestern.edu
+#   password: password88
+#   roles:
+#     - user
+#   profile:
+#     firstName: Audrey
+#     lastName: Arbeeny
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Croatia-2014"
+
+# userno89:
+#   email: userno89@kellogg.northwestern.edu
+#   password: password89
+#   roles:
+#     - user
+#   profile:
+#     firstName: Juan
+#     lastName: Lopez Barcelo
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Czechoslovakia-2014"
+
+# userno92:
+#   email: userno92@kellogg.northwestern.edu
+#   password: password92
+#   roles:
+#     - user
+#   profile:
+#     firstName: Pablo
+#     lastName: Jaramillo
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Romania-2014"
+
+# userno93:
+#   email: userno93@kellogg.northwestern.edu
+#   password: password93
+#   roles:
+#     - user
+#   profile:
+#     firstName: Francesca
+#     lastName: Velasco Alfaro
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Bucket Heads
+#     kwesttrip: "USA Virgin Islands-2013"
+
+# userno94:
+#   email: userno94@kellogg.northwestern.edu
+#   password: password94
+#   roles:
+#     - user
+#   profile:
+#     firstName: Jee Sun
+#     lastName: Ha
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Peru-2013"
+
+# userno95:
+#   email: userno95@kellogg.northwestern.edu
+#   password: password95
+#   roles:
+#     - user
+#   profile:
+#     firstName: Jeffrey
+#     lastName: Rose
+#     gender: male
+#     gradYear: 2015
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Chile-2013"
+
+# userno96:
+#   email: userno96@kellogg.northwestern.edu
+#   password: password96
+#   roles:
+#     - user
+#   profile:
+#     firstName: Gonzalo
+#     lastName: Romero Rodriquez
+#     gender: male
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Hedgehogs
+#     kwesttrip: "Berlin/Krakow-2014"
+
+# userno97:
+#   email: userno97@kellogg.northwestern.edu
+#   password: password97
+#   roles:
+#     - user
+#   profile:
+#     firstName: Tao
+#     lastName: Jin
+#     gender: male
+#     gradYear: 2015
+#     program: MMM
+#     section: Jive Turkeys
+#     kwesttrip: "Peru-2013"
+
+# userno99:
+#   email: userno99@kellogg.northwestern.edu
+#   password: password99
+#   roles:
+#     - user
+#   profile:
+#     firstName: Yuichi
+#     lastName: Morii
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Belize-2014"
+
+# userno100:
+#   email: userno100@kellogg.northwestern.edu
+#   password: password100
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ashish
+#     lastName: Srivastava
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Spain Mediterranean-2014"
+
+# userno101:
+#   email: userno101@kellogg.northwestern.edu
+#   password: password101
+#   roles:
+#     - user
+#   profile:
+#     firstName: Shuo
+#     lastName: Jiang
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Belize-2014"
+
+# userno103:
+#   email: userno103@kellogg.northwestern.edu
+#   password: password103
+#   roles:
+#     - user
+#   profile:
+#     firstName: David
+#     lastName: Ufford
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Jive Turkeys
+#     kwesttrip: "Ecuador-2014"
+
+# userno104:
+#   email: userno104@kellogg.northwestern.edu
+#   password: password104
+#   roles:
+#     - user
+#   profile:
+#     firstName: Samantha
+#     lastName: Greenberg
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "Brazil-2013"
+
+# userno105:
+#   email: userno105@kellogg.northwestern.edu
+#   password: password105
+#   roles:
+#     - user
+#   profile:
+#     firstName: Patrick
+#     lastName: Quintana
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Panama-2014"
+
+# userno106:
+#   email: userno106@kellogg.northwestern.edu
+#   password: password106
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ryan
+#     lastName: Lee
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Jive Turkeys
+#     kwesttrip: "Turkey-2014"
+
+# userno107:
+#   email: userno107@kellogg.northwestern.edu
+#   password: password107
+#   roles:
+#     - user
+#   profile:
+#     firstName: Kristina
+#     lastName: Punwani
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Mystery-2014"
+
+# userno108:
+#   email: userno108@kellogg.northwestern.edu
+#   password: password108
+#   roles:
+#     - user
+#   profile:
+#     firstName: Bethany
+#     lastName: Curd
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Ireland-2014"
+
+# userno109:
+#   email: userno109@kellogg.northwestern.edu
+#   password: password109
+#   roles:
+#     - user
+#   profile:
+#     firstName: Johanna
+#     lastName: Snyder
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Georgia/Armenia-2014"
+
+# userno110:
+#   email: userno110@kellogg.northwestern.edu
+#   password: password110
+#   roles:
+#     - user
+#   profile:
+#     firstName: Mary
+#     lastName: Gray
+#     gender: female
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Hedgehogs
+#     kwesttrip: "Iceland-2014"
+
+# userno111:
+#   email: userno111@kellogg.northwestern.edu
+#   password: password111
+#   roles:
+#     - user
+#   profile:
+#     firstName: Sharon
+#     lastName: Somuah
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Arubacao-2014"
+
+# userno112:
+#   email: userno112@kellogg.northwestern.edu
+#   password: password112
+#   roles:
+#     - user
+#   profile:
+#     firstName: Priya Anna
+#     lastName: Wad
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bucket Heads
+#     kwesttrip: "Greece-2014"
+
+# userno114:
+#   email: userno114@kellogg.northwestern.edu
+#   password: password114
+#   roles:
+#     - user
+#   profile:
+#     firstName: Dae Yong
+#     lastName: Jung
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Ecuador-2014"
+
+# userno115:
+#   email: userno115@kellogg.northwestern.edu
+#   password: password115
+#   roles:
+#     - user
+#   profile:
+#     firstName: Eric
+#     lastName: Komenda
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Romania-2014"
+
+# userno116:
+#   email: userno116@kellogg.northwestern.edu
+#   password: password116
+#   roles:
+#     - user
+#   profile:
+#     firstName: Stephen
+#     lastName: Lane
+#     gender: male
+#     gradYear: 2016
+#     program: JDMBA
+#     section: Poets
+#     kwesttrip: "Amazing race-2014"
+
+# userno117:
+#   email: userno117@kellogg.northwestern.edu
+#   password: password117
+#   roles:
+#     - user
+#   profile:
+#     firstName: Emily
+#     lastName: Chern
+#     gender: female
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Roadrunners
+#     kwesttrip: "Oman-2014"
+
+# userno118:
+#   email: userno118@kellogg.northwestern.edu
+#   password: password118
+#   roles:
+#     - user
+#   profile:
+#     firstName: Lumay
+#     lastName: Wang
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Bike Holland-2014"
+
+# userno119:
+#   email: userno119@kellogg.northwestern.edu
+#   password: password119
+#   roles:
+#     - user
+#   profile:
+#     firstName: Hathai
+#     lastName: Eamrungroj
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Spain - Mediterranean-2013"
+
+# userno120:
+#   email: userno120@kellogg.northwestern.edu
+#   password: password120
+#   roles:
+#     - user
+#   profile:
+#     firstName: Vishwath
+#     lastName: Kumar
+#     gender: male
+#     gradYear: 2015
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "South Africa-2013"
+
+# userno121:
+#   email: userno121@kellogg.northwestern.edu
+#   password: password121
+#   roles:
+#     - user
+#   profile:
+#     firstName: Maria
+#     lastName: Duzon
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "Sweden-2014"
+
+# userno122:
+#   email: userno122@kellogg.northwestern.edu
+#   password: password122
+#   roles:
+#     - user
+#   profile:
+#     firstName: Chantal
+#     lastName: McKay
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bucket Heads
+#     kwesttrip: "Nicaragua-2014"
+
+# userno123:
+#   email: userno123@kellogg.northwestern.edu
+#   password: password123
+#   roles:
+#     - user
+#   profile:
+#     firstName: Gillian
+#     lastName: Casten
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Ecuador-2014"
+
+# userno124:
+#   email: userno124@kellogg.northwestern.edu
+#   password: password124
+#   roles:
+#     - user
+#   profile:
+#     firstName: Mehak
+#     lastName: Agarwal
+#     gender: female
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Hedgehogs
+#     kwesttrip: "Spain Mediterranean-2014"
+
+# userno125:
+#   email: userno125@kellogg.northwestern.edu
+#   password: password125
+#   roles:
+#     - user
+#   profile:
+#     firstName: Thanabhum
+#     lastName: Aramwatananont
+#     gender: male
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Hedgehogs
+#     kwesttrip: "Spain Mediterranean-2014"
+
+# userno129:
+#   email: userno129@kellogg.northwestern.edu
+#   password: password129
+#   roles:
+#     - user
+#   profile:
+#     firstName: Junhua
+#     lastName: Xu
+#     gender: male
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Hedgehogs
+#     kwesttrip: "Greece-2014"
+
+# userno130:
+#   email: userno130@kellogg.northwestern.edu
+#   password: password130
+#   roles:
+#     - user
+#   profile:
+#     firstName: Jason
+#     lastName: Yeh
+#     gender: female
+#     gradYear: 2015
+#     program: MMM
+#     section: Highlanders
+#     kwesttrip: "Iceland-2014"
+
+# userno131:
+#   email: userno131@kellogg.northwestern.edu
+#   password: password131
+#   roles:
+#     - user
+#   profile:
+#     firstName: Richard
+#     lastName: Tsai
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Amazing race-2014"
+
+# userno132:
+#   email: userno132@kellogg.northwestern.edu
+#   password: password132
+#   roles:
+#     - user
+#   profile:
+#     firstName: Nihar
+#     lastName: Shah
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Poets
+#     kwesttrip: "Thailand-2014"
+
+# userno133:
+#   email: userno133@kellogg.northwestern.edu
+#   password: password133
+#   roles:
+#     - user
+#   profile:
+#     firstName: Tiffany
+#     lastName: Legge
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Arubacao-2014"
+
+# userno134:
+#   email: userno134@kellogg.northwestern.edu
+#   password: password134
+#   roles:
+#     - user
+#   profile:
+#     firstName: London
+#     lastName: Thomson-Thurm
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "France-2013"
+
+# userno135:
+#   email: userno135@kellogg.northwestern.edu
+#   password: password135
+#   roles:
+#     - user
+#   profile:
+#     firstName: Hursha
+#     lastName: Patel
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Guatemala-2014"
+
+# userno137:
+#   email: userno137@kellogg.northwestern.edu
+#   password: password137
+#   roles:
+#     - user
+#   profile:
+#     firstName: Umberto Giovanni
+#     lastName: Maccari
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Costa Rica-2014"
+
+# userno138:
+#   email: userno138@kellogg.northwestern.edu
+#   password: password138
+#   roles:
+#     - user
+#   profile:
+#     firstName: Troy
+#     lastName: Vernon
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Argentina-2014"
+
+# userno139:
+#   email: userno139@kellogg.northwestern.edu
+#   password: password139
+#   roles:
+#     - user
+#   profile:
+#     firstName: Benjamin
+#     lastName: Rosner
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Chile-2014"
+
+# userno140:
+#   email: userno140@kellogg.northwestern.edu
+#   password: password140
+#   roles:
+#     - user
+#   profile:
+#     firstName: James
+#     lastName: Tong
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Cash Cows
+#     kwesttrip: "Mystery-2014"
+
+# userno143:
+#   email: userno143@kellogg.northwestern.edu
+#   password: password143
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ian
+#     lastName: White
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "Puerto Rico-2014"
+
+# userno144:
+#   email: userno144@kellogg.northwestern.edu
+#   password: password144
+#   roles:
+#     - user
+#   profile:
+#     firstName: Brian
+#     lastName: Mulligan
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Denmark/Austria-2014"
+
+# userno145:
+#   email: userno145@kellogg.northwestern.edu
+#   password: password145
+#   roles:
+#     - user
+#   profile:
+#     firstName: María
+#     lastName: Marchionni
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Turkey-2014"
+
+# userno146:
+#   email: userno146@kellogg.northwestern.edu
+#   password: password146
+#   roles:
+#     - user
+#   profile:
+#     firstName: John
+#     lastName: Snow
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Highlanders
+#     kwesttrip: "Turkey-2014"
+
+# userno147:
+#   email: userno147@kellogg.northwestern.edu
+#   password: password147
+#   roles:
+#     - user
+#   profile:
+#     firstName: Brittany
+#     lastName: Bode
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bucket Heads
+#     kwesttrip: "Amazing race-2014"
+
+# userno148:
+#   email: userno148@kellogg.northwestern.edu
+#   password: password148
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ricardo
+#     lastName: Becker Toro
+#     gender: male
+#     gradYear: 2015
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "Croatia-2013"
+
+# userno149:
+#   email: userno149@kellogg.northwestern.edu
+#   password: password149
+#   roles:
+#     - user
+#   profile:
+#     firstName: Bhalayogasthini
+#     lastName: Sivayoganathan
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "Ecuador-2014"
+
+# userno150:
+#   email: userno150@kellogg.northwestern.edu
+#   password: password150
+#   roles:
+#     - user
+#   profile:
+#     firstName: Kendra
+#     lastName: Zehentbauer
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Portugal-2014"
+
+# userno151:
+#   email: userno151@kellogg.northwestern.edu
+#   password: password151
+#   roles:
+#     - user
+#   profile:
+#     firstName: Arti
+#     lastName: Sanganeria
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bucket Heads
+#     kwesttrip: "Italy-2014"
+
+# userno152:
+#   email: userno152@kellogg.northwestern.edu
+#   password: password152
+#   roles:
+#     - user
+#   profile:
+#     firstName: John
+#     lastName: Jingle
+#     gender: male
+#     gradYear: 2015
+#     program: 2Y
+#     section: Jive Turkeys
+#     kwesttrip: "Italy-2014"
+
+# userno153:
+#   email: userno153@kellogg.northwestern.edu
+#   password: password153
+#   roles:
+#     - user
+#   profile:
+#     firstName: Adithya
+#     lastName: Mohanakrishnan
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Costa Rica-2014"
+
+# userno154:
+#   email: userno154@kellogg.northwestern.edu
+#   password: password154
+#   roles:
+#     - user
+#   profile:
+#     firstName: Avani
+#     lastName: Patel
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Chile-2014"
+
+# userno155:
+#   email: userno155@kellogg.northwestern.edu
+#   password: password155
+#   roles:
+#     - user
+#   profile:
+#     firstName: Mark
+#     lastName: Giangreco
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "Panama-2014"
+
+# userno156:
+#   email: userno156@kellogg.northwestern.edu
+#   password: password156
+#   roles:
+#     - user
+#   profile:
+#     firstName: Heeyoung
+#     lastName: Kang
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Argentina-2014"
+
+# userno157:
+#   email: userno157@kellogg.northwestern.edu
+#   password: password157
+#   roles:
+#     - user
+#   profile:
+#     firstName: Brian
+#     lastName: Deppong
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Bull Frogs
+#     kwesttrip: "St. Lucia-2014"
+
+# userno158:
+#   email: userno158@kellogg.northwestern.edu
+#   password: password158
+#   roles:
+#     - user
+#   profile:
+#     firstName: Tommy
+#     lastName: Jackson
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Cash Cows
+#     kwesttrip: "Vietnam-2014"
+
+# userno159:
+#   email: userno159@kellogg.northwestern.edu
+#   password: password159
+#   roles:
+#     - user
+#   profile:
+#     firstName: Valerie
+#     lastName: Meyeres
+#     gender: female
+#     gradYear: 2015
+#     program: 2Y
+#     section: Big Dawgs
+#     kwesttrip: "Vietnam-2014"
+
+# userno160:
+#   email: userno160@kellogg.northwestern.edu
+#   password: password160
+#   roles:
+#     - user
+#   profile:
+#     firstName: Joe
+#     lastName: Schmoe
+#     gender: male
+#     gradYear: 2016
+#     program: JDMBA
+#     section: Poets
+#     kwesttrip: "Vietnam-2014"
+
+# userno161:
+#   email: userno161@kellogg.northwestern.edu
+#   password: password161
+#   roles:
+#     - user
+#   profile:
+#     firstName: J
+#     lastName: Parker
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Poets
+#     kwesttrip: "Vietnam-2014"
+
+# userno162:
+#   email: userno162@kellogg.northwestern.edu
+#   password: password162
+#   roles:
+#     - user
+#   profile:
+#     firstName: T
+#     lastName: Bone
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Poets
+#     kwesttrip: "Vietnam-2014"
+
+# userno163:
+#   email: userno163@kellogg.northwestern.edu
+#   password: password163
+#   roles:
+#     - user
+#   profile:
+#     firstName: Daniel
+#     lastName: Metzel
+#     gender: male
+#     gradYear: 2016
+#     program: MMM
+#     section: Cash Cows
+#     kwesttrip: "Bike Holland-2014"
+
+# userno164:
+#   email: userno164@kellogg.northwestern.edu
+#   password: password164
+#   roles:
+#     - user
+#   profile:
+#     firstName: Sompol
+#     lastName: Hiranrag
+#     gender: male
+#     gradYear: 2015
+#     program: 1Y
+#     section: 1Y-Roadrunners
+#     kwesttrip: "Peru-2014"
+
+# userno165:
+#   email: userno165@kellogg.northwestern.edu
+#   password: password165
+#   roles:
+#     - user
+#   profile:
+#     firstName: Christa
+#     lastName: Seid
+#     gender: female
+#     gradYear: 2016
+#     program: JDMBA
+#     section: Bull Frogs
+#     kwesttrip: "Nicaragua-2014"
+
+# userno166:
+#   email: userno166@kellogg.northwestern.edu
+#   password: password166
+#   roles:
+#     - user
+#   profile:
+#     firstName: Shilpam
+#     lastName: Singh
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Argentina-2014"
+
+# userno167:
+#   email: userno167@kellogg.northwestern.edu
+#   password: password167
+#   roles:
+#     - user
+#   profile:
+#     firstName: Franklin
+#     lastName: Cohen
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Highlanders
+#     kwesttrip: "Vietnam-2014"
 
 

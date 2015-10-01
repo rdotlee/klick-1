@@ -5,7 +5,7 @@ Template['admin_login'].events({
   'click #google-login': function(event) {
     Meteor.loginWithGoogle({
       requestPermissions: ['https://www.googleapis.com/auth/calendar','https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'],
-      requestOfflineToken: true,
+      requestOfflineToken: true, 
       forceApprovalPrompt: true
     }, function(err){
         if (err) {

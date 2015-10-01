@@ -35,6 +35,7 @@ fastclick@1.0.3
 flyandi:reactive-countdown@0.0.3
 geojson-utils@1.0.3
 google@1.1.5
+google-api@1.0.2
 html-tools@1.0.4
 htmljs@1.0.4
 http@1.1.0
@@ -85,7 +86,6 @@ oauth@1.1.4
 oauth2@1.1.3
 observe-sequence@1.0.6
 ordered-dict@1.0.3
-percolate:google-api@1.0.2
 raix:handlebar-helpers@0.2.4
 rajit:bootstrap3-datepicker@1.4.1
 random@1.0.3

@@ -232,6 +232,10 @@ if (Meteor.isServer) {
         }
       };
 
+      console.log('================Options===================');
+      console.log(options);
+      console.log('================Options===================');
+
       GoogleApi.post('calendar/v3/calendars/primary/events', options, function(res, data){
         console.log(res)
         console.log(data)

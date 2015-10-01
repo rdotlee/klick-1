@@ -37,7 +37,6 @@ meteorhacks:npm
 twbs:bootstrap
 flyandi:reactive-countdown
 mystor:device-detection
-percolate:google-api
 accounts-google
 vazco:universe-autoform-select
 comerc:bs-typeahead
@@ -49,3 +48,4 @@ aldeed:delete-button
 aldeed:autoform-bs-datepicker
 rajit:bootstrap3-datepicker
 accounts-ui-bootstrap-3
+google-api
