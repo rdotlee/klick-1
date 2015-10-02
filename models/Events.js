@@ -227,14 +227,11 @@ if (Meteor.isServer) {
           anyoneCanAddSelf: false,
           guestsCanSeeOtherGuests: false,
           guestsCanInviteOthers: false,
+          description: doc.description,
           location: doc.location.street + ", " + doc.location.city,
           visibility: 'private'
         }
       };
-
-      console.log('================Options===================');
-      console.log(options);
-      console.log('================Options===================');
 
       GoogleApi.post('calendar/v3/calendars/primary/events', options, function(res, data){
         console.log(res)
@@ -276,6 +273,7 @@ if (Meteor.isServer) {
           end: {
             dateTime: moment(endDate).format("YYYY-MM-DDTHH:mm:ssZ")
           },
+          description: doc.description,
           anyoneCanAddSelf: false,
           guestsCanSeeOtherGuests: false,
           guestsCanInviteOthers: false,

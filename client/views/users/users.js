@@ -15,6 +15,7 @@ Template['users'].helpers({
           fields: [
             {key:'name', label:'Name', tmpl: Template.users_name},
             {key:'username', label:'Email'},
+            {key:'cancelCount', label:'# Canceled Klicks'},
             {key:'klicks', label:'# of klicks', fn: function(value, object){return object.klicks ? object.klicks.length : 0;}},
             {key:'settings', label:'Settings', tmpl: Template.user_settings},
           ]

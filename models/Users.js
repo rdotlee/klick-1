@@ -246,6 +246,13 @@ var UserSchema = new SimpleSchema({
         autoform: {
             omit: true
         }
+    },
+    cancelCount: {
+      type: Number,
+      optional: true,
+      autoform: {
+          omit: true
+      }
     }
 });
 

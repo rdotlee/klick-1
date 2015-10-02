@@ -68,6 +68,11 @@ Template['event'].events({
     Events.update(this.eventData._id,{
       $pull: {users: Meteor.userId()},
     })
+
+    Meteor.users.update({_id:Meteor.user()._id}, {$inc:{cancelCount:1}})
+  },
+  "click #cancel": function (event, template) {
+    Meteor.users.update({_id:Meteor.user()._id}, {$inc:{cancelCount:1}})
   },
 });
 
