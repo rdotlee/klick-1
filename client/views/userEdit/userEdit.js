@@ -2,6 +2,20 @@ Template['userEdit'].helpers({
 });
 
 Template['userEdit'].events({
+  'click #fb-connect': function(event, template) {
+    Meteor.connectWithFacebook({}, function () {
+      var user = Meteor.user();
+
+      user.profile.gender = user.services.facebook.gender;
+      FBGraph.setAccessToken(user.services.facebook.accessToken);
+      var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
+      var results = fb_get("me/picture?type=large");
+      user.profile.picture = results.location;
+
+      //Meteor.users.update({}
+
+    });
+  }
 });
 
 Template['userEdit'].onRendered(function(){

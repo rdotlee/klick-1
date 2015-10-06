@@ -1,6 +1,9 @@
 <template name="userEdit">
    <div class="container-fluid">
     <div class="row">
+      <button id="fb-connect" class="btn btn-large">Connect with Facebook</button>
+    </div>
+    <div class="row">
       <div class="col-md-10 col-md-offset-1">
         {{> quickForm collection="Meteor.users" doc=this.user id="updateUserForm" type="update"}}
       </div>

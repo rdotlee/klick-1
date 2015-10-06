@@ -323,15 +323,7 @@ if (Meteor.isServer) {
     user.username = user.services.facebook.email; 
     user.profile.firstName = user.services.facebook.first_name;
     user.profile.lastName = user.services.facebook.last_name;
-    user.profile.gender = user.services.facebook.gender;
-    user.profile.lastName = user.services.facebook.last_name;
-    user.emails.push({address: user.services.facebook.email, verified: false});
-
-    FBGraph.setAccessToken(user.services.facebook.accessToken);
-    var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
-    var results = fb_get("me/picture?type=large");
-    console.log(results)
-    user.profile.picture = results.location;
+    
     return user;
   }
 

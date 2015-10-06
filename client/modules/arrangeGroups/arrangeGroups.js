@@ -36,7 +36,7 @@ Template['arrangeGroups'].events({
   },
   'click #save-group': function(event, template){
     var new_groups = Session.get('new_groups');
-    if(_.every(new_groups, function(group){return group.length <= this.groupLimit}, this)){
+    if(_.every(new_groups, function(group){return group.length <= this.groupLimit+1}, this)){
       Events.update(this._id, {$set: {groups: new_groups}});
       console.log(new_groups)
     } else {
