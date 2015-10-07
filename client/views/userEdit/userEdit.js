@@ -3,17 +3,21 @@ Template['userEdit'].helpers({
 
 Template['userEdit'].events({
   'click #fb-connect': function(event, template) {
-    Meteor.connectWithFacebook({}, function () {
+    Meteor.connectWithFacebook({
+      //requestPermissions:['user_birthday', 'user_education_history','user_friends','user_hometown']
+    }, function (res) {
+      console.log(res);
       var user = Meteor.user();
-
+      console.log(user);
       user.profile.gender = user.services.facebook.gender;
-      FBGraph.setAccessToken(user.services.facebook.accessToken);
-      var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
-      var results = fb_get("me/picture?type=large");
-      user.profile.picture = results.location;
+      
+      Meteor.users.update(user._id, {
+        $set: {
+          'profile.gender': user.profile.gender,
+        }
+      });
 
-      //Meteor.users.update({}
-
+      Meteor.call('getFBPhoto')
     });
   }
 });
