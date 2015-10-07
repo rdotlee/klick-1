@@ -12,7 +12,7 @@
         <p>
           <span class="fui-location"></span> {{eventData.location.street}} &nbsp;
           <span class="fui-calendar"></span> {{formatDateTime eventData.date}} &nbsp;
-          <span class="fui-user"></span> {{eventData.users.length}}
+          <b>Group Size:</b> {{eventData.groupLimit}}
         </p>  
         {{#if eventData.description}}
         <p>
