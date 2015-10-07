@@ -11,10 +11,12 @@ Meteor.methods({
     'getFBPhoto': function(){
       var user = Meteor.user();
       FBGraph.setAccessToken(user.services.facebook.accessToken);
+      var fb_get = Meteor.wrapAsync(FBGraph.get,FBGraph);
+      var results = fb_get("me/picture?type=large");
       FBGraph.get("me/picture?type=large", function(err, res){
         Meteor.users.update(user._id, {
           $set: {
-            'profile.picture': res.location
+            'profile.picture': results.location
           }
         });
       });
