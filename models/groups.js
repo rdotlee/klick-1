@@ -76,11 +76,11 @@ Groups.shuffleIntoGroups = function(users, groupLimit){
   group_by_id = group_by_id.filter(function(group){return group.length > 0});
 
   // no one eats alone
-  if (group_by_id.length > 1 && group_by_id[group_by_id.length].length === 1) {
-    var loner = group_by_id[group_by_id.length][0];
-    group_by_id.pop();
-    group_by_id[group_by_id.length].push(loner);
-  }
+  // if (group_by_id.length > 1 && group_by_id[group_by_id.length].length === 1) {
+  //   var loner = group_by_id[group_by_id.length][0];
+  //   group_by_id.pop();
+  //   group_by_id[group_by_id.length].push(loner);
+  // }
 
   return group_by_id;
 }
