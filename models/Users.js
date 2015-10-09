@@ -13,7 +13,7 @@ var UserProfile = new SimpleSchema({
   },
   gender: {
       type: String,
-      allowedValues: ['male', 'female'],
+      allowedValues: ['Male', 'Female'],
       optional: true
   },
   website: {

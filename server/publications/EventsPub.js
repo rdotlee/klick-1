@@ -13,3 +13,7 @@ Meteor.publish('Event', function (id) {
 Meteor.publish('futureEvents', function () {
   return Events.find({date: {$gte: new Date()}},{sort: {date: 1}});
 });
+
+Meteor.publish('AllEvents', function () {
+  return Events.find({},{sort: {date: -1}});
+});

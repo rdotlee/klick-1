@@ -97,7 +97,7 @@ Router.route('/dashboard/events', {
   name: 'eventList',
   onBeforeAction: mustBeAdmin,
   waitOn: function(){
-    return Meteor.subscribe("Events");
+    return Meteor.subscribe("AllEvents");
   },
   data: function(){
     return Events.find({});
