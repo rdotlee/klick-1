@@ -11,6 +11,10 @@ Template['user'].helpers({
       return username
     }
   },
+
+  showEdit: function(userId) {
+    return userId === Meteor.userId() || Roles.userIsInRole(userId, 'admin');
+  }
 });
 
 Template['user'].events({

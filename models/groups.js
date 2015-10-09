@@ -75,6 +75,10 @@ Groups.shuffleIntoGroups = function(users, groupLimit){
 
   group_by_id = group_by_id.filter(function(group){return group.length > 0});
 
+  group_by_id.sort(function(a, b){
+    return b.length - a.length; // ASC -> a - b; DESC -> b - a
+  });
+  
   // no one eats alone
   // if (group_by_id.length > 1 && group_by_id[group_by_id.length].length === 1) {
   //   var loner = group_by_id[group_by_id.length][0];

@@ -4,7 +4,7 @@ Template['userEdit'].helpers({
 Template['userEdit'].events({
   'click #fb-connect': function(event, template) {
     Meteor.connectWithFacebook({
-      //requestPermissions:['user_birthday', 'user_education_history','user_friends','user_hometown']
+      requestPermissions:['user_birthday', 'user_education_history','user_friends','user_hometown']
     }, function (res) {
       console.log(res);
       var user = Meteor.user();

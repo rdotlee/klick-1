@@ -20,7 +20,7 @@ var UserProfile = new SimpleSchema({
       type: String,
       optional: true
   },
-  Tagline: {
+  tagline: {
       type: String,
       optional: true,
       label: 'Tagline'
@@ -247,8 +247,8 @@ var UserSchema = new SimpleSchema({
             omit: true
         }
     },
-    cancelCount: {
-      type: Number,
+    canceledEvents: {
+      type: [String],
       optional: true,
       autoform: {
           omit: true
@@ -284,15 +284,15 @@ if (Meteor.isServer) {
   });
 
   Accounts.validateNewUser(function (user) {
-    // var email_regex = new RegExp("^[A-Z0-9._%+-]+@[A-Z0-9._%+-]*northwestern\.edu$","i"); 
-    // if (user.emails.length >= 1){
-    //   for (var i = user.emails.length - 1; i >= 0; i--) {
-    //     if(email_regex.test(user.emails[i].address)) {
-    //       return true;
-    //     }
-    //   }
-    // }
-    // throw new Meteor.Error(403, "You must use a Northwestern University Email");
+    var email_regex = new RegExp("^[A-Z0-9._%+-]+@[A-Z0-9._%+-]*northwestern\.edu$","i"); 
+    if (user.emails.length >= 1){
+      for (var i = user.emails.length - 1; i >= 0; i--) {
+        if(email_regex.test(user.emails[i].address)) {
+          return true;
+        }
+      }
+    }
+    throw new Meteor.Error(403, "You must use a Northwestern University Email");
     return true;
   });
 

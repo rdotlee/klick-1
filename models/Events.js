@@ -219,10 +219,12 @@ if (Meteor.isServer) {
         data:{
           summary: doc.title,
           start: {
-            dateTime: doc.date
+            dateTime: doc.date,
+            timeZone: 'America/Chicago'
           },
           end: {
-            dateTime: endDate
+            dateTime: endDate,
+            timeZone: 'America/Chicago'
           },
           anyoneCanAddSelf: false,
           guestsCanSeeOtherGuests: false,
@@ -268,10 +270,12 @@ if (Meteor.isServer) {
           summary: doc.title,
           attendees: invited,
           start: {
-            dateTime: moment(doc.date).format("YYYY-MM-DDTHH:mm:ssZ")
+            dateTime: moment(doc.date).format("YYYY-MM-DDTHH:mm:ssZ"),
+            timeZone: 'America/Chicago'
           },
           end: {
-            dateTime: moment(endDate).format("YYYY-MM-DDTHH:mm:ssZ")
+            dateTime: moment(endDate).format("YYYY-MM-DDTHH:mm:ssZ"),
+            timeZone: 'America/Chicago'
           },
           description: doc.description,
           anyoneCanAddSelf: false,

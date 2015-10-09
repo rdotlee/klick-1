@@ -54,6 +54,10 @@ Template['event'].helpers({
     return Meteor.users.find({_id: {$in: group}}).fetch().map(function(user){
       return user.emails[0].address;
     })
+  },
+
+  canceledOn: function(){
+    return Meteor.user().canceledEvents.indexOf(this.eventData._id) !== -1;
   }
   
 });
@@ -68,11 +72,9 @@ Template['event'].events({
     Events.update(this.eventData._id,{
       $pull: {users: Meteor.userId()},
     })
-
-    Meteor.users.update({_id:Meteor.user()._id}, {$inc:{cancelCount:1}})
   },
   "click #cancel": function (event, template) {
-    Meteor.users.update({_id:Meteor.user()._id}, {$inc:{cancelCount:1}})
+    Meteor.users.update({_id:Meteor.user()._id}, {$addToSet: {canceledEvents: this.eventData._id}});
   },
 });
 
