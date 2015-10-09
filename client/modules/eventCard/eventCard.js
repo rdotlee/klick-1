@@ -16,6 +16,10 @@ Template['eventCard'].helpers({
 
   future: function(){
     return this.date > new Date();
+  },
+
+  isFull: function(){
+    return this.users.length === this.eventLimit;
   }
 });
 

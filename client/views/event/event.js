@@ -57,7 +57,11 @@ Template['event'].helpers({
   },
 
   canceledOn: function(){
-    return Meteor.user().canceledEvents.indexOf(this.eventData._id) !== -1;
+    return Meteor.user().canceledEvents ? Meteor.user().canceledEvents.indexOf(this.eventData._id) !== -1 : false;
+  },
+
+  isFull: function(){
+    return this.eventData.users.length === this.eventData.eventLimit;
   }
   
 });
