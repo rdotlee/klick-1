@@ -6,8 +6,8 @@
                 {{#if currentUser}}
                   <a href="{{#if currentUser}}/events/{{_id}}{{/if}}" class="{{#unless currentUser}}disabled{{/unless}}">
                     <h2 class="tile-title">
-                      {{title}}
                       {{#if isHot}}<span class="fui-star-2"></span>{{/if}}
+                      {{title}}
                     </h2>
                   </a>
                 {{else}}
