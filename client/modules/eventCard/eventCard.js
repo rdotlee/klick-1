@@ -23,7 +23,6 @@ Template['eventCard'].helpers({
   },
 
   canceledOn: function(){
-    console.log( Meteor.user())
     return Meteor.user().canceledEvents ? Meteor.user().canceledEvents.indexOf(this._id) !== -1 : false;
   },
 });

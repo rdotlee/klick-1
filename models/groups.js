@@ -80,11 +80,22 @@ Groups.shuffleIntoGroups = function(users, groupLimit){
   });
   
   // no one eats alone
-  // if (group_by_id.length > 1 && group_by_id[group_by_id.length].length === 1) {
-  //   var loner = group_by_id[group_by_id.length][0];
-  //   group_by_id.pop();
-  //   group_by_id[group_by_id.length].push(loner);
-  // }
+  if (group_by_id.length > 1) {
+    var loner_group;
+    var smallest_group = 0;
+    for (var i = group_by_id.length - 1; i >= 0; i--) {
+      if (group_by_id[i].length === 1) {
+        loner_group = i;
+      } else if (group_by_id[smallest_group].length > group_by_id[i].length) {
+        smallest_group = i;
+      }
+    };
+
+    if (loner_group){
+      group_by_id[smallest_group].push(group_by_id[loner_group][0]);
+      group_by_id.splice(loner_group, 1);
+    }
+  }
 
   return group_by_id;
 }

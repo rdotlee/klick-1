@@ -301,21 +301,13 @@ if (Meteor.isServer) {
         user.emails = [];
     }
     user.profile = options.profile || {};
-    if(user.services && user.services.facebook){
-      user = getFacebookProfile(user);
-    } else if (user.services && user.services.google) {
-      user.username = user.services.google.email;
-      user.emails.push({address: user.services.google.email, verified: false});
-      user.profile.picture = user.services.google.picture;
-      user.profile.firstName = user.services.google.given_name;
-      user.profile.lastName = user.services.google.family_name;
-    } else {
-      user.username = options.email;
-      user.profile.picture = Gravatar.imageUrl(options.email,{
-        size: 200,
-        default: 'mm'
-      });
-    }
+
+    user.username = options.email;
+    user.profile.picture = Gravatar.imageUrl(options.email,{
+      size: 200,
+      default: 'mm'
+    });
+  
     return user;
   });
 
