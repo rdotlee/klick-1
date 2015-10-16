@@ -8,3 +8,6 @@ Meteor.startup(function () {
   //Accounts.config({ restrictCreationByEmailDomain: 'kellogg.edu' })
 });
 
+Deps.autorun(function(){
+  Meteor.subscribe('userData');
+});

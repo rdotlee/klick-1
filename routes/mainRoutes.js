@@ -29,7 +29,7 @@ Router.route('/admin_login', {
 Router.route('/events', {
   name: 'events',
   waitOn: function(){
-    return Meteor.subscribe("Events");
+    return [Meteor.subscribe("AllEvents"),  Meteor.subscribe('userData')];
   },
   action: function () {
     this.render('events');

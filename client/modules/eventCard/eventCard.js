@@ -20,7 +20,12 @@ Template['eventCard'].helpers({
 
   isFull: function(){
     return this.users.length === this.eventLimit;
-  }
+  },
+
+  canceledOn: function(){
+    console.log( Meteor.user())
+    return Meteor.user().canceledEvents ? Meteor.user().canceledEvents.indexOf(this._id) !== -1 : false;
+  },
 });
 
 Template['eventCard'].events({

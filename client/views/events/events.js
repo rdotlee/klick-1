@@ -39,7 +39,11 @@ Template['events'].helpers({
 
 Template['events'].events({
   'click #all-events': function(event, template){
-    Session.set('eventsParams', {});
+    Session.set('eventsParams', {
+      date: {
+        $gte: moment().toDate()
+      }
+    });
     Session.set('filter', 'all');
   },
   'click #reg-events': function(event, template){
@@ -80,6 +84,10 @@ Template['events'].events({
 
 Template['events'].onRendered(function(){
   Session.set('filter', 'all');
-  Session.set('eventsParams', {});
+  Session.set('eventsParams', {
+    date: {
+      $gte: moment().toDate()
+    }
+  });
 })
 

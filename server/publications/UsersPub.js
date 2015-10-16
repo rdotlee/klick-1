@@ -20,3 +20,10 @@ Meteor.methods({
       });
     }
 });
+
+Meteor.publish('userData', function() {
+  if(!this.userId) return null;
+  return Meteor.users.find(this.userId, {fields: {
+    canceledEvents: 1,
+  }});
+});
