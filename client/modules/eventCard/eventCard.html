@@ -29,17 +29,17 @@
             </ul>
             {{#if currentUser}}
               {{#if future}}
-                {{#if isRegistered}}
-                  {{#if canceledOn}}
-                    <a class="btn btn-primary btn-large btn-block disabled">Canceled Registration</a>
-                  {{else}}
-                    <button class="btn btn-primary btn-large btn-block disabled"  type="submit">Attending</button>
-                  {{/if}}
+                {{#if canceledOn}}
+                  <a class="btn btn-primary btn-large btn-block disabled">Canceled Registration</a>
                 {{else}}
-                  {{#if isFull}}
-                    <a class="btn btn-primary btn-large btn-block disabled" >Event full</a>
+                  {{#if isRegistered}}
+                    <button class="btn btn-primary btn-large btn-block disabled"  type="submit">Attending</button>
                   {{else}}
-                    <button class="btn btn-primary btn-large btn-block" id="register" type="submit">Join</button>
+                    {{#if isFull}}
+                      <a class="btn btn-primary btn-large btn-block disabled" >Event full</a>
+                    {{else}}
+                      <button class="btn btn-primary btn-large btn-block" id="register" type="submit">Join</button>
+                    {{/if}}
                   {{/if}}
                 {{/if}}
               {{/if}}

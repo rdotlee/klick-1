@@ -46,10 +46,10 @@
       {{/if}}
       <div class="col-md-12 text-center">
         {{#if future}}
-          {{#if isRegistered}}
-            {{#if canceledOn}}
-              <h3>You canceled your registration for this event</h3>
-            {{else}}
+          {{#if canceledOn}}
+            <h3>You canceled your registration for this event</h3>
+          {{else}}
+            {{#if isRegistered}}
               {{#unless viewable}}
                 <button class="btn btn-danger btn-large " id="unregister" type="submit">Sadly, I must cancel</button>
               {{else}}
@@ -57,12 +57,12 @@
                 <a id="cancel" class="btn btn-danger btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}},{{/each}}?subject=Sorry! I can’t make it today.&cc=klick@kellogg.northwestern.edu">Cancel – Contact All Attendees</a>
                 <a class="btn btn-warning btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}},{{/each}}?subject=Sorry! Running late">Running Late – Contact All Attendees</a>
               {{/unless}}
-            {{/if}}
-          {{else}}
-            {{#if isFull}}
-              <h3>Sorry this event is full</h3>
             {{else}}
-              <button class="btn btn-primary btn-large " id="register" type="submit">Join</button>
+              {{#if isFull}}
+                <h3>Sorry this event is full</h3>
+              {{else}}
+                <button class="btn btn-primary btn-large " id="register" type="submit">Join</button>
+              {{/if}}
             {{/if}}
           {{/if}}
         {{/if}}

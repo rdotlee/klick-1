@@ -1,6 +1,6 @@
 Template['event'].helpers({
   viewable: function () {
-    return moment().add(this.config.release_frame, 'days').isAfter(this.eventData.date);
+    return moment().add(this.config.release_frame, 'hours').isAfter(this.eventData.date);
   },
   getCountdown: function() {
     return Session.get("time"+this.eventData._id);
@@ -78,12 +78,15 @@ Template['event'].events({
     })
   },
   "click #cancel": function (event, template) {
+    Events.update(this.eventData._id,{
+      $pull: {users: Meteor.userId()},
+    });
     Meteor.users.update({_id:Meteor.user()._id}, {$addToSet: {canceledEvents: this.eventData._id}});
   },
 });
 
 Template['event'].onRendered(function(){
-  var releaseDate = moment(this.data.eventData.date).subtract(this.data.config.release_frame, 'days');
+  var releaseDate = moment(this.data.eventData.date).subtract(this.data.config.release_frame, 'hours');
   releaseDate = releaseDate.toDate();
   var seconds =  (releaseDate - new Date())/1000;
   var clock = seconds;

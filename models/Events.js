@@ -169,7 +169,7 @@ if (Meteor.isServer) {
     if(modifier.$addToSet && modifier.$addToSet.users){
       var newUser = modifier.$addToSet.users;
       users.push(newUser);
-      if(doc.manualSort || moment().add(config.release_frame, 'days').isAfter(doc.date)){
+      if(doc.manualSort || moment().add(config.release_frame, 'hours').isAfter(doc.date)){
         console.log('Adding, Manual grouping add or within release')
         new_groups = Groups.addToGroup(doc.groups,modifier.$addToSet.users, doc.groupLimit);
       } else {
@@ -180,7 +180,7 @@ if (Meteor.isServer) {
     } else if (modifier.$pull && modifier.$pull.users) {
       var removeUser = modifier.$pull.users;
       users = _.filter(users, function(id){ return id !== removeUser});
-      if(doc.manualSort || moment().add(config.release_frame, 'days').isAfter(doc.date)){
+      if(doc.manualSort || moment().add(config.release_frame, 'hours').isAfter(doc.date)){
         console.log('Manual grouping remove')
         new_groups = Groups.removeFromGroup(doc.groups,modifier.$pull.users, doc.groupLimit);
       } else {
@@ -209,10 +209,10 @@ if (Meteor.isServer) {
   });
 
   Events.after.insert(function (userId, doc){
+    var link_text = "\n\nFind you who you are meeting at http://klick.meteor.com/events/" + doc._id; 
     var config = Settings.findOne({});
     var calendarOwner = Meteor.users.findOne(config.calendarOwner);
     if(calendarOwner){
-      console.log(calendarOwner)
       var endDate = moment(doc.date).add(1, 'hours').toDate();
       var options = {
         user: calendarOwner,
@@ -229,15 +229,13 @@ if (Meteor.isServer) {
           anyoneCanAddSelf: false,
           guestsCanSeeOtherGuests: false,
           guestsCanInviteOthers: false,
-          description: doc.description,
+          description: doc.description+link_text,
           location: doc.location.street + ", " + doc.location.city,
           visibility: 'private'
         }
       };
 
       GoogleApi.post('calendar/v3/calendars/primary/events', options, function(res, data){
-        console.log(res)
-        console.log(data)
         var calId = data.id;
         Events.update(doc._id, {$set: {gcalId: calId}});
       });
@@ -249,6 +247,7 @@ if (Meteor.isServer) {
     console.log('\n\nUpdating event to: ')
     console.log(doc);
 
+    var link_text = "\n\nFind you who you are meeting at http://klick.meteor.com/events/" + doc._id; 
     var config = Settings.findOne({});
     var calendarOwner = Meteor.users.findOne(config.calendarOwner);
     var invited = Meteor.users.find({_id: {$in: doc.users}}).fetch();
@@ -277,7 +276,7 @@ if (Meteor.isServer) {
             dateTime: moment(endDate).format("YYYY-MM-DDTHH:mm:ssZ"),
             timeZone: 'America/Chicago'
           },
-          description: doc.description,
+          description: doc.description +link_text,
           anyoneCanAddSelf: false,
           guestsCanSeeOtherGuests: false,
           guestsCanInviteOthers: false,
