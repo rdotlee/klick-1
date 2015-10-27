@@ -45,9 +45,7 @@ AutoForm.addHooks('insertUserForm', {
       profile: {
         firstName: insertDoc.firstName,
         lastName: insertDoc.lastName,
-        program: insertDoc.program,
-        section: insertDoc.section,
-        kwesttrip: insertDoc.kwesttrip
+        netid: insertDoc.netid
       }
     }, function(err){
       if (err) {
@@ -67,33 +65,23 @@ AutoForm.addHooks('insertUserForm', {
 
 var UserSignUp = new SimpleSchema({
   firstName: {
-      type: String
+      type: String,
+      optional: false,
   },
   lastName: {
-      type: String
+      type: String,
+      optional: false,
   },
   email: {
     type: String,
+    optional: false,
     regEx: SimpleSchema.RegEx.Email,
-    label: "Email",
+    label: "Kellogg Email",
   },
-  program: {
+  netid: {
       type: String,
       optional: false,
-      label: 'Kellogg Program',
-      allowedValues: ['MMM', '1Y', '2Y', 'JDMBA', 'MDMBA', 'Part-time', 'Executive', 'JV'],
-  },
-  section: {
-      type: String,
-      optional: false,
-      label: 'Section',
-      allowedValues: ['1Y-Hedgehogs','1Y-Roadrunners','Big Dawgs','Bucket Heads','Bull Frogs','Cash Cows','Highlanders','Jive Turkeys','Moose','Poets','N/A',],
-  },
-  kwesttrip: {
-      type: String,
-      optional: false,
-      label: 'KWEST Trip',
-      allowedValues: ['Amazing Race-2013','Amazing race-2014','Argentina-2014','Arubacao-2014','Belize-2014','Berlin/Krakow-2014','Bike Holland-2014','Brazil-2013','Chile-2013','Chile-2014','Costa Rica-2014','Croatia-2013','Croatia-2014','Czechoslovakia-2014','Denmark/Austria-2014','Dominican Republic-2013','Ecuador-2014','France-2013','Georgia/Armenia-2014','Greece-2014','Guatemala-2014','Hungary-2014','Iceland-2014','Ireland-2014','Italy-2014','Mystery-2014','Nicaragua-2013','Nicaragua-2014','Oman-2014','Panama-2014','Peru-2013','Peru-2014','Portugal-2014','Puerto Rico-2014','Romania-2013','Romania-2014','South Africa-2013','Spain - Mediterranean-2013','Spain - Northern-2013','Spain Mediterranean-2014','St. Lucia-2014','Sweden-2014','Thailand-2013','Thailand-2014','Turkey-2014','USA Virgin Islands-2013','Vietnam-2014','Zanzibar-2014','N/A'],
+      label: 'NetID'
   },
   password: {
     type: String,

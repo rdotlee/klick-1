@@ -1,6 +1,6 @@
 <template name="eventCard">
-    <div class="col-md-3">
-      <div class="share ">
+    <div class="col-md-4">
+      <div class="share event_card">
             <ul>
               <li>
                 {{#if currentUser}}
@@ -18,34 +18,44 @@
                 {{/if}}
               </li>
               <li>
-                <span class="fui-location"></span> {{location.street}}
+                <span class="fui-calendar"></span> {{formatDateTime date}}
               </li>
               <li>
-                <span class="fui-calendar"></span> {{formatDateTime date}}
+                <span class="fui-location"></span> {{location.street}}
               </li>
               <li>
                 Group size: {{groupLimit}}
               </li>
             </ul>
-            {{#if currentUser}}
-              {{#if future}}
-                {{#if canceledOn}}
-                  <a class="btn btn-primary btn-large btn-block disabled">Canceled Registration</a>
-                {{else}}
-                  {{#if isRegistered}}
-                    <button class="btn btn-primary btn-large btn-block disabled"  type="submit">Attending</button>
-                  {{else}}
-                    {{#if isFull}}
-                      <a class="btn btn-primary btn-large btn-block disabled" >Event full</a>
-                    {{else}}
-                      <button class="btn btn-primary btn-large btn-block" id="register" type="submit">Join</button>
+            
+            {{#if future}}
+              <div class="btn-toolbar padding none">
+                <div class="btn-group">
+                  <a class="btn btn-warning btn-large {{#unless currentUser}}disabled{{/unless}}" href="{{#if currentUser}}/events/{{_id}}{{/if}}">Details</a>
+                  {{#if currentUser}}
+                    {{#if future}}
+                      {{#if canceledOn}}
+                        <a class="btn btn-primary btn-large disabled">Canceled Registration</a>
+                      {{else}}
+                        {{#if isRegistered}}
+                          <button class="btn btn-primary btn-large disabled"  type="submit">Attending</button>
+                        {{else}}
+                          {{#if isFull}}
+                            <a class="btn btn-primary btn-large disabled" >Event full</a>
+                          {{else}}
+                            <button class="btn btn-primary btn-large " id="register" type="submit">Join</button>
+                          {{/if}}
+                        {{/if}}
+                      {{/if}}
                     {{/if}}
+                  {{else}}
+                    <a class="btn btn-primary btn-large disabled" > Login to Join</a>
                   {{/if}}
-                {{/if}}
-              {{/if}}
+                </div>
+              </div>
             {{else}}
-              <a class="btn btn-primary btn-large btn-block disabled" > Login to Join</a>
+              <a class="btn btn-warning btn-large btn-block {{#unless currentUser}}disabled{{/unless}}" href="{{#if currentUser}}/events/{{_id}}{{/if}}">Details</a>
             {{/if}}
-          </div>
+      </div>
     </div>
 </template>

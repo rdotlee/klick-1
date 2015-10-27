@@ -1,13 +1,15 @@
 <template name="userEdit">
    <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-2 col-md-offset-1 padding bottom">
-        <button id="fb-connect" class="btn btn-large">Load from Facebook</button>
+    {{#if incomplete_profile}}
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="alert alert-warning" role="alert">Complete your profile to register for events</div>
+        </div>
       </div>
-    </div>
+    {{/if}}
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        {{> quickForm collection="Meteor.users" doc=this.user id="updateUserForm" type="update"}}
+        {{> quickForm collection="Meteor.users" doc=this.user schema=profile_schema id="updateUserForm" type="update"}}
       </div>
     </div>
   </div>

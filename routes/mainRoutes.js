@@ -191,6 +191,26 @@ var mustBeAdmin = function(pause){
   }
 }
 
+var complete_profile = function () {
+  var user = Meteor.user();
+  return user.profile.firstName &&
+    user.profile.lastName &&
+    user.profile.netid &&
+    user.profile.gradYear &&
+    user.profile.program &&
+    user.profile.section &&
+    user.profile.kwesttrip;
+}
+
+var profileFilled = function(pause){
+  if(Meteor.user() && !complete_profile()){
+    Router.go('userEdit', {_id: Meteor.userId});
+  } else {
+    this.next();
+  }
+}
+
 Router.onBeforeAction(mustBeThisUser, {only: ['userEdit']});
 Router.onBeforeAction(mustBeSignedIn, {except: ['home', 'events','signup', 'admin_login']});
+Router.onBeforeAction(profileFilled, {except: ['userEdit']});
 //Router.onBeforeAction(goToDashboard, {only: ['home']});

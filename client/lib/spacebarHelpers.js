@@ -63,7 +63,7 @@ Template.registerHelper('formatDate', function(date) {
 });
 
 Template.registerHelper('formatDateTime', function(date) {
-  return moment(date).format('MM/DD/YYYY @ hh:mm a');
+  return moment(date).format('ddd MM/DD @ hh:mm a');
 });
 
 Template.registerHelper('repeat', function(times) {
@@ -77,3 +77,8 @@ Template.registerHelper('repeat', function(times) {
 Template.registerHelper('twoDecimals', function(num) {
   return Math.round(num * 100) / 100;
 });
+
+Template.registerHelper('kellog_pic', function(netid) {
+  return "http://www.kellogg.northwestern.edu/images/students/all/"+netid+".jpg";
+});
+

@@ -22,7 +22,7 @@ html, body {
 
 .profile{
   .profile-img{
-    height: 150px;
+    height: 200px;
     margin: 21px 0 17px;
     vertical-align: bottom;
   }
@@ -59,4 +59,24 @@ html, body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+[data-required] label:after {content: '*'}
+
+.event_card {
+  ul {
+    cursor: pointer;
+  }
+
+  .btn-toolbar {
+    margin-left: 0;
+    .btn-group {
+      width: 100%;
+      margin-left: 0;
+    
+      .btn {
+        width: 50%;
+      }
+    }
+  }
 }

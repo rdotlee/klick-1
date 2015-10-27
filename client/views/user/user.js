@@ -1,5 +1,4 @@
 Template['user'].helpers({
-
   userIsLoggedInUser: function(userId){
     return userId === Meteor.userId();
   },
@@ -14,6 +13,10 @@ Template['user'].helpers({
 
   showEdit: function(userId) {
     return userId === Meteor.userId() || Roles.userIsInRole(userId, 'admin');
+  },
+
+  no_events: function(){
+    return !this.klicks.length;
   }
 });
 

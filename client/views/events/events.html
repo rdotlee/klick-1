@@ -1,12 +1,21 @@
 <template name="events">
     <div class="container">
-      {{#if currentUser}}
-      <div class="btn-group pull-right" role="group">
-        <button type="button" id="all-events" class="btn btn-default {{#if isFilter 'all'}}active{{/if}}">Upcoming</button>
-        <button type="button" id="reg-events" class="btn btn-default {{#if isFilter 'reg'}}active{{/if}}">Going</button>
-        <button type="button" id="past-events" class="btn btn-default {{#if isFilter 'past'}}active{{/if}}">Past</button>
+      <div class="row">
+        <div class="col-md-8">
+          <h3>Events</h3>
+          <p>Here are all the Klick events coming up. Sign up to meet new classmates!</p>
+        </div>
+
+        {{#if currentUser}}
+        <div class="col-md-4">
+          <div class="btn-group pull-right" role="group">
+            <button type="button" id="all-events" class="btn btn-default {{#if isFilter 'all'}}active{{/if}}">Upcoming</button>
+            <button type="button" id="reg-events" class="btn btn-default {{#if isFilter 'reg'}}active{{/if}}">Registered</button>
+            <button type="button" id="past-events" class="btn btn-default {{#if isFilter 'past'}}active{{/if}}">Past</button>
+          </div>
+        </div>
+        {{/if}}
       </div>
-      {{/if}}
       <div class="row">
         {{#each areas}}
           <div class="col-md-12">

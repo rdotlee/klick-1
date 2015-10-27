@@ -37,6 +37,10 @@ Template['eventCard'].events({
   "click #delete": function (event, template) {
     Events.remove(this._id);
   },
+
+  "click .event_card ul": function(event, template) {
+    Router.go('event',{_id: this._id})
+  }
 });
 
 

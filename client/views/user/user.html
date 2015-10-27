@@ -1,16 +1,23 @@
 <template name="user">
   <div class="container">
     <div class="row">
+      {{#if no_events}}
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="alert alert-info" role="alert">Sweet profile!  Now go  click the Events button above and check out some  upcoming  meet-ups  you can join!</div>
+          </div>
+        </div>
+      {{/if}}
       <div class="col-md-12 profile">
         <div class="row">
           <div class="col-md-4">
-            <img src="{{profile.picture}}" class="profile-img img-rounded {{#unless isPhone}}pull-right{{/unless}}">
+            <img src="{{kellog_pic profile.netid}}" class="profile-img img-rounded {{#unless isPhone}}pull-right{{/unless}}">
           </div>
           <div class="col-md-6">
             <h3>
               {{name}}
               {{#if showEdit _id}}
-                <a class="btn btn-primary" href="/users/{{_id}}/edit">Edit</a>
+                <a class="btn btn-primary margin left" href="/users/{{_id}}/edit">Edit</a>
               {{/if}}
             </h3>
             <blockquote>
@@ -18,61 +25,50 @@
               <p>{{profile.tagline}}</p>
             {{/if}}
             </blockquote>
-            <p>
+            <table class="table">
               {{#if profile.birthday}}
-                <b>Birthday:</b> {{formatDate profile.birthday}}<br>
+                <tr>
+                  <td>Birthday:</td>
+                  <td>{{formatDate profile.birthday}}</td>
+                </tr>
               {{/if}}
               {{#if profile.gender}}
-                <b>Gender:</b> {{profile.gender}}<br>
-              {{/if}}
-              {{#if profile.website}}
-                <b>Website:</b> {{profile.website}}<br>
+                <tr>
+                  <td>Gender:</td>
+                  <td>{{profile.gender}}</td>
+                </tr>
               {{/if}}
               {{#if profile.program}}
-                <b>Program:</b> {{profile.program}}<br>
+                <tr>
+                  <td>Program:</td>
+                  <td>{{profile.program}}</td>
+                </tr>
               {{/if}}
               {{#if profile.section}}
-                <b>Section:</b> {{profile.section}}<br>
+                <tr>
+                  <td>Section:</td>
+                  <td>{{profile.section}}</td>
+                </tr>
               {{/if}}
               {{#if profile.kwesttrip}}
-                <b>Kwest Trip:</b> {{profile.kwesttrip}}<br>
+                <tr>
+                  <td>Kwest Trip:</td>
+                  <td>{{profile.kwesttrip}}</td>
+                </tr>
               {{/if}}
               {{#if profile.gradYear}}
-                <b>Class of:</b> {{profile.gradYear}}<br>
+                <tr>
+                  <td>Class of:</td>
+                  <td>{{profile.gradYear}}</td>
+                </tr>
               {{/if}}
-              {{#if profile.organizations}}
-                <b>Companies and Organizations:</b>
-                <ul>
-                  {{#each profile.organizations}}
-                    <li>{{this}}</li>
-                  {{/each}}
-                </ul>
+              {{#if profile.nationality}}
+                <tr>
+                  <td>Nationality:</td>
+                  <td>{{profile.nationality}}</td>
+                </tr>
               {{/if}}
-              {{#if profile.education}}
-                <b>Education:</b>
-                <ul>
-                  {{#each profile.education}}
-                    <li>{{this}}</li>
-                  {{/each}}
-                </ul>
-              {{/if}}
-              {{#if profile.nationalities}}
-                <b>Nationalities:</b>
-                <ul>
-                  {{#each profile.nationalities}}
-                    <li>{{this}}</li>
-                  {{/each}}
-                </ul>
-              {{/if}}
-              {{#if profile.languages}}
-                <b>Languages:</b>
-                <ul>
-                  {{#each profile.languages}}
-                    <li>{{this}}</li>
-                  {{/each}}
-                </ul>
-              {{/if}}
-            </p>
+            </table>
           </div>  
         </div> 
       </div>
