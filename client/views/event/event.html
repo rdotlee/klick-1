@@ -53,9 +53,9 @@
               {{#unless viewable}}
                 <button class="btn btn-danger btn-large " id="unregister" type="submit">Sadly, I must cancel</button>
               {{else}}
-                <a id="cancel" class="btn btn-primary btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}},{{/each}}">Contact All Attendees</a>
-                <a id="cancel" class="btn btn-danger btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}},{{/each}}?subject=Sorry! I can’t make it today.&cc=klick@kellogg.northwestern.edu">Cancel – Contact All Attendees</a>
-                <a class="btn btn-warning btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}},{{/each}}?subject=Sorry! Running late">Running Late – Contact All Attendees</a>
+                <a class="btn btn-primary btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}};{{/each}}">Contact All Attendees</a>
+                <a id="cancel" class="btn btn-danger btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}};{{/each}}?subject=Sorry! I can’t make it today.&cc=klick@kellogg.northwestern.edu">Cancel – Contact All Attendees</a>
+                <a class="btn btn-warning btn-large" type="submit" href="mailto:{{#each groupEmails}}{{this}};{{/each}}?subject=Sorry! Running late">Running Late – Contact All Attendees</a>
               {{/unless}}
             {{else}}
               {{#if isFull}}

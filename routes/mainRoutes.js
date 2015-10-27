@@ -29,7 +29,8 @@ Router.route('/admin_login', {
 Router.route('/events', {
   name: 'events',
   waitOn: function(){
-    return [Meteor.subscribe("AllEvents"),  Meteor.subscribe('userData')];
+    if (Meteor.user()) return [Meteor.subscribe("AllEvents"),  Meteor.subscribe('userData')];
+    if (!Meteor.user()) return [Meteor.subscribe("AllEvents")];
   },
   action: function () {
     this.render('events');
