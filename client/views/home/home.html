@@ -1,45 +1,63 @@
 <template name="home">
-  <div class="container">
-    {{#if currentUser}}
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="">My upcoming events</h3>
-        </div>
-        {{#each futureEvents}}
-          {{> eventCard}}
-        {{/each}}
+  <div class = "hero jumbotron">
+      <h1>Klick</h1>
+      <div class="green_bar padding tb">
+        <h4>Inspiring growth for your network at Kellogg.</h4>
+        <p class="lead"><i>Because you've got 1,200 people to meet, and only so many lunches to do it.</i></p>
       </div>
-
-    {{else}}
-      <div class="jumbotron hero">
-        <div class="container">
-          <h1>Make new connections at the Jake with Klick</h1>
-          <p>Expand your Kellogg experience and network through informal Klick meet-ups to make brave new connections </p>
-          <p>
-            {{#unless currentUser}}
-              <a href="/signup" class="btn btn-primary btn-lg mrs">Sign Up!</a>
-            {{/unless}}
-            <a class="btn btn-primary btn-lg" href="/events" role="button">See events&raquo;</a>
-          </p>
-        </div>
-      </div>
-
-        <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4 text-center">
-          <h2><span class="fui-calendar"></span> Schedule</h2>
-        </div>
-        <div class="col-md-4 text-center">
-          <h2><span class="fui-bubble"></span> Meet</h2>
-       </div>
-        <div class="col-md-4 text-center">
-          <h2><span class="fui-checkbox-checked"></span> Klick</h2>
-        </div>
-        <div class="col-md-12 text-center">
-          <p>In the limited time we have in Evanston, it's tough to meet all the amazing students in the Kellogg community.  Through casual Klick meet-ups, we hope to offer Kellogg students opportunities to meet new classmates and forge inspiring connections.</p>
-        </div>
-      </div>
-    {{/if}}
+      <p class="padding top">
+        <a class = "btn btn-primary btn-lg" role = "button">Learn more</a>
+      </p>
   </div>
-
+  <div class="container text-center padding bottom">
+    <h2>How it works</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Sign up</h3>
+        <p class="padding lr">Register with your Kellogg email, and tell us a bit about yourself - that way we can try to find you Klickmates you may not know yet!</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Get Matched</h3>
+        <p class="padding lr">Find a time that works and we'll schedule a meetup with people you may not know.  We'll keep it a secret until 30 minutes before your meetup just to make it interesting.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Klick</h3>
+        <p class="padding lr">Check back on the site where your Klickmates are revealed! Meet in your assigned area and the rest is up to you.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-center team">
+    <h2>Team</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Sign up</h3>
+        <h4 class="padding lr">Phil Brown</h4>
+      </div>
+      <div class="col-md-4">
+        <h3>Get Matched</h3>
+        <h4 class="padding lr">Ashley Jurinka</h4>
+      </div>
+      <div class="col-md-4">
+        <h3>Klick</h3>
+        <h4 class="padding lr">Ryan Lee</h4>
+      </div>
+    </div>
+  </div>
+  <div class="container padding bottom">
+    <h2 class="text-center">FAQ</h2>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <p class="margin bottom none">Q: What was the inspiration behind Klick?</p>
+        <p class="padding left">In the short time we have at Kellogg, it's tough to meet all the amazing students in the community.  It's even harder to consistently push yourself outside of your natural social circle to find those people you wouldn't have met otherwise. Through casual meetups, we hope to offer Kellogg students additional opportunities to forge those connections.</p>
+        <p class="margin bottom none">Q: What if I have to cancel right before the event?</p>
+        <p class="padding left">Agh, you're the worst!  Just kidding - we get that it happens.  Before names and photos are revealed, you can easily go onto the site and unregister from an event.  That's always best because we can shuffle things around on our end to fill in any gaps.  After the reveal, you'll find an option to send an email to everyone in your group to let them know you won't be joining (or you'll be running late!).  Don't be that person who cancels once the names are revealed - swipe right, guys.</p>
+        <p class="margin bottom none">Q: I keep meeting with people I've already met!</p>
+        <p class="padding left">First of all, this is going to happen - and we hope you see this as an incredible opportunity to spend time with a group in a new context that you would not have otherwise engineered yourself.  With that being said, we do prioritize KWEST, Section, Country, etc. when matching the groups. Sometimes you may have to hang out with non-strangers - sorry guys.</p>
+        <p class="margin bottom none">Q: Why do you keep my Klickmates secret?</p>
+        <p class="padding left">This should feel as different as possible from that first meeting with your assigned group for DECS.  One of our most important assumptions is that any Kellogg student can find something in common with anyone else in the Jake - and that allows us to take over the wheel and match you with people in a new context. We hope this helps with some of the subtle divides in our community. By keeping it a secret, we get to artificially create danger and excitement while also allowing the groups to shift as more students sign up. This is a bit of a social experiment.</p>
+        <p class="margin bottom none">Q: How will I know where to meet the others?</p>
+        <p class="padding left">If you are meeting in the Jake, we've deliberately set events during non-peak hours (during class times, afternoons) to increase the likelihood of finding a table in the Atrium.  For now, we encourage you to...</p>
+      </div>
+    </div>
+  </div>
 </template>
