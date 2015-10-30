@@ -10,9 +10,9 @@
           <h2>{{eventData.title}}</h2>
         {{/if}}
         <p>
-          <span class="fui-location"></span> {{eventData.location.street}} &nbsp;
-          <span class="fui-calendar"></span> {{formatDateTime eventData.date}} &nbsp;
-          <b>Group Size:</b> {{eventData.groupLimit}}
+          <span class="nowrap"><span class="fui-location"></span> {{eventData.location.street}}</span> &nbsp;
+          <span class="nowrap"><span class="fui-calendar"></span> {{formatDateTime eventData.date}}</span> &nbsp;
+          <span class="nowrap"><b>Group Size:</b> {{eventData.groupLimit}}</span>
         </p>  
         {{#if eventData.description}}
         <p>
@@ -34,17 +34,17 @@
           <div class="row row-centered">
             {{#each repeat eventData.groupLimit}}
             <div {{groupAttr ..}}>
-              <img src="/images/blankavatar.png" class="img-responsive img-rounded">
+              <img src="/images/blankavatar.png" class="img-responsive img-rounded margin auto">
             </div>
             {{/each}}
           </div>
-          <div class="row row-centered">
-            <p class="lead">Get excited…make sure to check back here in {{secondsToDays getCountdown}} and we’ll reveal your matched Klick group.” 
+          <div class="row text-center">
+            <p class="lead padding lr">Get excited…make sure to check back here in {{secondsToDays getCountdown}} and we’ll reveal your matched Klick group. 
             </p>
           </div>  
         {{/if}}
       {{/if}}
-      <div class="col-md-12 text-center">
+      <div class="col-md-12 text-center padding bottom">
         {{#if future}}
           {{#if canceledOn}}
             <h3>You canceled your registration for this event</h3>
