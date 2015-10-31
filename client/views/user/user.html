@@ -13,7 +13,7 @@
           <div class="col-md-4">
             <img src="{{kellog_pic profile.netid}}" class="profile-img img-rounded {{#unless isPhone}}pull-right{{/unless}}">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <h3>
               {{name}}
               {{#if showEdit _id}}
@@ -25,50 +25,52 @@
               <p>{{profile.tagline}}</p>
             {{/if}}
             </blockquote>
-            <table class="table">
-              {{#if profile.birthday}}
-                <tr>
-                  <td>Birthday:</td>
-                  <td>{{formatDate profile.birthday}}</td>
-                </tr>
-              {{/if}}
-              {{#if profile.gender}}
-                <tr>
-                  <td>Gender:</td>
-                  <td>{{profile.gender}}</td>
-                </tr>
-              {{/if}}
-              {{#if profile.program}}
-                <tr>
-                  <td>Program:</td>
-                  <td>{{profile.program}}</td>
-                </tr>
-              {{/if}}
-              {{#if profile.section}}
-                <tr>
-                  <td>Section:</td>
-                  <td>{{profile.section}}</td>
-                </tr>
-              {{/if}}
-              {{#if profile.kwesttrip}}
-                <tr>
-                  <td>Kwest Trip:</td>
-                  <td>{{profile.kwesttrip}}</td>
-                </tr>
-              {{/if}}
-              {{#if profile.gradYear}}
-                <tr>
-                  <td>Class of:</td>
-                  <td>{{profile.gradYear}}</td>
-                </tr>
-              {{/if}}
-              {{#if profile.nationality}}
-                <tr>
-                  <td>Nationality:</td>
-                  <td>{{profile.nationality}}</td>
-                </tr>
-              {{/if}}
-            </table>
+            <div class="col-md-10">
+              <table class="table">
+                {{#if profile.birthday}}
+                  <tr>
+                    <td>Birthday:</td>
+                    <td>{{formatDate profile.birthday}}</td>
+                  </tr>
+                {{/if}}
+                {{#if profile.gender}}
+                  <tr>
+                    <td>Gender:</td>
+                    <td>{{profile.gender}}</td>
+                  </tr>
+                {{/if}}
+                {{#if profile.program}}
+                  <tr>
+                    <td>Program:</td>
+                    <td>{{profile.program}}</td>
+                  </tr>
+                {{/if}}
+                {{#if profile.section}}
+                  <tr>
+                    <td>Section:</td>
+                    <td>{{profile.section}}</td>
+                  </tr>
+                {{/if}}
+                {{#if profile.kwesttrip}}
+                  <tr>
+                    <td>Kwest Trip:</td>
+                    <td>{{profile.kwesttrip}}</td>
+                  </tr>
+                {{/if}}
+                {{#if profile.gradYear}}
+                  <tr>
+                    <td>Class of:</td>
+                    <td>{{profile.gradYear}}</td>
+                  </tr>
+                {{/if}}
+                {{#if profile.nationality}}
+                  <tr>
+                    <td>Nationality:</td>
+                    <td>{{profile.nationality}}</td>
+                  </tr>
+                {{/if}}
+              </table>
+            </div>
           </div>  
         </div> 
       </div>

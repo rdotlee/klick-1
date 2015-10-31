@@ -52,7 +52,10 @@ var UserProfile = new SimpleSchema({
   tagline: {
       type: String,
       optional: true,
-      label: 'Tagline'
+      label: 'Tagline',
+      autoform: {
+         placeholder: 'Give us one line that describes you. The funnier the better.'
+      }
   },
   gradYear: {
       type: Number,

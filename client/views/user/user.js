@@ -12,7 +12,7 @@ Template['user'].helpers({
   },
 
   showEdit: function(userId) {
-    return userId === Meteor.userId() || Roles.userIsInRole(userId, 'admin');
+    return userId === Meteor.userId() || Roles.userIsInRole(Meteor.userId(), 'admin');
   },
 
   no_events: function(){

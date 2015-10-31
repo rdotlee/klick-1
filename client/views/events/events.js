@@ -13,6 +13,9 @@ Template['events'].helpers({
             areaEvents.events.push(event);
           }
         });
+        areaEvents.events.sort(function(a,b){
+          return new Date(b.date) - new Date(a.date);
+        });
         eventsByArea.push(areaEvents);
       });
 
