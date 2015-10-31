@@ -57,13 +57,16 @@ html, body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  text-align: center;
 
   .green_bar {
     background-color: rgba(22,193,183, 0.7);
     .lead {
       color: #d3d3d3;
     }
+  }
+
+  .upcoming_events {
+    padding: 0 50px;
   }
 }
 
@@ -75,6 +78,8 @@ html, body {
 [data-required] label:after {content: '*'}
 
 .event_card {
+  color: @klick-purple;
+
   ul {
     cursor: pointer;
   }

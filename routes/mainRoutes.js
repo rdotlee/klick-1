@@ -10,6 +10,14 @@ Router.route('/', {
   }
 });
 
+Router.route('/about', {
+  name: 'about',
+  action: function () {
+    this.render('about');
+    SEO.set({ title: 'About - ' + Meteor.App.NAME });
+  }
+});
+
 Router.route('/signup', {
   name: 'signup',
   action: function () {

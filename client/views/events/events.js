@@ -13,9 +13,6 @@ Template['events'].helpers({
             areaEvents.events.push(event);
           }
         });
-        areaEvents.events.sort(function(a,b){
-          return new Date(b.date) - new Date(a.date);
-        });
         eventsByArea.push(areaEvents);
       });
 
@@ -28,7 +25,7 @@ Template['events'].helpers({
 
     events: function(){
       var params = Session.get('eventsParams');
-      return Events.find(params);
+      return Events.find(params,{sort: {date: 1}});
     },
 
     ifInArea: function(area, eventArea){

@@ -28,6 +28,7 @@
             {{#if currentUser}}
               <li  class="{{isActivePath profilePath}} tc"><a href="/users/{{currentUser._id}}">Profile</a></li>
             {{/if}}
+            <li  class="{{isActiveRoute 'about'}} tc"><a href="/about">About</a></li>
             <li  class="{{isActiveRoute 'events'}} tc"><a href="/events">Events</a></li>
             {{> loginButtons}} <!-- here -->
           </ul>

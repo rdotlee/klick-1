@@ -1,14 +1,23 @@
 <template name="home">
   <div class = "hero jumbotron">
-      <h1>Klick</h1>
-      <div class="green_bar padding tb">
+    {{#if currentUser}}
+      <h3 class="upcoming_events">Your upcoming Klicks:</h3>
+      <div class="row upcoming_events">
+        {{#each futureEvents}}
+          {{> eventCard}}
+        {{/each}}
+      </div>
+    {{else}}
+      <h1 class="text-center">Klick</h1>
+      <div class="green_bar padding tb text-center">
         <h4>Inspiring growth for your network at Kellogg.</h4>
         <p class="lead"><i>Because you've got 1,200 people to meet, and only so many lunches to do it.</i></p>
       </div>
-      <p class="padding top large">
+      <p class="padding top large text-center">
         <a class = "btn btn-primary btn-lg" href="{{pathFor route='signup'}}">Sign up!</a>
         <a class = "btn btn-primary btn-lg margin left" href="{{pathFor route='events'}}">See events</a>
       </p>
+    {{/if}}
   </div>
   <div class="container text-center padding bottom">
     <h2>How it works</h2>
