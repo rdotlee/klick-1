@@ -46,19 +46,19 @@ var UserProfile = new SimpleSchema({
       type: String,
       optional: true,
       label: 'Kellogg Program',
-      allowedValues: ['MMM', '1Y', '2Y', 'JDMBA', 'MDMBA', 'Part-time', 'Executive', 'JV'],
+      allowedValues: ['2Y', '1Y', 'MMM', 'JDMBA', 'PT', 'EX', 'JV', 'Faculty/Staff'],
   },
   section: {
       type: String,
       optional: true,
       label: 'Section',
-      allowedValues: ['1Y-Hedgehogs','1Y-Roadrunners','Big Dawgs','Bucket Heads','Bull Frogs','Cash Cows','Highlanders','Jive Turkeys','Moose','Poets','N/A',],
+      allowedValues: ['1Y-Hedgehogs', '1Y-Roadrunners', 'Big Dogs', 'Bucket Heads', 'Bull Frogs', 'Cash Cows', 'Highlanders', 'Moose', 'Poets', 'Turkeys', 'N/A'],
   },
   kwesttrip: {
       type: String,
       optional: true,
       label: 'KWEST Trip',
-      allowedValues: ['Amazing Race-2013','Amazing race-2014','Argentina-2014','Arubacao-2014','Belize-2014','Berlin/Krakow-2014','Bike Holland-2014','Brazil-2013','Chile-2013','Chile-2014','Costa Rica-2014','Croatia-2013','Croatia-2014','Czechoslovakia-2014','Denmark/Austria-2014','Dominican Republic-2013','Ecuador-2014','France-2013','Georgia/Armenia-2014','Greece-2014','Guatemala-2014','Hungary-2014','Iceland-2014','Ireland-2014','Italy-2014','Mystery-2014','Nicaragua-2013','Nicaragua-2014','Oman-2014','Panama-2014','Peru-2013','Peru-2014','Portugal-2014','Puerto Rico-2014','Romania-2013','Romania-2014','South Africa-2013','Spain - Mediterranean-2013','Spain - Northern-2013','Spain Mediterranean-2014','St. Lucia-2014','Sweden-2014','Thailand-2013','Thailand-2014','Turkey-2014','USA Virgin Islands-2013','Vietnam-2014','Zanzibar-2014','N/A'],
+      allowedValues: ['N/A', 'Adriatic Riviera-2015', 'Alps: Switzerland-2015', 'Amalfi Coast-2015', 'Amazing race-2014', 'Amazing Race-2015', 'Argentina-2014', 'Aruba-2015', 'Arubacao-2014', 'Bavaria-2015', 'Belize-2014', 'Belize-2015', 'Berlin/Krakow-2014', 'Bike France-2015', 'Bike Holland-2014', 'Brazil-2015', 'British Isles-2015', 'Cataluna-2015', 'Chile-2014', 'Chile-2015', 'Costa Rica-2014', 'Costa Rica-2015', 'Croatia-2014', 'Croatia-2015', 'Czechoslovakia-2014', 'Denmark/Austria-2014', 'Ecuador/Galapagos-2015', 'Ecuador-2014', 'Family-2014', 'Finland/Estonia-2015', 'Georgia/Armenia-2014', 'Greece-2014', 'Greece-2015', 'Guatemala-2014', 'Guatemala-2015', 'Hong Kong/Macau-2015', 'Hungary-2014', 'Iceland-2014', 'Iceland-2015', 'Ireland-2014', 'Italy-2014', 'Jordan-2015', 'Korea-2015', 'Montenegro-2015', 'Morocco-2015', 'Mystery-2014', 'Mystery-2015', 'Netherlands-2015', 'Nicaragua-2014', 'Nicaragua-2015', 'Northern Spain-2014', 'Northern Spain-2015', 'Norway/Sweden-2015', 'Oman-2014', 'Panama-2014', 'Peru-2014', 'Portugal-2014', 'Portugal-2015', 'Puerto Rico-2014', 'Romania-2014', 'Romania-2015', 'Spain Mediterranean-2014', 'St. Lucia/Barbados-2015', 'St. Lucia-2014', 'Sweden-2014', 'Thailand-2014', 'Thailand-2015', 'Top Chef (Peru)-2015', 'Turkey-2014', 'Turkey-2015', 'Uruguay/Argentina-2015', 'Vietnam-2014', 'Vietnam-2015', 'Zanzibar-2014'],
   },
   nationality: {
       type: String,

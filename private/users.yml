@@ -1,41 +1,42 @@
 user_admin:
-  email: admin@northwestern.edu
+  email: klick@kellogg.northwestern.edu
   password: testtest
   roles: 
     - admin
   profile:
     firstName: Bob
     lastName: Smith
-    gender: "male"
+    gender: "Male"
     gradYear: 2016
     program: 'MMM'
-pbrown2016:
-  email: pbrown2016@kellogg.northwestern.edu
-  password: password1
-  roles:
-    - user
-  profile:
-    firstName: Ashley
-    lastName: Jurinka
-    gender: female
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Guatemala-2014"
+    netid: abc123
+# pbrown2016:
+#   email: pbrown2016@kellogg.northwestern.edu
+#   password: password1
+#   roles:
+#     - user
+#   profile:
+#     firstName: Ashley
+#     lastName: Jurinka
+#     gender: female
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Guatemala-2014"
 
-ajurinka2016:
-  email: ajurinka2016@kellogg.northwestern.edu
-  password: password2
-  roles:
-    - user
-  profile:
-    firstName: Philip
-    lastName: Brown
-    gender: male
-    gradYear: 2016
-    program: 2Y
-    section: Moose
-    kwesttrip: "Peru-2014"
+# ajurinka2016:
+#   email: ajurinka2016@kellogg.northwestern.edu
+#   password: password2
+#   roles:
+#     - user
+#   profile:
+#     firstName: Philip
+#     lastName: Brown
+#     gender: male
+#     gradYear: 2016
+#     program: 2Y
+#     section: Moose
+#     kwesttrip: "Peru-2014"
 
 # rlee2016:
 #   email: rlee2016@kellogg.northwestern.edu
