@@ -219,6 +219,6 @@ var profileFilled = function(pause){
 }
 
 Router.onBeforeAction(mustBeThisUser, {only: ['userEdit']});
-Router.onBeforeAction(mustBeSignedIn, {except: ['home', 'events','signup', 'admin_login']});
+Router.onBeforeAction(mustBeSignedIn, {except: ['home', 'about', 'events','signup', 'admin_login']});
 Router.onBeforeAction(profileFilled, {except: ['userEdit']});
 //Router.onBeforeAction(goToDashboard, {only: ['home']});

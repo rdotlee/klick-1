@@ -1,12 +1,21 @@
 <template name="home">
   <div class = "hero jumbotron">
     {{#if currentUser}}
-      <h3 class="upcoming_events">Your upcoming Klicks:</h3>
-      <div class="row upcoming_events">
-        {{#each futureEvents}}
-          {{> eventCard}}
-        {{/each}}
-      </div>
+      {{#if hasRegisteredEvents}}
+        <h3 class="upcoming_events">Your upcoming Klicks:</h3>
+        <div class="row upcoming_events">
+          {{#each yourFutureEvents}}
+            {{> eventCard}}
+          {{/each}}
+        </div>
+      {{else}}
+        <h3 class="upcoming_events">Upcoming Klicks:</h3>
+        <div class="row upcoming_events">
+          {{#each futureEvents}}
+            {{> eventCard}}
+          {{/each}}
+        </div>
+      {{/if}}
     {{else}}
       <img src="/images/klickLogo.svg" class="img-responsive logo">
       <div class="green_bar padding tb text-center">
@@ -23,15 +32,15 @@
     <h2>How it works</h2>
     <div class="row">
       <div class="col-md-4">
-        <h3>Sign up</h3>
+        <h3><span class="fui-new"></span> Sign up</h3>
         <p class="padding lr">Register with your Kellogg email, and tell us a bit about yourself - that way we can try to find you Klickmates you may not know yet!</p>
       </div>
       <div class="col-md-4">
-        <h3>Get Matched</h3>
+        <h3><span class="fui-calendar-solid"></span> Get Matched</h3>
         <p class="padding lr">Find a time that works and we'll schedule a meetup with people you may not know.  We'll keep it a secret until 30 minutes before your meetup just to make it interesting.</p>
       </div>
       <div class="col-md-4">
-        <h3>Klick</h3>
+        <h3><span class="fui-check-circle"></span> Klick</h3>
         <p class="padding lr">Check back on the site where your Klickmates are revealed! Meet in your assigned area and the rest is up to you.</p>
       </div>
     </div>
@@ -39,17 +48,22 @@
   <div class="container-fluid text-center team">
     <h2>Team</h2>
     <div class="row">
-      <div class="col-md-4">
-        <h3>Sign up</h3>
-        <h4 class="padding lr">Phil Brown</h4>
+      <div class="col-md-6 col-md-offset-3">
+        <img src="/images/team.jpg" class="img-responsive img-rounded">
       </div>
-      <div class="col-md-4">
-        <h3>Get Matched</h3>
-        <h4 class="padding lr">Ashley Jurinka</h4>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-2">
+        <h5 class="padding lr">Ashley Jurinka</h5>
       </div>
-      <div class="col-md-4">
-        <h3>Klick</h3>
-        <h4 class="padding lr">Ryan Lee</h4>
+      <div class="col-md-2">
+        <h5 class="padding lr">Nikhil Pai</h5>
+      </div>
+      <div class="col-md-2">
+        <h5 class="padding lr">Phil Brown</h5>
+      </div>
+      <div class="col-md-2">
+        <h5 class="padding lr">Ryan Lee</h5>
       </div>
     </div>
   </div>

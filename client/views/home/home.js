@@ -1,8 +1,16 @@
 Template.home.helpers({
-  futureEvents: function(){
+  yourFutureEvents: function(){
     return Events.find({
       users: {$all: [Meteor.userId()]}
     });
+  },
+  futureEvents: function(){
+    return Events.find({});
+  },
+  hasRegisteredEvents: function(){
+    return Events.find({
+      users: {$all: [Meteor.userId()]}
+    }).count();
   }
 });
 
