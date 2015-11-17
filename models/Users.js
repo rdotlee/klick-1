@@ -161,6 +161,7 @@ if (Meteor.isServer) {
   });
 
   Accounts.validateNewUser(function (user) {
+    if (user.services.google.accessToken) return true;
     var email_regex = new RegExp("^[A-Z0-9._%+-]+@[A-Z0-9._%+-]*northwestern\.edu$","i"); 
     if (user.emails.length >= 1){
       for (var i = user.emails.length - 1; i >= 0; i--) {
@@ -179,6 +180,13 @@ if (Meteor.isServer) {
     }
     user.profile = options.profile || {};
     user.username = options.email;
+
+    if (user.services.google.accessToken) {
+      user.profile.firstName = user.services.google.given_name;
+      user.profile.lastName = user.services.google.family_name;
+      user.profile.netid = 'abc123';
+    }
+
     return user;
   });
 }
