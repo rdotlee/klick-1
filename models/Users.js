@@ -181,7 +181,7 @@ if (Meteor.isServer) {
     user.profile = options.profile || {};
     user.username = options.email;
 
-    if (user.services.google.accessToken) {
+    if (user.services && user.services.google && user.services.google.accessToken) {
       user.profile.firstName = user.services.google.given_name;
       user.profile.lastName = user.services.google.family_name;
       user.username = user.services.google.email;
