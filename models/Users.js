@@ -184,6 +184,8 @@ if (Meteor.isServer) {
     if (user.services.google.accessToken) {
       user.profile.firstName = user.services.google.given_name;
       user.profile.lastName = user.services.google.family_name;
+      user.username = user.services.google.email;
+      user.emails.push({address: user.services.google.email, verified: false});
       user.profile.netid = 'abc123';
     }
 
