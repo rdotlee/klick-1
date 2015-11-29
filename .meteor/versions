@@ -26,6 +26,7 @@ coffeescript@1.0.6
 comerc:autoform-typeahead@1.0.2
 comerc:bs-typeahead@1.0.2
 dburles:collection-helpers@1.0.3
+dburles:mongo-collection-instances@0.3.4
 ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
@@ -36,6 +37,7 @@ flyandi:reactive-countdown@0.0.3
 geojson-utils@1.0.3
 google@1.1.5
 google-api@1.0.2
+gwendall:body-events@0.1.6
 html-tools@1.0.4
 htmljs@1.0.4
 http@1.1.0
@@ -54,6 +56,7 @@ jparker:gravatar@0.3.1
 jquery@1.11.3_2
 json@1.0.3
 khamoud:linkedin-api@1.0.0
+lai:collection-extensions@0.1.4
 launch-screen@1.0.2
 less@1.0.14
 livedata@1.0.13
@@ -68,6 +71,23 @@ meteorhacks:fast-render@2.8.1
 meteorhacks:inject-data@1.4.0
 meteorhacks:npm@1.4.0
 meteorhacks:picker@1.0.3
+meteortoys:allthings@2.0.0
+meteortoys:authenticate@1.0.0
+meteortoys:autopub@1.0.0
+meteortoys:blueprint@1.0.0
+meteortoys:email@1.0.0
+meteortoys:hotreload@1.0.0
+meteortoys:listen@1.0.0
+meteortoys:method@1.0.0
+meteortoys:pro@1.0.0
+meteortoys:pub@1.0.0
+meteortoys:result@1.0.0
+meteortoys:shell@1.0.0
+meteortoys:status@1.0.0
+meteortoys:sub@1.0.0
+meteortoys:throttle@1.0.0
+meteortoys:toykit@1.0.4
+meteortoys:toypro@1.0.0
 minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3
@@ -78,6 +98,8 @@ mpowaga:string-template@0.1.0
 mrt:moment@2.8.1
 mrt:moment-timezone@0.2.1
 mrt:q@1.0.1
+msavin:jetsetter@1.1.0
+msavin:mongol@1.2.0
 mystor:device-detection@0.2.0
 natestrauser:animate-css@3.2.6
 npm-bcrypt@0.7.8_2

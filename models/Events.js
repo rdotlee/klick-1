@@ -1,311 +1,252 @@
 Events = new Mongo.Collection('Events');
 
 SimpleSchema.messages({
-  wrongRole: "Wrong Role",
-  eventFull: "The event is full"
+    wrongRole: "Wrong Role",
+    eventFull: "The event is full"
 });
 
-AddressSchema = new SimpleSchema({
-  street: {
-    type: String,
-    max: 100
-  },
-  city: {
-    type: String,
-    max: 50
-  },
-  state: {
-    type: String,
-    autoform: {
-      options: {'AL': 'AL', 'AK': 'AK', 'AZ': 'AZ', 'AR': 'AR', 'CA': 'CA', 'CO': 'CO', 'CT': 'CT', 'DC': 'DC', 'DE': 'DE', 'FL': 'FL', 'GA': 'GA', 'HI': 'HI', 'ID': 'ID', 'IL': 'IL', 'IN': 'IN', 'IA': 'IA', 'KS': 'KS', 'KY': 'KY', 'LA': 'LA', 'ME': 'ME', 'MD': 'MD', 'MA': 'MA', 'MI': 'MI', 'MN': 'MN', 'MS': 'MS', 'MO': 'MO', 'MT': 'MT', 'NE': 'NE', 'NV': 'NV', 'NH': 'NH', 'NJ': 'NJ', 'NM': 'NM', 'NY': 'NY', 'NC': 'NC', 'ND': 'ND', 'OH': 'OH', 'OK': 'OK', 'OR': 'OR', 'PA': 'PA', 'RI': 'RI', 'SC': 'SC', 'SD': 'SD', 'TN': 'TN', 'TX': 'TX', 'UT': 'UT', 'VT': 'VT', 'VA': 'VA', 'WA': 'WA', 'WV': 'WV', 'WI': 'WI', 'WY': 'WY'}
+Schemas.AddressSchema = new SimpleSchema({
+    street: {
+        type: String,
+        max: 100
+    },
+    city: {
+        type: String,
+        max: 50
+    },
+    state: {
+        type: String,
+        autoform: {
+            options: {'AL': 'AL', 'AK': 'AK', 'AZ': 'AZ', 'AR': 'AR', 'CA': 'CA', 'CO': 'CO', 'CT': 'CT', 'DC': 'DC', 'DE': 'DE', 'FL': 'FL', 'GA': 'GA', 'HI': 'HI', 'ID': 'ID', 'IL': 'IL', 'IN': 'IN', 'IA': 'IA', 'KS': 'KS', 'KY': 'KY', 'LA': 'LA', 'ME': 'ME', 'MD': 'MD', 'MA': 'MA', 'MI': 'MI', 'MN': 'MN', 'MS': 'MS', 'MO': 'MO', 'MT': 'MT', 'NE': 'NE', 'NV': 'NV', 'NH': 'NH', 'NJ': 'NJ', 'NM': 'NM', 'NY': 'NY', 'NC': 'NC', 'ND': 'ND', 'OH': 'OH', 'OK': 'OK', 'OR': 'OR', 'PA': 'PA', 'RI': 'RI', 'SC': 'SC', 'SD': 'SD', 'TN': 'TN', 'TX': 'TX', 'UT': 'UT', 'VT': 'VT', 'VA': 'VA', 'WA': 'WA', 'WV': 'WV', 'WI': 'WI', 'WY': 'WY'}
+        }
+    },
+    zip: {
+        type: String,
+        regEx: /^[0-9]{5}$/
     }
-  },
-  zip: {
-    type: String,
-    regEx: /^[0-9]{5}$/
-  }
 });
 
-Events.attachSchema(
-    new SimpleSchema({
+Schemas.Events = new SimpleSchema({
     title: {
-      type: String
+        type: String
     },
     description: {
-      type: String,
-      optional: true,
+        type: String,
+        optional: true,
     },
     area: {
-      type: String,
-      label: 'Area',
-      autoform: {
-        options: function () {
-          return _.map(Areas.find().fetch(), function (area) {
-            return {label: area.name, value: area._id};
-          });
+        type: String,
+        label: 'Area',
+        autoform: {
+            options: function () {
+                return _.map(Areas.find().fetch(), function (area) {
+                    return {label: area.name, value: area._id};
+                });
+            }
         }
-      }
     },
     gcalId: {
-      type: String,
-      label: 'Gcal ID',
-      optional: true,
-      autoform: {
-        omit: true
-      }
+        type: String,
+        label: 'Gcal ID',
+        optional: true,
+        autoform: {
+            omit: true
+        }
     },
     createdAt: {
-      type: Date,
-      autoValue: function() {
-        if (this.isInsert) {
-          return new Date;
-        } else if (this.isUpsert) {
-          return {$setOnInsert: new Date};
-        } else {
-          this.unset();
+        type: Date,
+        autoValue: function() {
+            if (this.isInsert) {
+                return new Date;
+            } else if (this.isUpsert) {
+                return {$setOnInsert: new Date};
+            } else {
+                this.unset();
+            }
+        },
+        autoform: {
+            omit: true
         }
-      },
-      autoform: {
-        omit: true
-      }
     },
     eventLimit:{
-      type: Number,
-      label: 'Attendee Limit',
-      min: 1
+        type: Number,
+        label: 'Attendee Limit',
+        min: 1
     },
     groupLimit:{
-      type: Number,
-      label: 'Group Size',
-      min: 2
+        type: Number,
+        label: 'Group Size',
+        min: 2
     },
     users: {
-      type: [String],
-      label: 'People registered',
-      optional: true,
-      custom: function(){
-        if(this.field('eventLimit').isSet && this.value.length > this.field('eventLimit').value){
-          return 'eventFull';
-        } 
-      },
-      autoform: {
-        omit: true
-      },
-      defaultValue: []
+        type: [String],
+        label: 'People registered',
+        optional: true,
+        custom: function(){
+            if(this.field('eventLimit').isSet && this.value.length > this.field('eventLimit').value){
+                return 'eventFull';
+            } 
+        },
+        autoform: {
+            omit: true
+        },
+        defaultValue: []
     },
     groups: {
-      type: Array,
-      label: 'Groups',
-      optional: true,
-      autoform: {
-        omit: true
-      }
+        type: Array,
+        label: 'Groups',
+        optional: true,
+        autoform: {
+            omit: true
+        }
     },
     'groups.$': {
-      type: [String],
-      label: 'Group',
-      optional: true,
-      autoform: {
-        omit: true
-      }
+        type: [String],
+        label: 'Group',
+        optional: true,
+        autoform: {
+            omit: true
+        }
     },
     isLocked: {
-      type: Boolean,
-      label: "Event Locked",
-      defaultValue: false,
-      optional: true,
-      autoform: {
-        omit: true
-      }
+        type: Boolean,
+        label: "Event Locked",
+        defaultValue: false,
+        optional: true,
+        autoform: {
+            omit: true
+        }
     },
     location: {
-      type: AddressSchema
+        type: Schemas.AddressSchema
     },
     manualSort: {
-      type: Boolean,
-      label: "Manual group sorting",
-      defaultValue: false,
-      optional: true,
-      autoform: {
-        omit: true
-      }
+        type: Boolean,
+        label: "Manual group sorting",
+        defaultValue: false,
+        optional: true,
+        autoform: {
+            omit: true
+        }
     },
     date: {
-      type: Date,
-      label: 'Date',
-      min: new Date(),
-      autoform: {
-        afFieldInput: {
-          type: "bootstrap-datetimepicker"
+        type: Date,
+        label: 'Date',
+        min: new Date(),
+        autoform: {
+            afFieldInput: {
+                type: "bootstrap-datetimepicker"
+            }
         }
-      }
     }
-  })
-);
+});
 
-// Collection2 already does schema checking
-// Add custom permission rules if needed
+Events.attachSchema(Schemas.Events);
+
 if (Meteor.isServer) {
-  Events.allow({
-    insert : function (userId, doc) {
-      return true
-    },
-    update : function (userId, doc) {
-      return true;
-    },
-    remove : function (userId, doc) {
-      if(userId == doc._id || Roles.userIsInRole(userId, ['admin'])){
-        return true;
-      } else {
-        return false;
-      }
-    }
-  });
-
-  Events.before.update(function (userId, doc, fieldNames, modifier, options) {
-    var new_groups;
-    var users = doc.users || [];
-    var config = Settings.findOne({});
-    if(modifier.$addToSet && modifier.$addToSet.users){
-      var newUser = modifier.$addToSet.users;
-      users.push(newUser);
-      if(doc.manualSort || moment().add(config.release_frame, 'hours').isAfter(doc.date)){
-        console.log('Adding, Manual grouping add or within release')
-        new_groups = Groups.addToGroup(doc.groups,modifier.$addToSet.users, doc.groupLimit);
-      } else {
-        console.log('Adding, Random grouping add')
-        new_groups = Groups.addToRandomGroup(users, doc.groupLimit);
-      }
-      Meteor.users.update(modifier.$addToSet.users, {$addToSet: {klicks: doc._id}});
-    } else if (modifier.$pull && modifier.$pull.users) {
-      var removeUser = modifier.$pull.users;
-      users = _.filter(users, function(id){ return id !== removeUser});
-      if(doc.manualSort || moment().add(config.release_frame, 'hours').isAfter(doc.date)){
-        console.log('Manual grouping remove')
-        new_groups = Groups.removeFromGroup(doc.groups,modifier.$pull.users, doc.groupLimit);
-      } else {
-        console.log('Random grouping remove')
-        new_groups = Groups.removeFromRandomGroup(users, doc.groupLimit);
-      }
-       Meteor.users.update(modifier.$pull.users, {$pull: {klicks: doc._id}});
-    }
-
-    if(modifier.$set && modifier.$set.groupLimit && !doc.manualSort){
-      new_groups = Groups.shuffleIntoGroups(users, modifier.$set.groupLimit)
-    }
-
-    if(modifier.$set && modifier.$set.manualSort === false && doc.manualSort){
-      console.log('Reshuffling groups for pref change')
-      new_groups = Groups.shuffleIntoGroups(users, doc.groupLimit)
-    }
-
-    if (new_groups) {
-      if(!modifier.$set){
-        modifier.$set = {groups: new_groups};
-      }else{
-        modifier.$set.groups = new_groups;
-      }
-    }
-  });
-
-  Events.after.insert(function (userId, doc){
-    var link_text = "\n\nFind you who you are meeting at http://klick.meteor.com/events/" + doc._id; 
-    var config = Settings.findOne({});
-    var calendarOwner = Meteor.users.findOne(config.calendarOwner);
-    if(calendarOwner){
-      var endDate = moment(doc.date).add(1, 'hours').toDate();
-      var options = {
-        user: calendarOwner,
-        data:{
-          summary: doc.title,
-          start: {
-            dateTime: doc.date,
-            timeZone: 'America/Chicago'
-          },
-          end: {
-            dateTime: endDate,
-            timeZone: 'America/Chicago'
-          },
-          anyoneCanAddSelf: false,
-          guestsCanSeeOtherGuests: false,
-          guestsCanInviteOthers: false,
-          description: doc.description+link_text,
-          location: doc.location.street + ", " + doc.location.city,
-          visibility: 'private'
+    Events.allow({
+        insert : function (userId, doc) {
+            return true
+        },
+        update : function (userId, doc) {
+            return true;
+        },
+        remove : function (userId, doc) {
+            if(userId == doc._id || Roles.userIsInRole(userId, ['admin'])){
+                return true;
+            } else {
+                return false;
+            }
         }
-      };
-
-      GoogleApi.post('calendar/v3/calendars/primary/events', options, function(res, data){
-        var calId = data.id;
-        Events.update(doc._id, {$set: {gcalId: calId}});
-      });
-    }
-  })
-
-  Events.after.update(function (userId, doc, fieldNames, modifier, options) {
-    console.log('\n\n===========================================\n===========================================');
-    console.log('\n\nUpdating event to: ')
-    console.log(doc);
-
-    var link_text = "\n\nFind you who you are meeting at http://klick.meteor.com/events/" + doc._id; 
-    var config = Settings.findOne({});
-    var calendarOwner = Meteor.users.findOne(config.calendarOwner);
-    var invited = Meteor.users.find({_id: {$in: doc.users}}).fetch();
-    var invited = invited.map(function(user){
-      return { 
-        email: user.emails[0].address,
-        displayName: user.profile.firstName + " "+ user.profile.lastName
-      }
     });
 
-    if(calendarOwner){
-      var endDate = moment(doc.date).add(1, 'hours').toDate();
-      var options = {
-        user: calendarOwner,
-        query:{
-          sendNotifications: true,
-        },
-        data:{
-          summary: doc.title,
-          attendees: invited,
-          start: {
-            dateTime: moment(doc.date).format("YYYY-MM-DDTHH:mm:ssZ"),
-            timeZone: 'America/Chicago'
-          },
-          end: {
-            dateTime: moment(endDate).format("YYYY-MM-DDTHH:mm:ssZ"),
-            timeZone: 'America/Chicago'
-          },
-          description: doc.description +link_text,
-          anyoneCanAddSelf: false,
-          guestsCanSeeOtherGuests: false,
-          guestsCanInviteOthers: false,
-          location: doc.location.street + ", " + doc.location.city,
-          visibility: 'private'
+    Events.before.update(function (userId, doc, fieldNames, modifier, options) {
+        var new_groups;
+        var users = doc.users || [];
+        var config = Settings.findOne({});
+        var is_in_release_frame = moment().add(config.release_frame, 'hours').isAfter(doc.date);
+        var no_shuffle = doc.manualSort || is_in_release_frame;
+        var should_shuffle = false;
+        var group_size = doc.groupLimit;
+
+        // Adding new user to event
+        if(modifier.$addToSet && modifier.$addToSet.users){
+            var new_member = modifier.$addToSet.users;
+            users.push(new_member);
+            if(no_shuffle){
+                new_groups = Groups.addToGroup(doc.groups,new_member, doc.groupLimit);
+            } else {
+                should_shuffle = true;
+            }
+            Meteor.users.update(new_member, {$addToSet: {klicks: doc._id}});
+
+        // Removing user from event
+        } else if (modifier.$pull && modifier.$pull.users) {
+            var remove_member = modifier.$pull.users;
+            users = _.filter(users, function(id){ return id !== remove_member});
+            if(no_shuffle){
+                new_groups = Groups.removeFromGroup(doc.groups,remove_member, doc.groupLimit);
+            } else {
+                should_shuffle = true;
+            }
+            Meteor.users.update(remove_member, {$pull: {klicks: doc._id}});
         }
-      };
 
-      GoogleApi.patch('calendar/v3/calendars/primary/events/' + doc.gcalId+'?sendNotifications=true', options, function(res, data){
-        console.log(res, data);
-      });
-    }
-  });
-
-  Events.after.remove(function (userId, doc){
-    if(calendarOwner){
-      var endDate = moment(doc.date).add(1, 'hours').toDate();
-      var options = {
-        user: calendarOwner,
-        query:{
-          sendNotifications: true,
+        // Changed group limit
+        if(modifier.$set && modifier.$set.groupLimit && !doc.manualSort){
+            group_size = modifier.$set.groupLimit
+            should_shuffle = true;
         }
-      };
 
-      GoogleApi.delete('calendar/v3/calendars/primary/events' + doc.gcalId +'?sendNotifications=true', options, function(res, data){
-        console.log(res, data);
-      });
-    }
-  });
+        // Changed from manual to auto grouping
+        if(modifier.$set && modifier.$set.manualSort === false && doc.manualSort){
+            should_shuffle = true;
+        }
+
+        if (should_shuffle) {
+            new_groups = Groups.shuffleIntoGroups(users, doc.groupLimit)
+        }
+        console.log(modifier)
+        if (!modifier.$set) modifier.$set = {}
+        if (new_groups) _.extend(modifier.$set,{groups: new_groups});
+        console.log(modifier)
+    });
+
+    Events.after.insert(function (userId, doc){
+        Google_Mailer.creat_event({
+            _id: doc._id,
+            date: doc.date,
+            title: doc.title,
+            description: doc.description,
+            location: doc.location
+        });
+    })
+
+    Events.after.update(function (userId, doc, fieldNames, modifier, options) {
+        var invited = Meteor.users.find({_id: {$in: doc.users}}).fetch();
+        var invited = invited.map(function(user){
+            return { 
+                email: user.emails[0].address,
+                displayName: user.profile.firstName + " "+ user.profile.lastName
+            }
+        });
+
+        Google_Mailer.update_event({
+            _id: doc._id,
+            date: doc.date,
+            title: doc.title,
+            description: doc.description,
+            location: doc.location,
+            invited: invited,
+            gcalId: doc.gcalId
+        });
+    });
+
+    Events.after.remove(function (userId, doc){
+        Google_Mailer.delete_event({
+            gcalId: doc.gcalId
+        })
+    });
 }
 
 
