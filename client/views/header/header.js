@@ -8,7 +8,7 @@ Template['header'].events({
 });
 
 Template['header'].onRendered(function () {
-	 $(".navbar-nav li.tc a").click(function(event) {
+	 $(".navbar-nav li.tc a, #login-buttons-logout").click(function(event) {
       $(".navbar-collapse").collapse('hide');
     });
 })
