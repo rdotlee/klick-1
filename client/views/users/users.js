@@ -35,6 +35,15 @@ Template['users'].events({
   "click #delete-user": function(event, template){
     Meteor.users.remove({_id:this._id}) ;
   },
+  "click #download-csv": function(event) {
+      var nameFile = 'fileDownloaded.csv';
+      Meteor.call('download_users', function(err, fileContent) {
+        if(fileContent){
+          var blob = new Blob([fileContent], {type: "text/plain;charset=utf-8"});
+          saveAs(blob, nameFile);
+        }
+      });
+  }
 
 });
 
