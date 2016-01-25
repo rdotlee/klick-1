@@ -13,15 +13,16 @@ Klick is an automated "dinner with strangers" app. Users can sign up and fill ou
 * [How to use](#how-to-use)
   * [Setup](#setup)
   * [Settings](#settings)
-  * [Creating Events](#available-profiles-cofeescript-and-es6)
-  * [Signing Up Users](#deployments)
-* [Architechure](#structure)
+  * [Creating Events](#creating-events)
+  * [Signing Up Users](#signing-up-users)
+* [Architechure](#architechure)
   * [Packages used](#packages-used)
   * [Folder structure](#folder-structure) 
-  * [Schema](#folder-structure)
-* [Deploying](#other-awesome-boilerplates)
-  * [Dev](#folder-structure)
-  * [Prod](#folder-structure)
+  * [Schema](#schema)
+* [Deploying](#deploying)
+  * [Dev](#dev)
+  * [Staging](#staging)
+  * [Prod](#prod)
 * [License](#license)
 
 <!-- toc stop -->
@@ -47,12 +48,15 @@ Admin have the ability to edit events, users, areas and settings. Any user can b
   8. Click Update
 7. Create events
 
-
 ### Settings
 
 To veiw the app's settings, login as an admin and navigate to the Admin > Configuration tab. From there you can add, edit and remove areas.
 
-## Structure
+### Creating Events
+
+### Signing Up Users
+
+## Architechure
 
 ### Packages used
 
@@ -111,6 +115,32 @@ meteor-boilerplate		# Command line tool
 ```
 
 (*) = the command line tool creates files in these folders
+
+### Schema
+
+## Deploying
+
+### Dev
+Dev hosting is done locally using the (meteor commandline tool)[https://www.meteor.com/tool]. To run the app locally:
+1. `$ cd klick`
+2. `$ meteor`
+3. Go to (localhost:3000)[http://localhost:3000/]
+
+### Staging
+Staging is done using meteor's cloud hosting. The staging env uses its own database and does not mirror prod. To deploy to staging:
+1. Get access to the staging domain from Nikhil
+2. `$ cd klick`
+3. `$ meteor deploy klick`
+4. Go to (klick.meteor.com)[http://klick.meteor.com]
+
+### Prod
+The production server is hosted by (Modulus)[https://modulus.io/]. You must have the (modulus CLI tools)[http://help.modulus.io/customer/en_us/portal/articles/1701977-modulus-command-line] installed to deploy. To deploy:
+1. Get access to the staging domain from Nikhil
+2. `$ cd klick`
+3. `$ modulus deploy`
+4. Go to (klicktogether.com)[http://klicktogether.com]
+
+
 
 ## License
 This boilerplate has an MIT License, see the LICENSE.txt for more information.
